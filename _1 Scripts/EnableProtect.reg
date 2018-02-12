@@ -1,0 +1,67 @@
+Windows Registry Editor Version 5.00
+
+;Параметры проверки цифровой подписи программ
+[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Download]
+;Проверять цифровую подпись загружаемых программ
+"CheckExeSignatures"="yes"
+;Не запускать программы с непроверенной цифровой подписью
+"RunInvalidSignatures"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_LOCALMACHINE_LOCKDOWN]
+;Не разрешать запуск активного содержимого файлов на моем компьютере
+"iexplore.exe"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_LOCALMACHINE_LOCKDOWN\Settings]
+;Не разрешать запуск активного содержимого компакт-дисков на моем компьютере
+"LOCALMACHINE_CD_UNLOCK"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\PhishingFilter]
+;Включить фильтр SmartScreen
+"EnabledV9"=dword:00000001
+
+;Настройка параметров безопасности для Интернета
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings]
+;Разрешить встроенную проверку подлинности Windows
+"EnableNegotiate"=dword:00000001
+;Предупреждать о несоответствии адреса сертификата
+"WarnonBadCertRecving"=dword:00000001
+;Предупреждать о переходе в локальную зону
+"WarnOnIntranet"=dword:00000001
+;Предупреждать о перенаправления публикаций
+"WarnOnPostRedirect"=dword:00000001
+
+[-HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Attachments]
+;Включить предупреждение при открытии файлов, загруженных из Интернета
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer]
+;Включить Windows SmartScreen (Windows 8.1)
+"SmartScreenEnabled"="On"
+
+;Настройка Контроля учётных записей
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+;Выполнение программ Администратором с запросом
+"ConsentPromptBehaviorAdmin"=dword:00000005
+;Включить Контроль учётных записей (UAC)
+"EnableLUA"=dword:00000001
+;Спрашивать при запуске приложений
+"PromptOnSecureDesktop"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MpsSvc]
+;Включить службу Брандмауэр Windows
+"Start"=dword:00000002
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\DomainProfile]
+;Включить доменный профиль Брандмауэра Windows
+"EnableFirewall"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\PublicProfile]
+;Включить общий профиль Брандмауэра Windows
+"EnableFirewall"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\StandardProfile]
+;Включить частный профиль Брандмауэра Windows
+"EnableFirewall"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wscsvc]
+;Включить сдужбу Центр обеспечения безопасности
+"Start"=dword:00000002
