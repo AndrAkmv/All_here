@@ -2,7 +2,7 @@
 
 ver | find "10" > nul && set _win10=Y
 
-for /f  "Skip=2 Tokens=3*" %%i in ('reg query "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "My Video"') do set _src=%%j
+for /f "Skip=2 Tokens=3*" %%i in ('reg query "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "My Video"') do set _src=%%j
 if "%_src%" NEQ "%USERPROFILE%\Videos" (
 call :lxc "%_src%" "%USERPROFILE%\Videos"
 md "%USERPROFILE%\Videos" 2> nul
@@ -12,7 +12,7 @@ if defined _win10 reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Exp
 call :lrd "%_src%"
 )
 
-for /f  "Skip=2 Tokens=3*" %%i in ('reg query "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "My Pictures"') do set _src=%%j
+for /f "Skip=2 Tokens=3*" %%i in ('reg query "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "My Pictures"') do set _src=%%j
 if "%_src%" NEQ "%USERPROFILE%\Pictures" (
 call :lxc "%_src%" "%USERPROFILE%\Pictures"
 md "%USERPROFILE%\Pictures" 2> nul
@@ -22,7 +22,7 @@ if defined _win10 reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Exp
 call :lrd "%_src%"
 )
 
-for /f  "Skip=2 Tokens=3*" %%i in ('reg query "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "My Music"') do set _src=%%j
+for /f "Skip=2 Tokens=3*" %%i in ('reg query "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "My Music"') do set _src=%%j
 if "%_src%" NEQ "%USERPROFILE%\Music" (
 call :lxc "%_src%" "%USERPROFILE%\Music"
 md "%USERPROFILE%\Music" 2> nul
@@ -32,7 +32,7 @@ if defined _win10 reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Exp
 call :lrd "%_src%"
 )
 
-for /f  "Skip=2 Tokens=2*" %%i in ('reg query "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" ^
+for /f "Skip=2 Tokens=2*" %%i in ('reg query "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" ^
 /v {374DE290-123F-4565-9164-39C4925E467B}') do set _src=%%j
 if "%_src%" NEQ "%USERPROFILE%\Downloads" (
 call :lxc "%_src%" "%USERPROFILE%\Downloads"
@@ -45,7 +45,7 @@ if defined _win10 reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Exp
 call :lrd "%_src%"
 )
 
-for /f  "Skip=2 Tokens=2*" %%i in ('reg query "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v Personal') do set _src=%%j
+for /f "Skip=2 Tokens=2*" %%i in ('reg query "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v Personal') do set _src=%%j
 if "%_src%" NEQ "%USERPROFILE%\Documents" (
 call :lxc "%_src%" "%USERPROFILE%\Documents"
 md "%USERPROFILE%\Documents" 2> nul
@@ -55,7 +55,7 @@ if defined _win10 reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Exp
 call :lrd "%_src%"
 )
 
-for /f  "Skip=2 Tokens=2*" %%i in ('reg query "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v Desktop') do set _src=%%j
+for /f "Skip=2 Tokens=2*" %%i in ('reg query "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v Desktop') do set _src=%%j
 if "%_src%" NEQ "%USERPROFILE%\Desktop" (
 call :lxc "%_src%" "%USERPROFILE%\Desktop"
 md "%USERPROFILE%\Desktop" 2> nul
