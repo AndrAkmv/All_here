@@ -1,15 +1,7 @@
 @echo off
 
 ver | find "10" > nul && set _win10=Y
-ver > nul
 
-for /f "Tokens=2 Delims==" %%i in ('wmic LogicalDisk where "DriveType=3" get Name /Format:Value') do call :syst %%i || goto :next
-
-:syst
-if %1 NEQ %SYSTEMDRIVE% set "_disk=%1" & exit /b 1
-exit /b
-
-:next
 for /f  "Skip=2 Tokens=3*" %%i in ('reg query "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "My Video"') do set _src=%%j
 if "%_src%" NEQ "%USERPROFILE%\Videos" (
 call :lxc "%_src%" "%USERPROFILE%\Videos"
