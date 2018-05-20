@@ -42,19 +42,19 @@ echo Getting list of packages. Please wait...
 dism /%_img% /English /LogLevel:1 /Get-Packages > %TEMP%\packages.txt
 echo -------------------------------------------------------------------------------
 set /a _num+=1
-echo %_num% Add: Servicing stack update for Windows 10 Version 1607
-call :exist %_arch%\Windows10.0-KB4049065-%_arch%.cab ||^
-dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows10.0-KB4049065-%_arch%.cab /NoRestart
+echo %_num% Add: Servicing stack update for Windows 10 version 1607
+call :exist %_arch%\Windows10.0-KB4132216-%_arch%.cab ||^
+dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows10.0-KB4132216-%_arch%.cab /NoRestart
 echo -------------------------------------------------------------------------------
 set /a _num+=1
-echo %_num% Add: December 2017 Adobe flash KB4053577
-call :exist %_arch%\Windows10.0-KB4053577-%_arch%.cab ||^
-dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows10.0-KB4053577-%_arch%.cab /NoRestart
+echo %_num% Add: May 2017 cumulative update KB4103720
+call :exist %_arch%\Windows10.0-KB4103720-%_arch%.cab ||^
+dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows10.0-KB4103720-%_arch%.cab /NoRestart
 echo -------------------------------------------------------------------------------
 set /a _num+=1
-echo %_num% Add: December 2017 montly rollup KB4053579
-call :exist %_arch%\Windows10.0-KB4053579-%_arch%.cab ||^
-dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows10.0-KB4053579-%_arch%.cab /NoRestart
+echo %_num% Add: May 2017 Adobe flash player KB4103729
+call :exist %_arch%\Windows10.0-KB4103729-%_arch%.cab ||^
+dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows10.0-KB4103729-%_arch%.cab /NoRestart
 echo -------------------------------------------------------------------------------
 del %TEMP%\packages.txt
 if not exist %_file% exit
