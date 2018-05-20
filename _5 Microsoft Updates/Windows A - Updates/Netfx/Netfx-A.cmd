@@ -50,28 +50,10 @@ dism /%_img% /English /LogLevel:1 /Enable-Feature /FeatureName:NetFx3 /Source:%T
 echo -------------------------------------------------------------------------------
 del %TEMP%\features.txt
 rd /s /q %TEMP%\Windows10-SXS-%_arch%
-goto :add
+goto :unmount
 
 :state
 findstr %1 %TEMP%\features.txt | find "Enable" > nul
-exit /b
-
-:add
-cls
-echo Getting list of packages. Please wait...
-dism /%_img% /English /LogLevel:1 /Get-Packages > %TEMP%\packages.txt
-echo -------------------------------------------------------------------------------
-rem set /a _num+=1
-rem echo %_num% Add: System security update KB2894852-v2
-rem call :exist %_arch%\Windows8.1-KB2894852-v2-%_arch%.cab ||^
-rem dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows8.1-KB2894852-v2-%_arch%.cab /NoRestart
-rem echo -------------------------------------------------------------------------------
-del %TEMP%\packages.txt
-if not exist %_file% exit
-goto :unmount
-
-:exist
-dism /%_img% /English /LogLevel:1 /Get-PackageInfo /PackagePath:%1 | find "Package Identity" | findstr /g:/ %TEMP%\packages.txt > nul
 exit /b
 
 :mount
