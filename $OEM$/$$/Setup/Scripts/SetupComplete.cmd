@@ -3,8 +3,8 @@
 set _arch=x64
 if %PROCESSOR_ARCHITECTURE%==x86 if not defined PROCESSOR_ARCHITEW6432 set _arch=x86
 
-start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft .NET Framework 4.7.1\NDP471-KB4033342-x86-x64-AllOS-ENU.exe" /q
-start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft .NET Framework 4.7.1\NDP471-KB4033342-x86-x64-AllOS-RUS.exe" /q
+start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft .NET Framework 4.7.2\NDP472-KB4054530-x86-x64-AllOS-ENU.exe" /q
+start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft .NET Framework 4.7.2\NDP472-KB4054530-x86-x64-AllOS-RUS.exe" /q
 start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Visual C++ Pack\vcredist_x86_2005.exe" /q
 if %_arch%==x64 start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Visual C++ Pack\vcredist_x64_2005.exe" /q
 start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Visual C++ Pack\vcredist_x86_2008.exe" /q
