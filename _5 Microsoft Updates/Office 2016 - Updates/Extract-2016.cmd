@@ -1,5 +1,5 @@
 @echo off
-echo Extracting updates for Microsoft Office 2016 Standard SP0 (December 2017)
+echo Extracting updates for Microsoft Office 2016 Standard SP0 (May 2018)
 echo -------------------------------------------------------------------------------
 set /a _num+=1
 echo %_num% Extract: protocolhndlr2016-kb2910954-fullfile-x86-glb.exe
@@ -101,9 +101,6 @@ set /a _num+=1
 echo %_num% Extract: acewss2016-kb4011259-fullfile-x86-glb.exe
 start /w x86\acewss2016-kb4011259-fullfile-x86-glb.exe /extract:x86-msp /quiet
 set /a _num+=1
-echo %_num% Extract: mso2016-kb4011567-fullfile-x86-glb.exe
-start /w x86\mso2016-kb4011567-fullfile-x86-glb.exe /extract:x86-msp /quiet
-set /a _num+=1
 echo %_num% Extract: riched202016-kb4011569-fullfile-x86-glb.exe
 start /w x86\riched202016-kb4011569-fullfile-x86-glb.exe /extract:x86-msp /quiet
 set /a _num+=1
@@ -145,6 +142,9 @@ start /w x86\onenote2016-kb4018321-fullfile-x86-glb.exe /extract:x86-msp /quiet
 set /a _num+=1
 echo %_num% Extract: graph2016-kb4018327-fullfile-x86-glb.exe
 start /w x86\graph2016-kb4018327-fullfile-x86-glb.exe /extract:x86-msp /quiet
+set /a _num+=1
+echo %_num% Extract: mso2016-kb4018328-fullfile-x86-glb.exe
+start /w x86\mso2016-kb4018328-fullfile-x86-glb.exe /extract:x86-msp /quiet
 set /a _num+=1
 echo %_num% Extract: lync2016-kb4018367-fullfile-x86-glb.exe
 start /w x86\lync2016-kb4018367-fullfile-x86-glb.exe /extract:x86-msp /quiet
