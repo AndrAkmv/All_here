@@ -67,11 +67,6 @@ call :exist %_arch%\Windows8.1-KB3003667-%_arch%.cab ||^
 dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows8.1-KB3003667-%_arch%.cab /NoRestart
 echo -------------------------------------------------------------------------------
 set /a _num+=1
-echo %_num% Add: System security update KB3004361
-call :exist %_arch%\Windows8.1-KB3004361-%_arch%.cab ||^
-dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows8.1-KB3004361-%_arch%.cab /NoRestart
-echo -------------------------------------------------------------------------------
-set /a _num+=1
 echo %_num% Add: System security update KB3004365-v2
 call :exist %_arch%\Windows8.1-KB3004365-v2-%_arch%.cab ||^
 dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows8.1-KB3004365-v2-%_arch%.cab /NoRestart
@@ -142,11 +137,6 @@ call :exist %_arch%\Windows8.1-KB3020370-%_arch%.cab ||^
 dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows8.1-KB3020370-%_arch%.cab /NoRestart
 echo -------------------------------------------------------------------------------
 set /a _num+=1
-echo %_num% Add: System security update KB3022777
-call :exist %_arch%\Windows8.1-KB3022777-%_arch%.cab ||^
-dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows8.1-KB3022777-%_arch%.cab /NoRestart
-echo -------------------------------------------------------------------------------
-set /a _num+=1
 echo %_num% Add: System update KB3024751
 call :exist %_arch%\Windows8.1-KB3024751-%_arch%.cab ||^
 dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows8.1-KB3024751-%_arch%.cab /NoRestart
@@ -165,11 +155,6 @@ set /a _num+=1
 echo %_num% Add: System update KB3029606-v2
 call :exist %_arch%\Windows8.1-KB3029606-v2-%_arch%.cab ||^
 dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows8.1-KB3029606-v2-%_arch%.cab /NoRestart
-echo -------------------------------------------------------------------------------
-set /a _num+=1
-echo %_num% Add: System security update KB3030377
-call :exist %_arch%\Windows8.1-KB3030377-%_arch%.cab ||^
-dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows8.1-KB3030377-%_arch%.cab /NoRestart
 echo -------------------------------------------------------------------------------
 set /a _num+=1
 echo %_num% Add: System update KB3030947
@@ -240,11 +225,6 @@ set /a _num+=1
 echo %_num% Add: System security update KB3045755
 call :exist %_arch%\Windows8.1-KB3045755-%_arch%.cab ||^
 dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows8.1-KB3045755-%_arch%.cab /NoRestart
-echo -------------------------------------------------------------------------------
-set /a _num+=1
-echo %_num% Add: System update KB3045992
-call :exist %_arch%\Windows8.1-KB3045992-%_arch%.cab ||^
-dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows8.1-KB3045992-%_arch%.cab /NoRestart
 echo -------------------------------------------------------------------------------
 set /a _num+=1
 echo %_num% Add: System security update KB3045999
@@ -369,11 +349,6 @@ call :exist %_arch%\Windows8.1-KB3072019-%_arch%.cab ||^
 dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows8.1-KB3072019-%_arch%.cab /NoRestart
 echo -------------------------------------------------------------------------------
 set /a _num+=1
-echo %_num% Add: System security update KB3075220
-call :exist %_arch%\Windows8.1-KB3075220-%_arch%.cab ||^
-dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows8.1-KB3075220-%_arch%.cab /NoRestart
-echo -------------------------------------------------------------------------------
-set /a _num+=1
 echo %_num% Add: System security update KB3076949
 call :exist %_arch%\Windows8.1-KB3076949-%_arch%.cab ||^
 dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows8.1-KB3076949-%_arch%.cab /NoRestart
@@ -392,11 +367,6 @@ set /a _num+=1
 echo %_num% Add: System update KB3078676
 call :exist %_arch%\Windows8.1-KB3078676-%_arch%.cab ||^
 dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows8.1-KB3078676-%_arch%.cab /NoRestart
-echo -------------------------------------------------------------------------------
-set /a _num+=1
-echo %_num% Add: System update KB3080042
-call :exist %_arch%\Windows8.1-KB3080042-%_arch%.cab ||^
-dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows8.1-KB3080042-%_arch%.cab /NoRestart
 echo -------------------------------------------------------------------------------
 set /a _num+=1
 echo %_num% Add: System update KB3080800
@@ -479,11 +449,6 @@ call :exist %_arch%\Windows8.1-KB3103696-%_arch%.cab ||^
 dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows8.1-KB3103696-%_arch%.cab /NoRestart
 echo -------------------------------------------------------------------------------
 set /a _num+=1
-echo %_num% Add: System update KB3103699
-call :exist %_arch%\Windows8.1-KB3103699-%_arch%.cab ||^
-dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows8.1-KB3103699-%_arch%.cab /NoRestart
-echo -------------------------------------------------------------------------------
-set /a _num+=1
 echo %_num% Add: System update KB3103709-v2
 call :exist %_arch%\Windows8.1-KB3103709-v2-%_arch%.cab ||^
 dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows8.1-KB3103709-v2-%_arch%.cab /NoRestart
@@ -524,11 +489,6 @@ call :exist %_arch%\Windows8.1-KB3126030-%_arch%.cab ||^
 dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows8.1-KB3126030-%_arch%.cab /NoRestart
 echo -------------------------------------------------------------------------------
 set /a _num+=1
-echo %_num% Add: System update KB3126033
-call :exist %_arch%\Windows8.1-KB3126033-%_arch%.cab ||^
-dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows8.1-KB3126033-%_arch%.cab /NoRestart
-echo -------------------------------------------------------------------------------
-set /a _num+=1
 echo %_num% Add: System security update KB3126434
 call :exist %_arch%\Windows8.1-KB3126434-%_arch%.cab ||^
 dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows8.1-KB3126434-%_arch%.cab /NoRestart
@@ -537,11 +497,6 @@ set /a _num+=1
 echo %_num% Add: System security update KB3126587
 call :exist %_arch%\Windows8.1-KB3126587-%_arch%.cab ||^
 dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows8.1-KB3126587-%_arch%.cab /NoRestart
-echo -------------------------------------------------------------------------------
-set /a _num+=1
-echo %_num% Add: System update KB3128650
-call :exist %_arch%\Windows8.1-KB3128650-%_arch%.cab ||^
-dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows8.1-KB3128650-%_arch%.cab /NoRestart
 echo -------------------------------------------------------------------------------
 set /a _num+=1
 if %_arch%==x64 (
@@ -626,11 +581,6 @@ call :exist %_arch%\Windows8.1-KB3147071-%_arch%.cab ||^
 dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows8.1-KB3147071-%_arch%.cab /NoRestart
 echo -------------------------------------------------------------------------------
 set /a _num+=1
-echo %_num% Add: System security update KB3153704
-call :exist %_arch%\Windows8.1-KB3153704-%_arch%.cab ||^
-dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows8.1-KB3153704-%_arch%.cab /NoRestart
-echo -------------------------------------------------------------------------------
-set /a _num+=1
 echo %_num% Add: System security update KB3155784
 call :exist %_arch%\Windows8.1-KB3155784-%_arch%.cab ||^
 dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows8.1-KB3155784-%_arch%.cab /NoRestart
@@ -656,16 +606,6 @@ call :exist %_arch%\Windows8.1-KB3161949-%_arch%.cab ||^
 dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows8.1-KB3161949-%_arch%.cab /NoRestart
 echo -------------------------------------------------------------------------------
 set /a _num+=1
-echo %_num% Add: System security update KB3161958
-call :exist %_arch%\Windows8.1-KB3161958-%_arch%.cab ||^
-dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows8.1-KB3161958-%_arch%.cab /NoRestart
-echo -------------------------------------------------------------------------------
-set /a _num+=1
-echo %_num% Add: System security update KB3169704
-call :exist %_arch%\Windows8.1-KB3169704-%_arch%.cab ||^
-dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows8.1-KB3169704-%_arch%.cab /NoRestart
-echo -------------------------------------------------------------------------------
-set /a _num+=1
 echo %_num% Add: System security update KB3172729
 call :exist %_arch%\Windows8.1-KB3172729-%_arch%.cab ||^
 dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows8.1-KB3172729-%_arch%.cab /NoRestart
@@ -689,6 +629,11 @@ set /a _num+=1
 echo %_num% Add: System update KB3184143
 call :exist %_arch%\Windows8.1-KB3184143-%_arch%.cab ||^
 dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows8.1-KB3184143-%_arch%.cab /NoRestart
+echo -------------------------------------------------------------------------------
+set /a _num+=1
+echo %_num% Add: System security update KB3185319-v2
+call :exist %_arch%\Windows8.1-KB3185319-v2-%_arch%.cab ||^
+dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows8.1-KB3185319-v2-%_arch%.cab /NoRestart
 echo -------------------------------------------------------------------------------
 set /a _num+=1
 echo %_num% Add: System security update KB3187754-v2
