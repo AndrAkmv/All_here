@@ -47,12 +47,12 @@ call :exist %_arch%\Windows10.0-KB4132216-%_arch%.cab ||^
 dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows10.0-KB4132216-%_arch%.cab /NoRestart
 echo -------------------------------------------------------------------------------
 set /a _num+=1
-echo %_num% Add: May 2017 cumulative update KB4103720
+echo %_num% Add: May 2018 cumulative update KB4103720
 call :exist %_arch%\Windows10.0-KB4103720-%_arch%.cab ||^
 dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows10.0-KB4103720-%_arch%.cab /NoRestart
 echo -------------------------------------------------------------------------------
 set /a _num+=1
-echo %_num% Add: May 2017 Adobe flash player KB4103729
+echo %_num% Add: May 2018 Adobe flash player KB4103729
 call :exist %_arch%\Windows10.0-KB4103729-%_arch%.cab ||^
 dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows10.0-KB4103729-%_arch%.cab /NoRestart
 echo -------------------------------------------------------------------------------
