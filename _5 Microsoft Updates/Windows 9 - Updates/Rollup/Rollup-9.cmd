@@ -57,14 +57,24 @@ call :exist %_arch%\Windows8.1-KB4040981-%_arch%.cab ||^
 dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows8.1-KB4040981-%_arch%.cab /NoRestart
 echo -------------------------------------------------------------------------------
 set /a _num+=1
-echo %_num% Add: December 2017 Adobe flash KB4053577
-call :exist %_arch%\Windows8.1-KB4053577-%_arch%.cab ||^
-dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows8.1-KB4053577-%_arch%.cab /NoRestart
+echo %_num% Add: May 2018 .NET Framework 3.5 KB4095875
+call :exist %_arch%\Windows8.1-KB4095875-%_arch%.cab ||^
+dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows8.1-KB4095875-%_arch%.cab /NoRestart
 echo -------------------------------------------------------------------------------
 set /a _num+=1
-echo %_num% Add: December 2017 montly rollup KB4054519
-call :exist %_arch%\Windows8.1-KB4054519-%_arch%.cab ||^
-dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows8.1-KB4054519-%_arch%.cab /NoRestart
+echo %_num% Add: May 2018 Windows cumulative KB4103725
+call :exist %_arch%\Windows8.1-KB4103725-%_arch%.cab ||^
+dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows8.1-KB4103725-%_arch%.cab /NoRestart
+echo -------------------------------------------------------------------------------
+set /a _num+=1
+echo %_num% Add: May 2018 Adobe flash player KB4103729
+call :exist %_arch%\Windows8.1-KB4103729-%_arch%.cab ||^
+dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows8.1-KB4103729-%_arch%.cab /NoRestart
+echo -------------------------------------------------------------------------------
+set /a _num+=1
+echo %_num% Add: May 2018 Internet Explorer KB4103768
+call :exist %_arch%\Windows8.1-KB4103768-%_arch%.cab ||^
+dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\Windows8.1-KB4103768-%_arch%.cab /NoRestart
 echo -------------------------------------------------------------------------------
 del %TEMP%\packages.txt
 if not exist %_file% exit
