@@ -1,5 +1,5 @@
 @echo off
-echo Extracting updates for Microsoft Office 2010 Standard SP2 (December 2017)
+echo Extracting updates for Microsoft Office 2010 Standard SP2 (May 2018)
 echo -------------------------------------------------------------------------------
 set /a _num+=1
 echo %_num% Extract: mstore2010-kb2553140-fullfile-x86-glb.exe
@@ -10,9 +10,6 @@ start /w x86\osc2010-kb2553308-fullfile-x86-glb.exe /extract:x86-msp /quiet
 set /a _num+=1
 echo %_num% Extract: ieawsdc2010-kb2553313-fullfile-x86-glb.exe
 start /w x86\ieawsdc2010-kb2553313-fullfile-x86-glb.exe /extract:x86-msp /quiet
-set /a _num+=1
-echo %_num% Extract: ose2010-kb2553338-fullfile-x86-glb.exe
-start /w x86\ose2010-kb2553338-fullfile-x86-glb.exe /extract:x86-msp /quiet
 set /a _num+=1
 echo %_num% Extract: ocfxca2010-kb2553347-fullfile-x86-glb.exe
 start /w x86\ocfxca2010-kb2553347-fullfile-x86-glb.exe /extract:x86-msp /quiet
@@ -38,9 +35,6 @@ set /a _num+=1
 echo %_num% Extract: msores2010-kb2597087-fullfile-x86-glb.exe
 start /w x86\msores2010-kb2597087-fullfile-x86-glb.exe /extract:x86-msp /quiet
 set /a _num+=1
-echo %_num% Extract: graph2010-kb2687275-fullfile-x86-glb.exe
-start /w x86\graph2010-kb2687275-fullfile-x86-glb.exe /extract:x86-msp /quiet
-set /a _num+=1
 echo %_num% Extract: outexum2010-kb2760779-fullfile-x86-glb.exe
 start /w x86\outexum2010-kb2760779-fullfile-x86-glb.exe /extract:x86-msp /quiet
 set /a _num+=1
@@ -49,9 +43,6 @@ start /w x86\ipeditor2010-kb2817369-fullfile-x86-glb.exe /extract:x86-msp /quiet
 set /a _num+=1
 echo %_num% Extract: targetdir2010-kb2825640-fullfile-x86-glb.exe
 start /w x86\targetdir2010-kb2825640-fullfile-x86-glb.exe /extract:x86-msp /quiet
-set /a _num+=1
-echo %_num% Extract: osetup2010-kb2837599-fullfile-x86-glb.exe
-start /w x86\osetup2010-kb2837599-fullfile-x86-glb.exe /extract:x86-msp /quiet
 set /a _num+=1
 echo %_num% Extract: mshelp2010-kb2850016-fullfile-x86-glb.exe
 start /w x86\mshelp2010-kb2850016-fullfile-x86-glb.exe /extract:x86-msp /quiet
@@ -71,8 +62,8 @@ set /a _num+=1
 echo %_num% Extract: ospp2010-kb2883019-fullfile-x86-glb.exe
 start /w x86\ospp2010-kb2883019-fullfile-x86-glb.exe /extract:x86-msp /quiet
 set /a _num+=1
-echo %_num% Extract: powerpointloc2010-kb2920812-fullfile-x86-glb.exe
-start /w x86\powerpointloc2010-kb2920812-fullfile-x86-glb.exe /extract:x86-msp /quiet
+echo %_num% Extract: graph2010-kb2899590-fullfile-x86-glb.exe
+start /w x86\graph2010-kb2899590-fullfile-x86-glb.exe /extract:x86-msp /quiet
 set /a _num+=1
 echo %_num% Extract: otkruntimertl2010-kb2956063-fullfile-x86-glb.exe
 start /w x86\otkruntimertl2010-kb2956063-fullfile-x86-glb.exe /extract:x86-msp /quiet
@@ -82,6 +73,9 @@ start /w x86\msoloc2010-kb2956076-fullfile-x86-glb.exe /extract:x86-msp /quiet
 set /a _num+=1
 echo %_num% Extract: excelloc2010-kb2956084-fullfile-x86-glb.exe
 start /w x86\excelloc2010-kb2956084-fullfile-x86-glb.exe /extract:x86-msp /quiet
+set /a _num+=1
+echo %_num% Extract: powerpointloc2010-kb2965234-fullfile-x86-glb.exe
+start /w x86\powerpointloc2010-kb2965234-fullfile-x86-glb.exe /extract:x86-msp /quiet
 set /a _num+=1
 echo %_num% Extract: wordloc2010-kb2965313-fullfile-x86-glb.exe
 start /w x86\wordloc2010-kb2965313-fullfile-x86-glb.exe /extract:x86-msp /quiet
@@ -110,8 +104,8 @@ set /a _num+=1
 echo %_num% Extract: infopath2010-kb3114414-fullfile-x86-glb.exe
 start /w x86\infopath2010-kb3114414-fullfile-x86-glb.exe /extract:x86-msp /quiet
 set /a _num+=1
-echo %_num% Extract: ace2010-kb3114555-fullfile-x86-glb.exe
-start /w x86\ace2010-kb3114555-fullfile-x86-glb.exe /extract:x86-msp /quiet
+echo %_num% Extract: ace2010-kb3114874-fullfile-x86-glb.exe
+start /w x86\ace2010-kb3114874-fullfile-x86-glb.exe /extract:x86-msp /quiet
 set /a _num+=1
 echo %_num% Extract: onenoteloc2010-kb3114885-fullfile-x86-glb.exe
 start /w x86\onenoteloc2010-kb3114885-fullfile-x86-glb.exe /extract:x86-msp /quiet
@@ -146,17 +140,23 @@ set /a _num+=1
 echo %_num% Extract: ogl2010-kb3213638-fullfile-x86-glb.exe
 start /w x86\ogl2010-kb3213638-fullfile-x86-glb.exe /extract:x86-msp /quiet
 set /a _num+=1
-echo %_num% Extract: mso2010-kb4011188-fullfile-x86-glb.exe
-start /w x86\mso2010-kb4011188-fullfile-x86-glb.exe /extract:x86-msp /quiet
+echo %_num% Extract: ose2010-kb4011274-fullfile-x86-glb.exe
+start /w x86\ose2010-kb4011274-fullfile-x86-glb.exe /extract:x86-msp /quiet
 set /a _num+=1
-echo %_num% Extract: outlookloc2010-kb4011196-fullfile-x86-glb.exe
-start /w x86\outlookloc2010-kb4011196-fullfile-x86-glb.exe /extract:x86-msp /quiet
+echo %_num% Extract: osetup2010-kb4011275-fullfile-x86-glb.exe
+start /w x86\osetup2010-kb4011275-fullfile-x86-glb.exe /extract:x86-msp /quiet
 set /a _num+=1
-echo %_num% Extract: word2010-kb4011614-fullfile-x86-glb.exe
-start /w x86\word2010-kb4011614-fullfile-x86-glb.exe /extract:x86-msp /quiet
+echo %_num% Extract: eqnedt322010-kb4011610-fullfile-x86-ru-ru.exe
+start /w x86\eqnedt322010-kb4011610-fullfile-x86-ru-ru.exe /extract:x86-msp /quiet
 set /a _num+=1
-echo %_num% Extract: excel2010-kb4011617-fullfile-x86-glb.exe
-start /w x86\excel2010-kb4011617-fullfile-x86-glb.exe /extract:x86-msp /quiet
+echo %_num% Extract: mso2010-kb4022137-fullfile-x86-glb.exe
+start /w x86\mso2010-kb4022137-fullfile-x86-glb.exe /extract:x86-msp /quiet
 set /a _num+=1
-echo %_num% Extract: eqnedt322010-kb4011618-fullfile-x86-ru-ru.exe
-start /w x86\eqnedt322010-kb4011618-fullfile-x86-ru-ru.exe /extract:x86-msp /quiet
+echo %_num% Extract: word2010-kb4022141-fullfile-x86-glb.exe
+start /w x86\word2010-kb4022141-fullfile-x86-glb.exe /extract:x86-msp /quiet
+set /a _num+=1
+echo %_num% Extract: outlookloc2010-kb4022144-fullfile-x86-glb.exe
+start /w x86\outlookloc2010-kb4022144-fullfile-x86-glb.exe /extract:x86-msp /quiet
+set /a _num+=1
+echo %_num% Extract: excel2010-kb4022146-fullfile-x86-glb.exe
+start /w x86\excel2010-kb4022146-fullfile-x86-glb.exe /extract:x86-msp /quiet
