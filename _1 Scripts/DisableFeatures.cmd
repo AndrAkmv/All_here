@@ -4,11 +4,9 @@ title Disabling features in Windows image
 set _file=install.wim
 set _img=Online
 set _mnt=mount
-set _tool=7
 set _word=Wim
 
-ver | find "6.1" > nul || set _tool=8
-if %_tool% GTR 7 set _word=Image
+ver | find "6.1" > nul || set _word=Image
 
 :pre_menu
 cls

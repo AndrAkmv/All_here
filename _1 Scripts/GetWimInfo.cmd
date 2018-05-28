@@ -4,11 +4,9 @@ title Getting information from Windows image
 set _file=install.wim
 set _img=Online
 set _mnt=mount
-set _tool=7
 set _word=Wim
 
-ver | find "6.1" > nul || set _tool=8
-if %_tool% GTR 7 set _word=Image
+ver | find "6.1" > nul || set _word=Image
 
 :pre_menu
 cls
@@ -42,8 +40,8 @@ echo [f] features ([F] - export)
 echo [l] languages
 echo [e] editions
 echo [a] app
-if %_tool% GTR 7 echo [x] appx ([X] - export)
-if %_tool% GTR 7 echo [s] assoc ([S] - export)
+if %_word%==Image echo [x] appx ([X] - export)
+if %_word%==Image echo [s] assoc ([S] - export)
 echo [q] quit (unmount)
 echo -------------------------------------------------------------------------------
 choice /c dDpPfFleaxXsSq /n /cs /m "Your choice: "
@@ -56,10 +54,10 @@ if %ERRORLEVEL% EQU 6 goto :features-export
 if %ERRORLEVEL% EQU 7 goto :languages
 if %ERRORLEVEL% EQU 8 goto :editions
 if %ERRORLEVEL% EQU 9 goto :app
-if %ERRORLEVEL% EQU 10 if %_tool% GTR 7 (goto :appx) else (goto :adv_menu)
-if %ERRORLEVEL% EQU 11 if %_tool% GTR 7 (goto :appx-export) else (goto :adv_menu)
-if %ERRORLEVEL% EQU 12 if %_tool% GTR 7 (goto :assoc) else (goto :adv_menu)
-if %ERRORLEVEL% EQU 13 if %_tool% GTR 7 (goto :assoc-export) else (goto :adv_menu)
+if %ERRORLEVEL% EQU 10 if %_word%==Image (goto :appx) else (goto :adv_menu)
+if %ERRORLEVEL% EQU 11 if %_word%==Image (goto :appx-export) else (goto :adv_menu)
+if %ERRORLEVEL% EQU 12 if %_word%==Image (goto :assoc) else (goto :adv_menu)
+if %ERRORLEVEL% EQU 13 if %_word%==Image (goto :assoc-export) else (goto :adv_menu)
 goto :unmount
 
 :drivers
