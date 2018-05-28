@@ -80,7 +80,6 @@ call :state Xps-Foundation-Xps-Viewer &&^
 dism /%_img% /English /LogLevel:1 /Disable-Feature /FeatureName:Xps-Foundation-Xps-Viewer /NoRestart
 echo -------------------------------------------------------------------------------
 del %TEMP%\features.txt
-if not exist %_file% exit
 goto :unmount
 
 :disable-9
@@ -139,7 +138,6 @@ call :state SMB1Protocol &&^
 dism /%_img% /English /LogLevel:1 /Disable-Feature /FeatureName:SMB1Protocol /NoRestart
 echo -------------------------------------------------------------------------------
 del %TEMP%\features.txt
-if not exist %_file% exit
 goto :unmount
 
 :disable-A
@@ -193,7 +191,6 @@ call :state Printing-Foundation-Features &&^
 dism /%_img% /English /LogLevel:1 /Disable-Feature /FeatureName:Printing-Foundation-Features /NoRestart
 echo -------------------------------------------------------------------------------
 del %TEMP%\features.txt
-if not exist %_file% exit
 goto :unmount
 
 :state
@@ -210,6 +207,7 @@ goto :version
 
 :unmount
 cls
+if not exist %_file% exit
 if not %_img%==Online (
 dism /English /LogLevel:1 /Unmount-%_word% /MountDir:%_mnt% /Commit
 rd %_mnt%

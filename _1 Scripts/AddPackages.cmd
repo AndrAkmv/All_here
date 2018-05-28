@@ -41,7 +41,6 @@ dism /%_img% /English /LogLevel:1 /Get-Packages > %TEMP%\packages.txt
 echo -------------------------------------------------------------------------------
 for /f "tokens=*" %%i in ('dir %_arch% /b') do call :handle %%i
 del %TEMP%\packages.txt
-if not exist %_file% exit
 goto :unmount
 
 :handle
@@ -65,6 +64,7 @@ goto :bit
 
 :unmount
 cls
+if not exist %_file% exit
 if not %_img%==Online (
 dism /English /LogLevel:1 /Unmount-%_word% /MountDir:%_mnt% /Commit
 rd %_mnt%

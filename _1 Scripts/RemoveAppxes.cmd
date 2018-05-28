@@ -28,8 +28,10 @@ if %ERRORLEVEL% EQU 13 goto :mount
 goto :pre_menu
 
 :version
-dism /%_img% /English /LogLevel:1 /Get-Help | find "Image Version: 6.1" > nul && goto :unmount
-goto :remove
+dism /%_img% /English /LogLevel:1 /Get-Help | find "Image Version: 6.3" > nul && set _ver=8.1
+dism /%_img% /English /LogLevel:1 /Get-Help | find "Image Version: 10" > nul && set _ver=10
+if defined _ver goto :remove
+goto :unmount
 
 :remove
 cls
@@ -75,6 +77,7 @@ goto :version
 
 :unmount
 cls
+if not exist %_file% exit
 if not %_img%==Online (
 dism /English /LogLevel:1 /Unmount-Image /MountDir:%_mnt% /Commit
 rd %_mnt%
