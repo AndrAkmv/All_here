@@ -53,6 +53,7 @@ dism /%_img% /English /LogLevel:1 /Enable-Feature /FeatureName:NetFx3 /Source:%T
 echo -------------------------------------------------------------------------------
 del %TEMP%\features.txt
 rd /s /q %TEMP%\Windows%_ver%-SXS-%_arch%
+if %_ver% EQU 10 goto :unmount
 goto :add
 
 :state
