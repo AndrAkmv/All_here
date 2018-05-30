@@ -9,12 +9,12 @@ ver | find "6.1" > nul && exit
 
 :pre_menu
 cls
-if not exist %_file% goto :version
+if not exist %_file% goto :remove
 dism /English /LogLevel:1 /Get-ImageInfo /ImageFile:%_file%
 echo -------------------------------------------------------------------------------
 if %ERRORLEVEL% NEQ 0 pause & exit
 set /p _ind=Input index or press [Enter] for quit: || exit
-if %_ind% EQU 0 goto :version
+if %_ind% EQU 0 goto :remove
 if %_ind% GTR 0 if %_ind% LEQ 24 goto :ind_menu
 goto :pre_menu
 
@@ -26,12 +26,6 @@ if %ERRORLEVEL% NEQ 0 pause & goto :pre_menu
 choice /c abcdefghijklmnopqrstuvwxyz /n /m "Mount selected image? [m] "
 if %ERRORLEVEL% EQU 13 goto :mount
 goto :pre_menu
-
-:version
-dism /%_img% /English /LogLevel:1 /Get-Help | find "Image Version: 6.3" > nul && set _ver=8.1
-dism /%_img% /English /LogLevel:1 /Get-Help | find "Image Version: 10" > nul && set _ver=10
-if defined _ver goto :remove
-goto :unmount
 
 :remove
 cls
@@ -73,7 +67,7 @@ md %_mnt%
 dism /English /LogLevel:1 /Mount-Image /ImageFile:%_file% /Index:%_ind% /MountDir:%_mnt%
 if %ERRORLEVEL% NEQ 0 rd %_mnt% & pause & exit
 set _img=Image:%_mnt%
-goto :version
+goto :remove
 
 :unmount
 cls
