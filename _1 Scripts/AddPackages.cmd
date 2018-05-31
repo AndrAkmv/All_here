@@ -39,19 +39,20 @@ cls
 echo Getting list of packages. Please wait...
 dism /%_img% /English /LogLevel:1 /Get-Packages > %TEMP%\packages.txt
 echo -------------------------------------------------------------------------------
-for /f "tokens=*" %%i in ('dir %_arch% /b') do call :handle %%i
+for /f "tokens=*" %%i in ('dir %_arch% /b') do call :exist %%i
 del %TEMP%\packages.txt
 goto :unmount
+
+:exist
+dism /%_img% /English /LogLevel:1 /Get-PackageInfo /PackagePath:%_arch%\%1 |^
+find "Package Identity" | findstr /g:/ %TEMP%\packages.txt > nul || call :handle %1
+exit /b
 
 :handle
 set /a _num+=1
 echo %_num% Add: %1
-call :exist %_arch%\%1 || dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\%1 /NoRestart
+dism /%_img% /English /LogLevel:1 /Add-Package /PackagePath:%_arch%\%1 /NoRestart
 echo -------------------------------------------------------------------------------
-exit /b
-
-:exist
-dism /%_img% /English /LogLevel:1 /Get-PackageInfo /PackagePath:%1 | find "Package Identity" | findstr /g:/ %TEMP%\packages.txt > nul
 exit /b
 
 :mount
