@@ -6,7 +6,7 @@ set _img=Online
 set _mnt=mount
 set _word=Wim
 
-ver | find "6.1" > nul || set _word=Image
+dism /English /LogLevel:1 /Get-Help | find "Version: 6.1" > nul || set _word=Image
 
 :pre_menu
 cls

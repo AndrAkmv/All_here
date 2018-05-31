@@ -3,7 +3,7 @@ title Exporting Windows image to another file (optimize)
 
 set _file=install.wim
 
-ver | find "6.1" > nul && exit
+dism /English /LogLevel:1 /Get-Help | find "Version: 6.1" > nul && exit
 
 :pre_menu
 cls

@@ -6,8 +6,6 @@ set _file=install.wim
 set _img=Online
 set _mnt=mount
 
-ver | find "6.1" > nul && exit
-
 :pre_menu
 cls
 if not exist %_file% goto :bit
