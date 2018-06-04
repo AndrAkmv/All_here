@@ -54,7 +54,7 @@ if %_ver% EQU 10 goto :unmount
 goto :add
 
 :state
-findstr %1 %TEMP%\features.txt | find "Enable" > nul
+findstr /b %1 %TEMP%\features.txt | find "Enable" > nul
 exit /b
 
 :add
