@@ -49,6 +49,16 @@ if %1==Internet-Explorer-Optional-x86 exit /b
 if %1==Internet-Explorer-Optional-amd64 exit /b
 if %1==SearchEngine-Client-Package exit /b
 if %1==Windows-Defender-Default-Definitions exit /b
+if %1==Microsoft-Hyper-V-Common-Drivers-Package exit /b
+if %1==Microsoft-Hyper-V-Guest-Integration-Drivers-Package exit /b
+if %1==Microsoft-Windows-NetFx-VCRedist-Package exit /b
+if %1==Microsoft-Windows-Printing-PrintToPDFServices-Package exit /b
+if %1==Microsoft-Windows-Printing-XPSServices-Package exit /b
+if %1==Microsoft-Windows-Client-EmbeddedExp-Package exit /b
+if %1==Microsoft-Windows-NetFx3-OC-Package exit /b
+if %1==Microsoft-Windows-NetFx4-US-OC-Package exit /b
+if %1==Microsoft-Windows-NetFx3-WCF-OC-Package exit /b
+if %1==Microsoft-Windows-NetFx4-WCF-US-OC-Package exit /b
 goto :action
 
 :action
