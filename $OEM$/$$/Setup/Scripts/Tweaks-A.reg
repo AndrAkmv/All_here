@@ -32,6 +32,12 @@ Windows Registry Editor Version 5.00
 ;Убрать задержку повтора при зажатии клавиши
 "KeyboardDelay"="0"
 
+[HKEY_CURRENT_USER\Control Panel\Quick Actions]
+;Установить статус инициализации раскладки
+"LayoutInitializationStatus"=dword:00000001
+;Установить обработанными записи OEM
+"OemEntriesProcessed"=dword:00000001
+
 [HKEY_CURRENT_USER\Control Panel\Quick Actions\Pinned]
 ;Установка нужных плиток на панели Центра уведомлений
 "0"="SystemSettings_Display_Brightness"
