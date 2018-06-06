@@ -116,8 +116,6 @@ Windows Registry Editor Version 5.00
 "FlushRatingsToFiles"=dword:00000000
 ;Не спрашивать о воспроизведении с веб-страницы
 "HTMLViewAsk"=dword:00000000
-;Не обновлять содержимое библиотеки при первом запуске
-"LibraryHasBeenRun"=dword:00000001
 ;Не показывать сведения о мультимедиа из Интернета и не обновлять файлы
 "MetadataRetrieval"=dword:00000000
 ;Отключить загрузку лицензий на использование файлов мультимедиа
@@ -126,6 +124,8 @@ Windows Registry Editor Version 5.00
 "SilentDRMConfiguration"=dword:00000000
 ;Увеличить время запроса автоматического обновления проигрывателя
 "UpgradeCheckFrequency"=dword:00000002
+;Не отправлять данные об использовании прогигрывателя
+"UsageTracking"=dword:00000000
 
 [HKEY_CURRENT_USER\Software\Microsoft\Office\14.0\Common\General]
 ;Начальный диалог Office 2010 был показан
