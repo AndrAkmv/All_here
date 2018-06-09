@@ -80,7 +80,7 @@ Windows Registry Editor Version 5.00
 "ShowTabsBelowAddressBar"=dword:00000001
 
 [HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\PhishingFilter]
-;Отключить фильтр SmartScreen
+;Выключить фильтр SmartScreen для Internet Explorer
 "EnabledV9"=dword:00000000
 
 [HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\PrefetchPrerender]
