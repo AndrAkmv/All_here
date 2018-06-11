@@ -41,24 +41,23 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Control Panel\Quick Actions\Pinned]
 ;Установка нужных плиток на панели Центра уведомлений
 "0"="SystemSettings_Display_Brightness"
-"1"="SystemSettings_Network_Wifi_QuickAction"
+"1"="SystemSettings_Launcher_QuickNote"
 "2"="SystemSettings_Device_BluetoothQuickAction"
-"3"="SystemSettings_Radio_IsAirplaneModeEnabled"
-"4"="QuickActions_Launcher_DisplayTopology"
+"3"="SystemSettings_Network_Wifi_QuickAction"
+"4"="SystemSettings_Notifications_DoNotDisturb_Toggle"
 "5"="SystemSettings_Connections_Add_VPN"
-"6"="QuickActions_Launcher_DeviceControl"
+"6"="QuickActions_Launcher_DisplayTopology"
 "7"="QuickActions_Launcher_DeviceDiscovery"
-"8"="SystemSettings_Notifications_DoNotDisturb_Toggle"
+"8"="QuickActions_Launcher_DeviceControl"
 "9"="SystemSettings_Display_IsRotationLockedQuickAction"
 "10"="SystemSettings_Display_QuickAction_ColorProfile"
 "11"="SystemSettings_Network_MB_QuickAction"
-"12"="SystemSettings_Network_Tethering_QuickAction"
+"12"=-
 "13"=-
 "14"=-
 "15"=-
 "16"=-
 "17"=-
-"18"=-
 
 [HKEY_CURRENT_USER\Environment]
 ;Использовать %SYSTEMROOT%\System32 как папку для приложений WindowsApps
@@ -88,10 +87,6 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\FTP]
 ;Не разрешать представление FTP-узлов в виде папок
 "Use Web Based FTP"="yes"
-
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Input\TIPC]
-;Не отправлять в Майкрософт мои сведения о написании
-"Enabled"=dword:00000000
 
 ;Настройка персонализации ввода
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\InputPersonalization]
@@ -188,10 +183,6 @@ Windows Registry Editor Version 5.00
 ;Никогда не запрашивать мои отзывы
 "NumberOfSIUFInPeriod"=dword:00000000
 
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\AppHost]
-;Отключить фильтр SmartScreen для приложений из Магазина Windows
-"EnableWebContentEvaluation"=dword:00000000
-
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\DeviceAccess\Global\LooselyCoupled]
 ;Запретить приложениям автоматически синхронизироваться с беспроводными устройствами
 "Value"="Deny"
@@ -265,6 +256,13 @@ Windows Registry Editor Version 5.00
 ;Скрыть Область навигации в папках
 "PageSpaceControlSizer"=hex:a0,00,00,00,00,00,00,00,00,00,00,00,45,03,00,00
 
+;Изъять все программы из Панели задач
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Taskband]
+;Не показывать ссылки на программы в Панели задач
+"Favorites"=hex:ff
+;Удалить записи о закреплённых программах в Панели задач
+"FavoritesResolve"=-
+
 ;Настройка параметров безопасности для Интернета
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings]
 ;Запретить встроенную проверку подлинности Windows
@@ -290,6 +288,10 @@ Windows Registry Editor Version 5.00
 ;Отключить автозапуск всех устройств, кроме CD-привода
 "NoDriveTypeAutoRun"=dword:000000dd
 
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Search]
+;Отключить журнал этого и других устройств, где выполнен вход
+"DeviceHistoryEnabled"=dword:00000000
+
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\MSDT]
 ;Запретить начинать устранение неполадок сразу после запуска
 "AllowSkipFirstPage"=dword:00000000
@@ -309,14 +311,6 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\DeliveryOptimization\Config]
 ;Отключить обновление из нескольких мест
 "DODownloadMode"=dword:00000000
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Device Metadata]
-;Автоматически получать приложения для устройств и информацию
-"PreventDeviceMetadataFromNetwork"=dword:00000000
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\DriverSearching]
-;Никогда не устанавливать драйверы из Центра обновления Windows
-"SearchOrderConfig"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer]
 ;Отключить отображения вкладки "Предыдущие версии" в свойствах файлов
@@ -348,10 +342,6 @@ Windows Registry Editor Version 5.00
 ;Не проверять наличие новых решений для отчётов о проблемах
 "Disabled"=dword:00000001
 
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Sensor\Overrides\{BFA794E4-F964-4FDB-90F6-51056BFE4B44}]
-;Отключить платформу расположений Windows
-"SensorPermissionState"=dword:00000000
-
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SPP\Clients]
 ;Не восстанавливать параметры системы
 "{09F7EDC5-294E-4180-AF6A-FB0E6A0E9513}"=-
@@ -367,10 +357,6 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\MRT]
 ;Не предлагать обновления для Средства удаления вредоносных программ
 "DontOfferThroughWUAU"=dword:00000001
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Explorer]
-;Не предлагать найти приложение в Магазине
-"NoUseStoreOpenWith"=dword:00000001
 
 ;Поведение в случае отказа сисемы (BSOD)
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\CrashControl]
@@ -407,10 +393,6 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\lanmanserver\Parameters]
 ;Отключить стандартные административные общие ресурсы (C$ и т.д.)
 "AutoShareWks"=dword:00000000
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\lfsvc\Service\Configuration]
-;Выключить определение местополежения для этго устройства
-"Status"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MpsSvc]
 ;Отключить службу Брандмауэр Windows
