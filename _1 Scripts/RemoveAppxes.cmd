@@ -29,15 +29,11 @@ goto :pre_menu
 
 :remove
 cls
-echo Getting list of Appxes. Please wait...
+echo Getting list of appxes. Please wait...
 dism /%_img% /English /LogLevel:1 /Get-ProvisionedAppxPackages > %TEMP%\appxes.txt
 echo -------------------------------------------------------------------------------
-set _num=1
-for /f "skip=8 tokens=3" %%a in (%TEMP%\appxes.txt) do call :filter %%a
+for /f "skip=8 tokens=3" %%i in (%TEMP%\appxes.txt) do call :filter %%i
 del %TEMP%\appxes.txt
-echo Removes default application associations
-dism /%_img% /English /LogLevel:1 /Remove-DefaultAppAssociations
-echo -------------------------------------------------------------------------------
 if %_img%==Online (
 echo Remove current Appxes for AllUsers
 powershell -Command Start-Process powershell -ArgumentList '-NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File RemoveAppxes.ps1' -Verb RunAs
@@ -46,19 +42,14 @@ if not exist %_file% exit
 goto :unmount
 
 :filter
-echo %1 | findstr /ric:"Microsoft.*" > nul
-if %ERRORLEVEL% EQU 0 call :action %1
+echo %1 | findstr /ric:"Microsoft.*_" > nul && call :action %1
 exit /b
 
 :action
-echo %1 | findstr /ric:"Microsoft.*_" > nul
-if %ERRORLEVEL% NEQ 0 (
 set /a _num+=1
 echo %_num% Remove: %1
-) else (
 dism /%_img% /English /LogLevel:1 /Remove-ProvisionedAppxPackage /PackageName:%1
 echo -------------------------------------------------------------------------------
-)
 exit /b
 
 :mount
