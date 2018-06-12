@@ -287,10 +287,6 @@ Windows Registry Editor Version 5.00
 ;Запретить начинать устранение неполадок сразу после запуска
 "AllowSkipFirstPage"=dword:00000000
 
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Sensors\LocationProvider]
-;Запретить Windows отправлять GPS-информацию о расположении
-"CSEnable"=dword:00000000
-
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQMClient\Windows]
 ;Не принимать участие в Программе улучшения качества ПО
 "CEIPEnable"=dword:00000000
@@ -338,10 +334,6 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\AIT]
 ;Не разрешать использовать Телеметрию для приложений
 "AITEnable"=dword:00000000
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Sensor\Overrides\{BFA794E4-F964-4FDB-90F6-51056BFE4B44}]
-;Отключить платформу расположений Windows
-"SensorPermissionState"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SPP\Clients]
 ;Не восстанавливать параметры системы
