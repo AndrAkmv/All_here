@@ -192,6 +192,8 @@ Windows Registry Editor Version 5.00
 "SilentInstalledAppsEnabled"=dword:00000000
 ;Выключить подсказки по использованию
 "SoftLandingEnabled"=dword:00000000
+;Выключить подписное содержимое на экране приветствия
+"SubscribedContent-310093Enabled"=dword:00000000
 ;Выключить подписное содержимое на игру Candy Crush
 "SubscribedContent-314559Enabled"=dword:00000000
 ;Выключить подписное содержимое на экране блокировки
@@ -204,6 +206,7 @@ Windows Registry Editor Version 5.00
 "SubscribedContent-338393Enabled"=dword:00000000
 ;Выключить подписное содержимое на временной шкале
 "SubscribedContent-353694Enabled"=dword:00000000
+"SubscribedContent-353698Enabled"=dword:00000000
 ;Выключить системную панель предложений
 "SystemPaneSuggestionsEnabled"=dword:00000000
 
