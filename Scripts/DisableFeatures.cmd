@@ -49,6 +49,8 @@ if %1==Internet-Explorer-Optional-x86 exit /b
 if %1==Internet-Explorer-Optional-amd64 exit /b
 if %1==SearchEngine-Client-Package exit /b
 if %1==Windows-Defender-Default-Definitions exit /b
+if %1==MicrosoftWindowsPowerShellV2Root exit /b
+if %1==MicrosoftWindowsPowerShellV2 exit /b
 if %1==Microsoft-Hyper-V-Common-Drivers-Package exit /b
 if %1==Microsoft-Hyper-V-Guest-Integration-Drivers-Package exit /b
 if %1==Microsoft-Windows-NetFx-VCRedist-Package exit /b
