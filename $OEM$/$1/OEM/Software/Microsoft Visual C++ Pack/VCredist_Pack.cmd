@@ -1,6 +1,8 @@
 @echo off
+
 set _arch=x64
 if %PROCESSOR_ARCHITECTURE%==x86 if not defined PROCESSOR_ARCHITEW6432 set _arch=x86
+
 echo Microsoft Visual C++ Redistributable Packages
 echo -------------------------------------------------------------------------------
 echo Microsoft Visual C++ 2005 Redistributable x86
