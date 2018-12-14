@@ -1,6 +1,8 @@
 @echo off
 title Uninstal telemetry and GWX updates
 
+start /w wusa.exe /uninstall /KB:3150513 /quiet /norestart
+
 dism /Online /English /LogLevel:1 /Get-Help | find "Image Version: 6.1" > nul && goto :gwx-7
 dism /Online /English /LogLevel:1 /Get-Help | find "Image Version: 6.3" > nul && goto :gwx-9
 exit
