@@ -36,7 +36,7 @@ for /f "skip=8 tokens=3" %%i in (%TEMP%\appxes.txt) do call :filter %%i
 del %TEMP%\appxes.txt
 if %_img%==Online (
 echo Remove current Appxes for AllUsers
-powershell -Command Start-Process powershell -ArgumentList '-NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File RemoveAppxes.ps1' -Verb RunAs
+powershell -ExecutionPolicy Bypass -Command "Get-AppxPackage | Remove-AppxPackage"
 )
 if not exist %_file% exit
 goto :unmount
