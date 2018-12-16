@@ -47,7 +47,6 @@
                     <Order>1</Order>
                 </SynchronousCommand>
             </FirstLogonCommands>
-            <TimeZone>FLE Standard Time</TimeZone>
             <OOBE>
                 <HideEULAPage>true</HideEULAPage>
                 <HideOEMRegistrationScreen>true</HideOEMRegistrationScreen>
@@ -55,6 +54,7 @@
                 <HideWirelessSetupInOOBE>true</HideWirelessSetupInOOBE>
                 <ProtectYourPC>3</ProtectYourPC>
             </OOBE>
+            <TimeZone>FLE Standard Time</TimeZone>
             <UserAccounts>
                 <AdministratorPassword>
                     <PlainText>true</PlainText>
@@ -71,9 +71,6 @@
                     </LocalAccount>
                 </LocalAccounts>
             </UserAccounts>
-            <VisualEffects>
-                <FontSmoothing>Off</FontSmoothing>
-            </VisualEffects>
         </component>
         <component name="Microsoft-Windows-WinRE-RecoveryAgent" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             <UninstallWindowsRE>true</UninstallWindowsRE>
