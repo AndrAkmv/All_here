@@ -20,8 +20,8 @@ start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Silverlight 5.1.50907\Silverli
 
 ver | find "6.1" > nul && goto :windows-7
 ver | find "6.3" > nul && goto :windows-9
-ver | find "10.0.14393" > nul && goto :windows-A
-ver | find "10.0.17134" > nul && goto :windows-X
+dism /Online /English /LogLevel:1 /Get-Currentedition | find "EnterpriseS" > nul && goto :windows-A
+dism /Online /English /LogLevel:1 /Get-Currentedition | find "Professional" > nul && goto :windows-X
 goto :cleanup
 
 :windows-7
