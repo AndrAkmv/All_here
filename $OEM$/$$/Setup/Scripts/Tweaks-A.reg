@@ -78,32 +78,32 @@ Windows Registry Editor Version 5.00
 "Language Hotkey"="2"
 "Layout Hotkey"="3"
 
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\CTF\SortOrder\Language]
+[HKEY_CURRENT_USER\Software\Microsoft\CTF\SortOrder\Language]
 ;Сортировать языки ввода в порядке: английский, русский, украинский
 "00000000"="00000409"
 "00000001"="00000419"
 "00000002"="00000422"
 
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\FTP]
+[HKEY_CURRENT_USER\Software\Microsoft\FTP]
 ;Не разрешать представление FTP-узлов в виде папок
 "Use Web Based FTP"="yes"
 
 ;Настройка персонализации ввода
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\InputPersonalization]
+[HKEY_CURRENT_USER\Software\Microsoft\InputPersonalization]
 ;Ограничить сбор данных рукописного ввода
 "RestrictImplicitInkCollection"=dword:00000001
 ;Ограничить сбор данных набора текста
 "RestrictImplicitTextCollection"=dword:00000001
 
 ;Параметры проверки цифровой подписи программ
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Internet Explorer\Download]
+[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Download]
 ;Не проверять цифровую подпись загружаемых программ
 "CheckExeSignatures"="no"
 ;Запускать программы с непроверенной цифровой подписью
 "RunInvalidSignatures"=dword:00000001
 
 ;Дополнительные настройки Internet Explorer 11
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Internet Explorer\Main]
+[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main]
 ;Открывать плитки Internet Explorer на Рабочем столе
 "ApplicationTileImmersiveActivation"=dword:00000000
 ;Не предлагать Internet Explorer использовать по умолчанию
@@ -115,39 +115,39 @@ Windows Registry Editor Version 5.00
 ;Использовать новую вкладку при запуске
 "Start Page"="about:Tabs"
 
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_LOCALMACHINE_LOCKDOWN]
+[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_LOCALMACHINE_LOCKDOWN]
 ;Разрешить запуск активного содержимого файлов на моем компьютере
 "iexplore.exe"=dword:00000000
 
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_LOCALMACHINE_LOCKDOWN\Settings]
+[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_LOCALMACHINE_LOCKDOWN\Settings]
 ;Разрешить запуск активного содержимого компакт-дисков на моем компьютере
 "LOCALMACHINE_CD_UNLOCK"=dword:00000001
 
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Internet Explorer\MINIE]
+[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\MINIE]
 ;Показывать вкладки в отдельной строке
 "ShowTabsBelowAddressBar"=dword:00000001
 
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Internet Explorer\PhishingFilter]
+[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\PhishingFilter]
 ;Выключить фильтр SmartScreen для Internet Explorer
 "EnabledV9"=dword:00000000
 
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Internet Explorer\PrefetchPrerender]
+[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\PrefetchPrerender]
 ;Не загружать сайты и содержимое в фоновом режиме
 "Enabled"=dword:00000000
 
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Internet Explorer\SearchScopes]
+[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\SearchScopes]
 ;Назначить Bing поисковой системой по умолчанию
 "DefaultScope"="{0633EE93-D776-472f-A0FF-E1416B8B2E3A}"
 
 [-HKEY_CURRENT_USER\SOFTWARE\Microsoft\Internet Explorer\SearchScopes\{8C3078A0-9AAB-4371-85D1-656CA8E46EE8}]
 ;Удалить Яндекс из списка поисковых систем
 
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Internet Explorer\TabbedBrowsing]
+[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\TabbedBrowsing]
 ;При открытии новой вкладки открывать домашнюю страницу
 "NewTabPageShow"=dword:00000001
 
 ;Дополнительные настройки Windows Media Player 12
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\MediaPlayer\Preferences]
+[HKEY_CURRENT_USER\Software\Microsoft\MediaPlayer\Preferences]
 ;Принять лицензионное соглашение
 "AcceptedPrivacyStatement"=dword:00000001
 ;Не добавлять файлы видео, найденные в библиотеке изображений
@@ -175,26 +175,26 @@ Windows Registry Editor Version 5.00
 ;Не отправлять данные об использовании прогигрывателя
 "UsageTracking"=dword:00000000
 
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Common\General]
+[HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\General]
 ;Начальный диалог Office 2016 был показан
 "ShownFirstRunOptin"=dword:00000001
 
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Siuf\Rules]
+[HKEY_CURRENT_USER\Software\Microsoft\Siuf\Rules]
 ;Никогда не запрашивать мои отзывы
 "NumberOfSIUFInPeriod"=dword:00000000
 
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\DeviceAccess\Global\LooselyCoupled]
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\DeviceAccess\Global\LooselyCoupled]
 ;Запретить приложениям автоматически синхронизироваться с беспроводными устройствами
 "Value"="Deny"
 
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer]
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer]
 ;Отображать все значки в области уведомлений
 "EnableAutoTray"=dword:00000000
 ;He дoбaвлять "- Яpлык" для coздaвaeмыx яpлыкoв
 "link"=hex:00,00,00,00
 
 ;Расширенные настройки Проводника
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
 ;Показывать скрытые файлы, папки и диски
 "Hidden"=dword:00000001
 ;Показывать пустые диски в папке "Компьютер"
@@ -218,11 +218,11 @@ Windows Registry Editor Version 5.00
 ;Использовать маленькие значки на Панели задач
 "TaskbarSmallIcons"=dword:00000001
 
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoComplete]
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\AutoComplete]
 ;Использовать встроенное автозаполнение
 "Append Completion"="yes"
 
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers]
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers]
 ;Запретить автозапуск для всех носителей и устройств
 "DisableAutoplay"=dword:00000001
 
@@ -230,41 +230,41 @@ Windows Registry Editor Version 5.00
 [-HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\UserChosenExecuteHandlers]
 ;Сбросить настройки автозапуска для всех носителей и устройств
 
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CIDOpen\Modules\GlobalSettings\Sizer]
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\CIDOpen\Modules\GlobalSettings\Sizer]
 ;Скрыть Область навигации в диалоге "Открыть..."
 "PageSpaceControlSizer"=hex:a0,00,00,00,00,00,00,00,00,00,00,00,9b,02,00,00
 
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CIDSave\Modules\GlobalSettings\Sizer]
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\CIDSave\Modules\GlobalSettings\Sizer]
 ;Скрыть Область навигации в диалоге "Сохранить как..."
 "PageSpaceControlSizer"=hex:a0,00,00,00,00,00,00,00,00,00,00,00,9b,02,00,00
 
 ;Настройка Панели управления
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel]
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel]
 ;Показывать крупные значки
 "AllItemsIconView"=dword:00000000
 ;Показывать все элементы Панели управления
 "StartupPage"=dword:00000001
 
 ;Добавление значков на Рабочий стол
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel]
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel]
 ;Отображать Компьютер на Рабочем столе
 "{20D04FE0-3AEA-1069-A2D8-08002B30309D}"=dword:00000000
 ;Отображать %UserName% на Рабочем столе
 "{59031a47-3f72-44a7-89c5-5595fe6b30ee}"=dword:00000000
 
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Modules\GlobalSettings\Sizer]
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Modules\GlobalSettings\Sizer]
 ;Скрыть Область навигации в папках
 "PageSpaceControlSizer"=hex:a0,00,00,00,00,00,00,00,00,00,00,00,45,03,00,00
 
 ;Изъять все программы из Панели задач
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Taskband]
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Taskband]
 ;Не показывать ссылки на программы в Панели задач
 "Favorites"=hex:ff
 ;Удалить записи о закреплённых программах в Панели задач
 "FavoritesResolve"=-
 
 ;Настройка параметров безопасности для Интернета
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings]
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings]
 ;Запретить встроенную проверку подлинности Windows
 "EnableNegotiate"=dword:00000000
 ;Отключить предупреждение о несоответствии адреса сертификата
@@ -274,29 +274,29 @@ Windows Registry Editor Version 5.00
 ;Отключить предупреждение о перенаправления публикаций
 "WarnOnPostRedirect"=dword:00000000
 
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Notifications\Settings\Windows.SystemToast.SecurityAndMaintenance]
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Notifications\Settings\Windows.SystemToast.SecurityAndMaintenance]
 ;Не получать уведомления от Центра безопасности и обслуживания
 "Enabled"=dword:00000000
 
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Attachments]
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Attachments]
 ;Отключить предупреждение при открытии файлов, загруженных из Интернета
 "SaveZoneInformation"=dword:00000001
 
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer]
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer]
 ;Отключить встроенные средства записи компакт-дисков
 "NoCDBurning"=dword:00000001
 ;Отключить автозапуск всех устройств, кроме CD-привода
 "NoDriveTypeAutoRun"=dword:000000dd
 
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Search]
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Search]
 ;Отключить журнал этого и других устройств, где выполнен вход
 "DeviceHistoryEnabled"=dword:00000000
 
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\MSDT]
+[HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\MSDT]
 ;Запретить начинать устранение неполадок сразу после запуска
 "AllowSkipFirstPage"=dword:00000000
 
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Windows]
+[HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Windows]
 ;Запретить Windows управлять принтером по умолчанию
 "LegacyDefaultPrinterMode"=dword:00000001
 
