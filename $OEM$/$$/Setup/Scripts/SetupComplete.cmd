@@ -20,8 +20,7 @@ start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Silverlight 5.1.50907\Silverli
 
 ver | find "6.1" > nul && goto :windows-7
 ver | find "6.3" > nul && goto :windows-9
-dism /Online /English /LogLevel:1 /Get-Currentedition | find "EnterpriseS" > nul && goto :windows-A
-dism /Online /English /LogLevel:1 /Get-Currentedition | find "Professional" > nul && goto :windows-X
+ver | find "10.0" > nul && goto :windows-Y
 goto :cleanup
 
 :windows-7
@@ -41,16 +40,10 @@ start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2013 Standard SP1+\setu
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Tweaks /d "cmd /c reg import %SYSTEMROOT%\Setup\Scripts\Tweaks-9.reg"
 goto :cleanup
 
-:windows-A
+:windows-Y
 start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2016 Standard SP0+\setup.exe" ^
 /config "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2016 Standard SP0+\unattend\config.xml"
-reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Tweaks /d "cmd /c reg import %SYSTEMROOT%\Setup\Scripts\Tweaks-A.reg"
-goto :cleanup
-
-:windows-X
-start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2016 Standard SP0+\setup.exe" ^
-/config "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2016 Standard SP0+\unattend\config.xml"
-reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Tweaks /d "cmd /c reg import %SYSTEMROOT%\Setup\Scripts\Tweaks-X.reg"
+reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Tweaks /d "cmd /c reg import %SYSTEMROOT%\Setup\Scripts\Tweaks-Y.reg"
 goto :cleanup
 
 :cleanup

@@ -34,7 +34,7 @@ Windows Registry Editor Version 5.00
 
 [HKEY_CURRENT_USER\Control Panel\Quick Actions]
 ;Установить статус инициализации раскладки
-"LayoutInitializationStatus"=dword:00000002
+"LayoutInitializationStatus"=dword:00000003
 ;Установить обработанными записи OEM
 "OemEntriesProcessed"=dword:00000001
 
@@ -45,13 +45,13 @@ Windows Registry Editor Version 5.00
 "2"="SystemSettings_Device_BluetoothQuickAction"
 "3"="SystemSettings_Network_Wifi_QuickAction"
 "4"="SystemSettings_Notifications_DoNotDisturb_Toggle"
-"5"="SystemSettings_Connections_Add_VPN"
-"6"="QuickActions_Launcher_DisplayTopology"
-"7"="QuickActions_Launcher_DeviceDiscovery"
-"8"="QuickActions_Launcher_DeviceControl"
-"9"="SystemSettings_Display_IsRotationLockedQuickAction"
-"10"="SystemSettings_Display_QuickAction_ColorProfile"
-"11"="SystemSettings_Network_MB_QuickAction"
+"5"="QuickActions_Launcher_DisplayTopology"
+"6"="QuickActions_Launcher_DeviceDiscovery"
+"7"="SystemSettings_SharedExperiences_NearShareQuickAction"
+"8"=-
+"9"=-
+"10"=-
+"11"=-
 "12"=-
 "13"=-
 "14"=-
@@ -60,6 +60,7 @@ Windows Registry Editor Version 5.00
 "17"=-
 "18"=-
 "19"=-
+"20"=-
 
 [HKEY_CURRENT_USER\Environment]
 ;Использовать %SYSTEMROOT%\System32 как папку для приложений WindowsApps
@@ -90,6 +91,17 @@ Windows Registry Editor Version 5.00
 ;Не разрешать представление FTP-узлов в виде папок
 "Use Web Based FTP"="yes"
 
+;Настройка персонализации ввода
+[HKEY_CURRENT_USER\Software\Microsoft\InputPersonalization]
+;Ограничить сбор данных рукописного ввода
+"RestrictImplicitInkCollection"=dword:00000001
+;Ограничить сбор данных набора текста
+"RestrictImplicitTextCollection"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Microsoft\InputPersonalization\TrainedDataStore]
+;Ограничить сбор контактов
+"HarvestContacts"=dword:00000000
+
 ;Параметры проверки цифровой подписи программ
 [HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Download]
 ;Не проверять цифровую подпись загружаемых программ
@@ -99,6 +111,8 @@ Windows Registry Editor Version 5.00
 
 ;Дополнительные настройки Internet Explorer 11
 [HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main]
+;Открывать плитки Internet Explorer на Рабочем столе
+"ApplicationTileImmersiveActivation"=dword:00000000
 ;Не предлагать Internet Explorer использовать по умолчанию
 "Check_Associations"="no"
 ;Не выполнять настройку при первом запуске
@@ -118,6 +132,7 @@ Windows Registry Editor Version 5.00
 
 [HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\PhishingFilter]
 ;Выключить фильтр SmartScreen для Internet Explorer
+"EnabledV8"=dword:00000000
 "EnabledV9"=dword:00000000
 
 [HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\PrefetchPrerender]
@@ -166,6 +181,14 @@ Windows Registry Editor Version 5.00
 ;Начальный диалог Office 2016 был показан
 "ShownFirstRunOptin"=dword:00000001
 
+[HKEY_CURRENT_USER\Software\Microsoft\Personalization\Settings]
+;Отменить принятие соглашения о конфиденциальности
+"AcceptedPrivacyPolicy"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Microsoft\Siuf\Rules]
+;Никогда не запрашивать мои отзывы
+"NumberOfSIUFInPeriod"=dword:00000000
+
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\CDP]
 ;Запретить приложениям на других устройствах открывать приложения
 "CdpSessionUserAuthzPolicy"=dword:00000000
@@ -192,20 +215,15 @@ Windows Registry Editor Version 5.00
 "SilentInstalledAppsEnabled"=dword:00000000
 ;Выключить подсказки по использованию
 "SoftLandingEnabled"=dword:00000000
-;Выключить подписное содержимое на экране приветствия
+;Выключить подписное содержимое везде
 "SubscribedContent-310093Enabled"=dword:00000000
-;Выключить подписное содержимое на игру Candy Crush
 "SubscribedContent-314559Enabled"=dword:00000000
-;Выключить подписное содержимое на экране блокировки
 "SubscribedContent-338387Enabled"=dword:00000000
-;Выключить подписное содержимое в меню "Пуск"
 "SubscribedContent-338388Enabled"=dword:00000000
-;Выключить подписное содержимое от Кортаны
 "SubscribedContent-338389Enabled"=dword:00000000
-;Выключить подписное содержимое в приложении "Параметры"
 "SubscribedContent-338393Enabled"=dword:00000000
-;Выключить подписное содержимое на временной шкале
 "SubscribedContent-353694Enabled"=dword:00000000
+"SubscribedContent-353696Enabled"=dword:00000000
 "SubscribedContent-353698Enabled"=dword:00000000
 ;Выключить системную панель предложений
 "SystemPaneSuggestionsEnabled"=dword:00000000
@@ -215,14 +233,6 @@ Windows Registry Editor Version 5.00
 
 [-HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager\SuggestedApps]
 ;Удалить список рекламных приложений
-
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\AppHost]
-;Отключить оценку веб-контента
-"EnableWebContentEvaluation"=dword:00000000
-
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\DeviceAccess\Global\LooselyCoupled]
-;Запретить приложениям автоматически синхронизироваться с беспроводными устройствами
-"Value"="Deny"
 
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer]
 ;Отображать все значки в области уведомлений
@@ -248,6 +258,8 @@ Windows Registry Editor Version 5.00
 "SharingWizardOn"=dword:00000000
 ;Отображать сжатые или зашифрованные файлы NTFS другим цветом
 "ShowEncryptCompressedColor"=dword:00000001
+;Запретить Windows отслеживать запуски приложений
+"Start_TrackProgs"=dword:00000000
 ;Не показывать приложения Магазина Windows на панели задач
 "StoreAppsOnTaskbar"=dword:00000000
 ;Отключить скольжение кнопок Панели задач
@@ -355,14 +367,6 @@ Windows Registry Editor Version 5.00
 ;Запретить Windows управлять принтером по умолчанию
 "LegacyDefaultPrinterMode"=dword:00000001
 
-[HKEY_CURRENT_USER\Software\Microsoft\Windows Security Health\State]
-;Убрать напоминание о входе в учётную запись Майкрософт
-"AccountProtection_MicrosoftAccount_Disconnected"=dword:00000000
-;Выключить фильтр SmartScreen для Microsoft Edge
-"AppAndBrowser_EdgeSmartScreenOff"=dword:00000000
-;Выключить фильтр SmartScreen для приложений из Microsoft Store
-"AppAndBrowser_StoreAppsSmartScreenOff"=dword:00000000
-
 [HKEY_CURRENT_USER\System\GameConfigStore]
 ;Отключить игровую панель DVR
 "GameDVR_Enabled"=dword:00000000
@@ -375,15 +379,9 @@ Windows Registry Editor Version 5.00
 ;Запретить удалённо включать мобильный хот-спот
 "RemoteStartupDisabled"=dword:00000001
 
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\DeliveryOptimization\Config]
-;Отключить обновление из нескольких мест
-"DODownloadMode"=dword:00000000
-
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer]
 ;Отключить отображения вкладки "Предыдущие версии" в свойствах файлов
 "NoPreviousVersionsPage"=dword:00000001
-;Выключить фильтр SmartScreen для приложений и файлов
-"SmartScreenEnabled"="Off"
 
 [-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\RemoteComputer\NameSpace\{863aa9fd-42df-457b-8e4d-0de1b8015c60}]
 ;Не сканировать сеть на наличие сетевых принтеров
@@ -461,10 +459,6 @@ Windows Registry Editor Version 5.00
 ;Отключить стандартные административные общие ресурсы (C$ и т.д.)
 "AutoShareWks"=dword:00000000
 
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time]
-;Отключить службу времени Windows
-"Start"=dword:00000004
-
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters]
 ;Не выполнять синхронизацию с сервером времение в интернете
 "Type"="NoSync"
@@ -472,3 +466,7 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SYSTEM\Maps]
 ;Отключить автоматическое обновление карт
 "AutoUpdateEnabled"=dword:00000000
+
+[HKEY_USERS\S-1-5-20\Software\Microsoft\Windows\CurrentVersion\DeliveryOptimization\Settings]
+;Отключить обновление из нескольких мест
+"DownloadMode"=dword:00000000
