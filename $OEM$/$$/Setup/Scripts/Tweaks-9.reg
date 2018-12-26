@@ -98,10 +98,6 @@ Windows Registry Editor Version 5.00
 ;Разрешить запуск активного содержимого компакт-дисков на моем компьютере
 "LOCALMACHINE_CD_UNLOCK"=dword:00000001
 
-[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\MINIE]
-;Показывать вкладки в отдельной строке
-"ShowTabsBelowAddressBar"=dword:00000001
-
 [HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\PhishingFilter]
 ;Выключить фильтр SmartScreen для Internet Explorer
 "EnabledV9"=dword:00000000
