@@ -16,7 +16,7 @@ if %_arch%==x64 start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Visual C++ Pac
 start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Visual C++ Pack\vcredist_x86_2017.exe" /q
 if %_arch%==x64 start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Visual C++ Pack\vcredist_x64_2017.exe" /q
 start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Visual C++ Pack\vstor_redist.exe" /q
-start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Silverlight 5.1.50907\Silverlight_%_arch%.exe" /q
+start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Silverlight 5.1.50918\Silverlight_%_arch%.exe" /q
 
 ver | find "6.1" > nul && goto :windows-7
 ver | find "6.3" > nul && goto :windows-9
