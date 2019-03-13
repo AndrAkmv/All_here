@@ -11,5 +11,5 @@ echo .NET Framework 4.7.2
 start /w ndp472-kb4054530-x86-x64-allos-enu.exe /passive /norestart
 echo Russian Language Pack
 start /w ndp472-kb4054530-x86-x64-allos-rus.exe /passive /norestart
-echo Rollup updates (Dec 2018)
-start /w ndp46-kb4470640-%_arch%.exe /passive /norestart
+echo Rollup updates (Feb 2019)
+start /w ndp46-kb4483451-%_arch%.exe /passive /norestart
