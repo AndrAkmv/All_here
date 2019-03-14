@@ -15,16 +15,16 @@ echo KB3021917
 start /w wusa.exe /uninstall /KB:3021917 /quiet /norestart
 echo KB2952664
 start /w wusa.exe /uninstall /KB:2952664 /quiet /norestart
-goto :tel-78
+goto :tel-79
 
 :gwx-9
 echo KB3044374
 start /w wusa.exe /uninstall /KB:3044374 /quiet /norestart
 echo KB2976978
 start /w wusa.exe /uninstall /KB:2976978 /quiet /norestart
-goto :tel-78
+goto :tel-79
 
-:tel-78
+:tel-79
 echo KB3080149
 start /w wusa.exe /uninstall /KB:3080149 /quiet /norestart
 echo KB3068708
