@@ -74,6 +74,8 @@ call :lxc "%_src%" %_disk%\Desktop
 md %_disk%\Desktop 2> nul
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders" /v Desktop /t REG_SZ /d %_disk%\Desktop /f > nul
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v Desktop /t REG_EXPAND_SZ /d %_disk%\Desktop /f > nul
+if defined _win10 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v {754AC886-DF64-4CBA-86B5-F7FBF4FBCEF5} ^
+/t REG_EXPAND_SZ /d %_disk%\Desktop /f > nul
 call :lrd "%_src%"
 )
 

@@ -50,6 +50,7 @@ if "%_src%" NEQ "%USERPROFILE%\Desktop" (
 md "%USERPROFILE%\Desktop" 2> nul
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders" /v Desktop /t REG_SZ /d "%USERPROFILE%\Desktop" /f > nul
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v Desktop /t REG_EXPAND_SZ /d "%%USERPROFILE%%\Desktop" /f > nul
+if defined _win10 reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v {754AC886-DF64-4CBA-86B5-F7FBF4FBCEF5} /f > nul
 )
 
 timeout 3 > nul
