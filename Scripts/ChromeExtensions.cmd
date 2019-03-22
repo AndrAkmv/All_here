@@ -4,6 +4,14 @@ title Managing Google Chrome extensions
 set _arch=\Wow6432Node
 if %PROCESSOR_ARCHITECTURE%==x86 if not defined PROCESSOR_ARCHITEW6432 set _arch=""
 
+:menu
+choice /c abcdefghijklmnopqrstuvwxyz /n /m "Add [a] or Delete [d] Chrome extension pack?"
+if %ERRORLEVEL% EQU 1 goto :add
+if %ERRORLEVEL% EQU 4 goto :del
+exit
+
+:add
+cls
 :: echo Google Translate
 :: reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\aapbdbdomjkkjkaonfhkkikfgjllcleb /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
 
@@ -63,3 +71,7 @@ rem Tabs
 :: reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\fajkhkmabkgflclnlmfdafpikejjncca /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
 
 timeout 3 > nul
+exit
+
+:del
+reg delete HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions /f > nul
