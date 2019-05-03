@@ -15,10 +15,6 @@ Windows Registry Editor Version 5.00
 "FontSmoothing"="0"
 ;Отключить сглаживание ClearType
 "FontSmoothingType"=dword:00000000
-;Установить цвет границ окон и Панели задач - "листва"
-"ImageColor"=dword:af36b375
-;Установить фон Рабочего стола - зелёный рисунок
-"Wallpaper"="%SYSTEMROOT%\\Web\\Wallpaper\\Theme1\\img3.jpg"
 
 [HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics]
 ;Показывать полностью имена длинных файлов в проводнике
