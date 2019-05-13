@@ -8,16 +8,18 @@ Windows Registry Editor Version 5.00
 ;Добавить пункт "Переместить в папку..." в контекстное меню файлов
 @="{C2FBB631-2971-11d1-A18C-00C04FD75D13}"
 
+;Настройка визуальных эффектов Рабочего стола
 [HKEY_CURRENT_USER\Control Panel\Desktop]
 ;Увеличить частоту мерцания курсора
 "CursorBlinkRate"="200"
 ;Отключить сглаживание неровностей экранных шрифтов
 "FontSmoothing"="0"
-;Отключить сглаживание ClearType
+;Выключить сглаживание ClearType
 "FontSmoothingType"=dword:00000000
 
+;Дополнительная настройка внешнего вида
 [HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics]
-;Показывать полностью имена длинных файлов в проводнике
+;Показывать полностью имена длинных файлов в Проводнике
 "IconTitleWrap"="0"
 ;Отключить анимацию окон при свертывании и развертывании
 "MinAnimate"="0"
@@ -38,13 +40,13 @@ Windows Registry Editor Version 5.00
 "TMP"=-
 
 [HKEY_CURRENT_USER\Keyboard Layout\Preload]
-;Английский язык по умолчанию, а также добавление русского и украинского
+;Установить английский язык по умолчанию, добавить русский и украинский
 "1"="00000409"
 "2"="00000419"
 "3"="00000422"
 
 [HKEY_CURRENT_USER\Keyboard Layout\Toggle]
-;Переключение между языками ввода Ctrl+Shift
+;Установить Ctrl+Shift для переключение между языками ввода
 "Hotkey"="2"
 "Language Hotkey"="2"
 "Layout Hotkey"="3"
@@ -56,7 +58,7 @@ Windows Registry Editor Version 5.00
 "00000002"="00000422"
 
 [HKEY_CURRENT_USER\Software\Microsoft\FTP]
-;Не разрешать представление FTP-узлов в виде папок
+;Запретить просмотр FTP-папок (за пределами Internet Explorer)
 "Use Web Based FTP"="yes"
 
 ;Настройка персонализации ввода
@@ -73,15 +75,15 @@ Windows Registry Editor Version 5.00
 ;Запускать программы с непроверенной цифровой подписью
 "RunInvalidSignatures"=dword:00000001
 
-;Дополнительные настройки Internet Explorer 11
+;Основная настройка Internet Explorer 11
 [HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main]
 ;Открывать плитки Internet Explorer на Рабочем столе
 "ApplicationTileImmersiveActivation"=dword:00000000
-;Не предлагать Internet Explorer использовать по умолчанию
+;Не предлагать использовать по умолчанию
 "Check_Associations"="no"
-;Не выполнять настройку при первом запуске
+;Запретить персонализацию при первом запуске
 "DisableFirstRunCustomize"=dword:00000001
-;Отключить уведомление по окончании загрузки файла
+;Отключить уведомление по окончании загрузки
 "NotifyDownloadComplete"="no"
 ;Использовать новую вкладку при запуске
 "Start Page"="about:Tabs"
@@ -113,7 +115,7 @@ Windows Registry Editor Version 5.00
 ;При открытии новой вкладки открывать домашнюю страницу
 "NewTabPageShow"=dword:00000001
 
-;Дополнительные настройки Windows Media Player 12
+;Настройка Windows Media Player 12
 [HKEY_CURRENT_USER\Software\Microsoft\MediaPlayer\Preferences]
 ;Принять лицензионное соглашение
 "AcceptedPrivacyStatement"=dword:00000001
@@ -125,7 +127,7 @@ Windows Registry Editor Version 5.00
 "DeleteRemovesFromComputer"=dword:00000000
 ;Запретить автоматическую проверку лицензий защищённых файлов
 "DisableLicenseRefresh"=dword:00000001
-;Проигрыватель уже запускался
+;Отметить, что проигрыватель уже запускался
 "FirstRun"=dword:00000000
 ;Не сохранять оценки в файлах мультимедиа
 "FlushRatingsToFiles"=dword:00000000
@@ -139,17 +141,18 @@ Windows Registry Editor Version 5.00
 "SilentDRMConfiguration"=dword:00000000
 ;Увеличить время запроса автоматического обновления проигрывателя
 "UpgradeCheckFrequency"=dword:00000002
-;Не отправлять данные об использовании прогигрывателя
+;Не отправлять данные об использовании проигрывателя
 "UsageTracking"=dword:00000000
 
 [HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common\General]
-;Начальный диалог Office 2013 был показан
+;Отметить показанным начальный диалог Office 2013
 "ShownFirstRunOptin"=dword:00000001
 
 [HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\FirstRun]
 ;Пропустить мастер подключения учётной записи Майкрософт
 "BootedRTM"=dword:00000001
 
+;Настройка Проводника
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer]
 ;Отображать все значки в области уведомлений
 "EnableAutoTray"=dword:00000000
@@ -160,7 +163,7 @@ Windows Registry Editor Version 5.00
 ;Отображать фон Рабочего стола на Начальном экране
 "MotionAccentId_v1.00"=dword:000000db
 
-;Расширенные настройки Проводника
+;Расширенная настройка Проводника
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
 ;Показывать скрытые файлы, папки и диски
 "Hidden"=dword:00000001
@@ -196,18 +199,18 @@ Windows Registry Editor Version 5.00
 ;Сбросить настройки автозапуска для всех носителей и устройств
 
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\CIDOpen\Modules\GlobalSettings\Sizer]
-;Скрыть Область навигации в диалоге "Открыть..."
+;Скрыть область навигации в диалоге "Открыть..."
 "PageSpaceControlSizer"=hex:a0,00,00,00,00,00,00,00,00,00,00,00,9b,02,00,00
 
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\CIDSave\Modules\GlobalSettings\Sizer]
-;Скрыть Область навигации в диалоге "Сохранить как..."
+;Скрыть область навигации в диалоге "Сохранить как..."
 "PageSpaceControlSizer"=hex:a0,00,00,00,00,00,00,00,00,00,00,00,9b,02,00,00
 
 ;Настройка Панели управления
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel]
 ;Показывать крупные значки
 "AllItemsIconView"=dword:00000000
-;Показывать все элементы Панели управления
+;Показывать все элементы
 "StartupPage"=dword:00000001
 
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\DontShowMeThisDialogAgain]
@@ -222,7 +225,7 @@ Windows Registry Editor Version 5.00
 "{59031a47-3f72-44a7-89c5-5595fe6b30ee}"=dword:00000000
 
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Modules\GlobalSettings\Sizer]
-;Скрыть Область навигации в папках
+;Скрыть область навигации в папках
 "PageSpaceControlSizer"=hex:a0,00,00,00,00,00,00,00,00,00,00,00,45,03,00,00
 
 ;Настройка Начального экрана
@@ -232,11 +235,9 @@ Windows Registry Editor Version 5.00
 ;Показывать Начальный экран при нажатии клавиши Windows
 "MonitorOverride"=dword:00000001
 
-;Изъять все программы из Панели задач
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Taskband]
-;Не показывать ссылки на программы в Панели задач
+;Изъять все программы из Панели задач
 "Favorites"=hex:ff
-;Удалить записи о закреплённых программах в Панели задач
 "FavoritesResolve"=-
 
 ;Настройка действий для углов
@@ -256,7 +257,7 @@ Windows Registry Editor Version 5.00
 ;Оставить режим показа приложений Метро при касании левого края
 "BackstackMode"=dword:00000001
 
-;Настройка параметров безопасности для Интернета
+;Настройка параметров безопасности браузера
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings]
 ;Запретить встроенную проверку подлинности Windows
 "EnableNegotiate"=dword:00000000
@@ -271,8 +272,9 @@ Windows Registry Editor Version 5.00
 ;Отключить предупреждение при открытии файлов, загруженных из Интернета
 "SaveZoneInformation"=dword:00000001
 
+;Дополнительная настройка Проводника
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer]
-;Отключить значок "Центр поддержки" из области уведомлений
+;Убрать значок "Центр поддержки" из области уведомлений
 "HideSCAHealth"=dword:00000001
 ;Отключить встроенные средства записи компакт-дисков
 "NoCDBurning"=dword:00000001
@@ -288,7 +290,7 @@ Windows Registry Editor Version 5.00
 "CEIPEnable"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Device Metadata]
-;Автоматически получать приложения для устройств и информацию
+;Автоматически получать приложения и информацию для устройств
 "PreventDeviceMetadataFromNetwork"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\DriverSearching]
@@ -302,21 +304,19 @@ Windows Registry Editor Version 5.00
 [-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\RemoteComputer\NameSpace\{863aa9fd-42df-457b-8e4d-0de1b8015c60}]
 ;Не сканировать сеть на наличие сетевых принтеров
 
-;Настройка Контроля учётных записей
+;Настройка выдачи уведомлений о вносимых изменениях
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
-;Выполнение программ Администратором без запроса
+;Запускать программы от имени Администратора
 "ConsentPromptBehaviorAdmin"=dword:00000000
-;Отключить контроль учётных записей (UAC)
+;Отключить Контроль учётных записей (UAC)
 "EnableLUA"=dword:00000000
-;Не спрашивать при запуске приложений
+;Не использовать защищённый Рабочий стол
 "PromptOnSecureDesktop"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update]
-;Удалить предварительную настройку
+;Искать обновления, но не загружать и не устанавливать их автоматически
 "AcceleratedInstallRequired"=-
-;Искать обновления, но не загружать и не устанавливать их автоматически
 "AUOptions"=dword:00000002
-;Искать обновления, но не загружать и не устанавливать их автоматически
 "CachedAUOptions"=dword:00000002
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\ScheduledDiagnostics]
@@ -358,7 +358,7 @@ Windows Registry Editor Version 5.00
 ;Отключить режим Гибернации
 "HibernateEnabled"=dword:00000000
 
-;Параметры Удалённого помощника
+;Установка параметров удалённого доступа
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Remote Assistance]
 ;Запретить удалённое управление этим компьютером
 "fAllowFullControl"=dword:00000000
@@ -402,7 +402,7 @@ Windows Registry Editor Version 5.00
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters]
-;Не выполнять синхронизацию с сервером времение в интернете
+;Не выполнять синхронизацию с сервером времени в Интернете
 "Type"="NoSync"
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wscsvc]
