@@ -1,0 +1,26 @@
+<Configuration>
+  <Add OfficeClientEdition="32" Channel="PerpetualVL2019" ForceUpgrade="TRUE">
+    <Product ID="Standard2019Volume" PIDKEY="6NWWJ-YQWMR-QKGCB-6TMB3-9D9HK">
+      <Language ID="ru-ru" />
+      <ExcludeApp ID="Groove" />
+      <ExcludeApp ID="OneDrive" />
+      <ExcludeApp ID="OneNote" />
+      <ExcludeApp ID="Outlook" />
+      <ExcludeApp ID="Publisher" />
+    </Product>
+    <Product ID="ProofingTools">
+      <Language ID="en-us" />
+      <Language ID="uk-ua" />
+    </Product>
+  </Add>
+  <Property Name="SharedComputerLicensing" Value="0" />
+  <Property Name="PinIconsToTaskbar" Value="FALSE" />
+  <Property Name="SCLCacheOverride" Value="0" />
+  <Property Name="AUTOACTIVATE" Value="0" />
+  <Property Name="FORCEAPPSHUTDOWN" Value="FALSE" />
+  <Property Name="DeviceBasedLicensing" Value="0" />
+  <Updates Enabled="TRUE" />
+  <RemoveMSI />
+  <Display Level="None" AcceptEULA="TRUE" />
+  <Logging Level="Off" />
+</Configuration>
