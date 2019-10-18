@@ -1,4 +1,5 @@
 @echo off
+
 echo Extracting updates for Microsoft Office
 echo -------------------------------------------------------------------------------
 for /f "tokens=*" %%i in ('dir x86 /b') do call :extract %%i
