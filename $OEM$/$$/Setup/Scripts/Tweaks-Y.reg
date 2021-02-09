@@ -77,6 +77,10 @@ Windows Registry Editor Version 5.00
 "2"="00000419"
 "3"="00000422"
 
+[HKEY_CURRENT_USER\Keyboard Layout\Preload\Substitutes]
+;Подставить украинскую (расширенную) раскладку клавиатуры
+"00000422"="00020422"
+
 [HKEY_CURRENT_USER\Keyboard Layout\Toggle]
 ;Установить Ctrl+Shift для переключение между языками ввода
 "Hotkey"="2"
