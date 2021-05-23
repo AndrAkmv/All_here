@@ -35,11 +35,11 @@ if %_arch%==x64 (
 echo Microsoft Visual C++ 2013 Redistributable x64
 start /w vcredist_x64_2013.exe /q
 )
-echo Microsoft Visual C++ 2017 Redistributable x86
-start /w vcredist_x86_2017.exe /q
+echo Microsoft Visual C++ 2015-2019 Redistributable x86
+start /w vcredist_x86_2015-2019.exe /q
 if %_arch%==x64 (
-echo Microsoft Visual C++ 2017 Redistributable x64
-start /w vcredist_x64_2017.exe /q
+echo Microsoft Visual C++ 2015-2019 Redistributable x64
+start /w vcredist_x64_2015-2019.exe /q
 )
 echo Visual Studio 2010 Tools for Office Runtime
 start /w vstor_redist.exe /q
