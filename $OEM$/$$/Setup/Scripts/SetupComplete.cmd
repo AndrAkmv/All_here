@@ -26,9 +26,9 @@ goto :cleanup
 
 :windows-7
 dism /Online /English /LogLevel:1 /Add-Package /PackagePath:"%SYSTEMDRIVE%\OEM\Updates\Windows 7 - Online\%_arch%"
-start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft .NET Framework 4.7.2\ndp472-kb4054530-x86-x64-allos-enu.exe" /q
-start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft .NET Framework 4.7.2\ndp472-kb4054530-x86-x64-allos-rus.exe" /q
-start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft .NET Framework 4.7.2\ndp46-kb4483451-%_arch%.exe" /q
+start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft .NET Framework 4.8\ndp48-x86-x64-allos-enu.exe" /q
+start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft .NET Framework 4.8\ndp48-x86-x64-allos-rus.exe" /q
+start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft .NET Framework 4.8\ndp48-kb4532941-%_arch%.exe" /q
 start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2010 Standard SP2+\setup.exe" ^
 /config "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2010 Standard SP2+\Unattend\config.xml"
 start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Security Essentials 4.10.209\MSEInstall_%_arch%.exe" /s /runwgacheck /o
