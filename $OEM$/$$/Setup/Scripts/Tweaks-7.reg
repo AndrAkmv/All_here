@@ -265,6 +265,10 @@ Windows Registry Editor Version 5.00
 ;Никогда не устанавливать драйверы из Центра обновления Windows
 "SearchOrderConfig"=dword:00000000
 
+[HKEY_LOCAL_MACHIN\SOFTWARE\Microsoft\Windows\CurrentVersion\EOSNotify]
+;Больше не напоминать об окончании срока поддержки
+"DiscontinueEOS"=dword:00000001
+
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer]
 ;Отключить отображения вкладки "Предыдущие версии" в свойствах файлов
 "NoPreviousVersionsPage"=dword:00000001
