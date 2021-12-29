@@ -290,8 +290,8 @@ Windows Registry Editor Version 5.00
 "PromptOnSecureDesktop"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update]
-;Искать обновления, но не загружать и не устанавливать их автоматически
-"AUOptions"=dword:00000002
+;Не проверять наличие обновлений (не рекомендуется)
+"AUOptions"=dword:00000001
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\ScheduledDiagnostics]
 ;Отключить автоматический поиск распространённых неполадок 
@@ -389,4 +389,8 @@ Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wscsvc]
 ;Отключить службу Центр обеспечения безопасности
+"Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wuauserv]
+;Отключить службу Центр обновления Windows
 "Start"=dword:00000004
