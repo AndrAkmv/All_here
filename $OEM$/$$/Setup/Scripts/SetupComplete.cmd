@@ -31,7 +31,6 @@ start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft .NET Framework 4.8\ndp48-x86-x
 start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft .NET Framework 4.8\ndp48-kb4532941-%_arch%.exe" /q
 start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2010 Standard SP2+\setup.exe" ^
 /config "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2010 Standard SP2+\Unattend\config.xml"
-start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Security Essentials 4.10.209\MSEInstall_%_arch%.exe" /s /runwgacheck /o
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Tweaks /d "cmd /c reg import %SYSTEMROOT%\Setup\Scripts\Tweaks-7.reg"
 goto :cleanup
 
