@@ -12,11 +12,21 @@ exit
 
 :add
 cls
-:: echo BankID CryptoPlugin
-:: reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\pgfbdgicjmhenccemcijooffohcdanic /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
+rem ADs
+:: echo Adblock Plus
+:: reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\cfhdojbkjhnklbpkdaibdccddilifddb /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
+echo uBlock Origin
+reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\cjpalhdlnbpafiamejdnhcphjbkeiagm /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
 
-:: echo CrxMouse Chrome Gestures
-:: reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\jlgkpaicikihijadgifklkbpdajbkhjo /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
+rem Context
+echo Selection Search
+reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\gipnlpdeieaidmmeaichnddnmjmcakoe /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
+:: echo Simple = Select + Search
+:: reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\aagminaekdpcfimcbhknlgjmpnnnmooo /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
+
+rem Dislike
+:: echo Return YouTube Dislike
+:: reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\gebbhagfogifgggkldgodflihgfeippi /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
 
 rem Eyes
 echo Dark Reader
@@ -24,49 +34,39 @@ reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\eimadpbcbfnmbkopoojfekhnkh
 :: echo Night Reader
 :: reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\hmafjphdklmdjfcnljjeonfpgafanjjc /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
 
-rem VPN
-echo Fast Proxy
-reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\mkelkmkgljeohnaeehnnkmdpocfmkmmf /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
-:: echo Yandex Access
-:: reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\oakfpjifgmfpainopanfgfckhkcfgacb /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
+rem Lang
+:: echo Google Translate
+:: reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\aapbdbdomjkkjkaonfhkkikfgjllcleb /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
 
-echo Google Translate
-reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\aapbdbdomjkkjkaonfhkkikfgjllcleb /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
+rem Mouse
+echo CrxMouse Chrome Gestures
+reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\jlgkpaicikihijadgifklkbpdajbkhjo /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
+:: echo smartUp Gestures
+:: reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\bgjfekefhjemchdeigphccilhncnjldn /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
+
+rem Similar
+echo SimilarSites
+reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\necpbmbhhdiplmfhmjicabdeighkndkn /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
+echo SimilarWeb
+reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\hoklmmgfnpapgjgcpechhaamimifchmp /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
 
 rem Tabs
-:: echo Duplicate Tab Helper
-:: reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\oaceoebbkmkgfjhmngdinoclnionlgoh /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
-echo No Dupe Tabs
-reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\fajkhkmabkgflclnlmfdafpikejjncca /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
-
-echo Return YouTube Dislike
-reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\gebbhagfogifgggkldgodflihgfeippi /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
-
-:: echo Selection Search
-:: reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\gipnlpdeieaidmmeaichnddnmjmcakoe /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
-
-:: echo SimilarWeb
-:: reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\hoklmmgfnpapgjgcpechhaamimifchmp /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
-
+echo Prevent Duplicate Tabs
+reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\eednccpckdkpojaiemedoejdngappaag /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
 echo Tab Activate
 reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\jlmadbnpnnolpaljadgakjilggigioaj /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
 
-rem ADs
-:: echo Adblock Plus
-:: reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\cfhdojbkjhnklbpkdaibdccddilifddb /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
-echo uBlock Origin
-reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\cjpalhdlnbpafiamejdnhcphjbkeiagm /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
-:: echo AdGuard
-:: reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\bgnkhhnnamicmpeenaelnjfhikgbkllg /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
+rem VPN
+:: echo Browsec VPN
+:: reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\omghfjlpggmjjaagoclmmobgdodcjboh /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
+echo Delta Free VPN
+reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\lpejglcfpkpbjhmnnmpmmlpblkcmdgmi /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
 
-echo SimilarSites
-reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\necpbmbhhdiplmfhmjicabdeighkndkn /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
-
-rem Theme
-:: echo pro grey
-:: reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\enhpebdanojkmhbbneclbkmpleemilaj /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
+rem Window
 echo Material Dark
 reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\npadhaijchjemiifipabpmeebeelbmpd /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
+:: echo pro grey
+:: reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\enhpebdanojkmhbbneclbkmpleemilaj /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
 
 timeout 3 > nul
 exit
