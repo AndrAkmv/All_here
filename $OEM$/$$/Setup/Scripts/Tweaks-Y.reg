@@ -518,6 +518,10 @@ Windows Registry Editor Version 5.00
 ;Отключить частный профиль Брандмауэра Windows
 "EnableFirewall"=dword:00000000
 
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time]
+;Отключить службу времени Windows
+"Start"=dword:00000004
+
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters]
 ;Не выполнять синхронизацию с сервером времени в Интернете
 "Type"="NoSync"
