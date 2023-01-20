@@ -19,8 +19,9 @@ start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Visual C++ Pack\vstor_redist.e
 
 ver | find "6.1" > nul && goto :windows-7
 ver | find "6.3" > nul && goto :windows-9
-dism /Online /English /Get-CurrentEdition | find "EnterpriseS" > nul && goto :Windows-A
-dism /Online /English /Get-CurrentEdition | find "Professional" > nul && goto :Windows-X
+ver | find "10.0.14393" > nul && goto :Windows-B
+ver | find "10.0.17763" > nul && goto :Windows-C
+ver | find "10.0.19044" > nul && goto :Windows-X
 goto :cleanup
 
 :windows-7
@@ -39,15 +40,19 @@ start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2013 Standard SP1+\setu
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Tweaks /d "cmd /c reg import %SYSTEMROOT%\Setup\Scripts\Tweaks-9.reg"
 goto :cleanup
 
-:windows-A
+:windows-B
 start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2016 Standard SP0+\setup.exe" ^
 /config "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2016 Standard SP0+\unattend\config.xml"
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Tweaks /d "cmd /c reg import %SYSTEMROOT%\Setup\Scripts\Tweaks-Y.reg"
 goto :cleanup
 
-:windows-X
+:windows-C
 start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2019 Standard latest\setup.exe" ^
 /configure "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2019 Standard latest\config.xml"
+reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Tweaks /d "cmd /c reg import %SYSTEMROOT%\Setup\Scripts\Tweaks-Y.reg"
+goto :cleanup
+
+:windows-X
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Tweaks /d "cmd /c reg import %SYSTEMROOT%\Setup\Scripts\Tweaks-Y.reg"
 goto :cleanup
 
