@@ -34,9 +34,11 @@ goto :version
 :version
 dism /%_img% /English /LogLevel:1 /Get-Help | find "Image Version: 6.3" > nul && set _ver=8.1
 if defined _ver goto :enable
-dism /%_img% /English /LogLevel:1 /Get-CurrentEdition | find "EnterpriseS" > nul && set _ver=A
+dism /%_img% /English /LogLevel:1 /Get-Help | find "Image Version: 10.0.14393" > nul && set _ver=B
 if defined _ver goto :enable
-dism /%_img% /English /LogLevel:1 /Get-CurrentEdition | find "Professional" > nul && set _ver=X
+dism /%_img% /English /LogLevel:1 /Get-Help | find "Image Version: 10.0.17763" > nul && set _ver=C
+if defined _ver goto :enable
+dism /%_img% /English /LogLevel:1 /Get-Help | find "Image Version: 10.0.19044" > nul && set _ver=X
 if defined _ver goto :enable
 goto :unmount
 
