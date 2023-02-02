@@ -59,6 +59,7 @@ goto :cleanup
 :cleanup
 start "" /w "%SYSTEMDRIVE%\OEM\Activator\AAct_%_arch%.exe" /win=act /ofs=act /taskwin /taskofs
 rd /s /q %SYSTEMDRIVE%\OEM
+reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v DTasks /d "cmd /c %SYSTEMROOT%\Setup\Scripts\DeleteTasks.cmd"
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Folder /d "cmd /c %SYSTEMROOT%\Setup\Scripts\UserFolders2D.cmd"
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Remove /d "cmd /c rd /s /q %SYSTEMROOT%\Setup\Scripts"
 powercfg -s 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c
