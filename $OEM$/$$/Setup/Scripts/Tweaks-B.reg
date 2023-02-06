@@ -1,0 +1,447 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\AllFilesystemObjects\shellex\ContextMenuHandlers\CopyTo]
+;Добавить пункт "Копировать в папку..." в контекстное меню файлов
+@="{C2FBB630-2971-11d1-A18C-00C04FD75D13}"
+
+[HKEY_CLASSES_ROOT\AllFilesystemObjects\shellex\ContextMenuHandlers\MoveTo]
+;Добавить пункт "Переместить в папку..." в контекстное меню файлов
+@="{C2FBB631-2971-11d1-A18C-00C04FD75D13}"
+
+;Настройка визуальных эффектов Рабочего стола
+[HKEY_CURRENT_USER\Control Panel\Desktop]
+;Увеличить частоту мерцания курсора
+"CursorBlinkRate"="200"
+;Отключить сглаживание неровностей экранных шрифтов
+"FontSmoothing"="0"
+;Выключить сглаживание ClearType
+"FontSmoothingType"=dword:00000000
+
+;Дополнительная настройка внешнего вида
+[HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics]
+;Показывать полностью имена длинных файлов в Проводнике
+"IconTitleWrap"="0"
+;Отключить анимацию окон при свертывании и развертывании
+"MinAnimate"="0"
+
+[HKEY_CURRENT_USER\Control Panel\International\User Profile]
+;Не предоставлять веб-сайтам доступ к моему списку языков
+"HttpAcceptLanguageOptOut"=dword:00000001
+;Сортировать языки ввода в порядке: английский, русский, украинский
+"Languages"=hex(7):65,00,6e,00,2d,00,55,00,53,00,00,00,72,00,75,00,00,00,75,00,6b,00
+
+[HKEY_CURRENT_USER\Control Panel\Keyboard]
+;Убрать задержку повтора при зажатии клавиши
+"KeyboardDelay"="0"
+
+[HKEY_CURRENT_USER\Control Panel\Quick Actions]
+;Установить статус инициализации раскладки
+"LayoutInitializationStatus"=dword:00000001
+;Установить обработанными записи OEM
+"OemEntriesProcessed"=dword:00000001
+
+[HKEY_CURRENT_USER\Control Panel\Quick Actions\Pinned]
+;Установка нужных плиток на панели Центра уведомлений
+"0"="SystemSettings_Display_Brightness"
+"1"="SystemSettings_Notifications_DoNotDisturb_Toggle"
+"2"="SystemSettings_Device_BluetoothQuickAction"
+"3"="SystemSettings_Network_Wifi_QuickAction"
+"4"=-
+"5"=-
+"6"=-
+"7"=-
+"8"=-
+"9"=-
+"10"=-
+"11"=-
+"12"=-
+"13"=-
+"14"=-
+"15"=-
+"16"=-
+"17"=-
+
+[HKEY_CURRENT_USER\Environment]
+;Использовать %SYSTEMROOT%\System32 как папку для приложений WindowsApps
+"Path"=-
+;Использовать %SYSTEMROOT%\Temp как временную папку для всех пользователей
+"TEMP"=-
+"TMP"=-
+
+[HKEY_CURRENT_USER\Keyboard Layout\Preload]
+;Установить английский язык по умолчанию, добавить русский и украинский
+"1"="00000409"
+"2"="00000419"
+"3"="00000422"
+
+[HKEY_CURRENT_USER\Keyboard Layout\Preload\Substitutes]
+;Подставить украинскую (расширенную) раскладку клавиатуры
+"00000422"="00020422"
+
+[HKEY_CURRENT_USER\Keyboard Layout\Toggle]
+;Установить Ctrl+Shift для переключение между языками ввода
+"Hotkey"="2"
+"Language Hotkey"="2"
+"Layout Hotkey"="3"
+
+[HKEY_CURRENT_USER\Software\Microsoft\CTF\SortOrder\Language]
+;Сортировать языки ввода в порядке: английский, русский, украинский
+"00000000"="00000409"
+"00000001"="00000419"
+"00000002"="00000422"
+
+[HKEY_CURRENT_USER\Software\Microsoft\FTP]
+;Запретить просмотр FTP-папок (за пределами Internet Explorer)
+"Use Web Based FTP"="yes"
+
+;Настройка персонализации ввода
+[HKEY_CURRENT_USER\Software\Microsoft\InputPersonalization]
+;Ограничить сбор данных рукописного ввода
+"RestrictImplicitInkCollection"=dword:00000001
+;Ограничить сбор данных набора текста
+"RestrictImplicitTextCollection"=dword:00000001
+
+;Параметры проверки цифровой подписи программ
+[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Download]
+;Не проверять цифровую подпись загружаемых программ
+"CheckExeSignatures"="no"
+;Запускать программы с непроверенной цифровой подписью
+"RunInvalidSignatures"=dword:00000001
+
+;Основная настройка Internet Explorer 11
+[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main]
+;Открывать плитки Internet Explorer на Рабочем столе
+"ApplicationTileImmersiveActivation"=dword:00000000
+;Не предлагать использовать по умолчанию
+"Check_Associations"="no"
+;Запретить персонализацию при первом запуске
+"DisableFirstRunCustomize"=dword:00000001
+;Отключить уведомление по окончании загрузки
+"NotifyDownloadComplete"="no"
+;Использовать новую вкладку при запуске
+"Start Page"="about:Tabs"
+
+[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_LOCALMACHINE_LOCKDOWN]
+;Разрешить запуск активного содержимого файлов на моем компьютере
+"iexplore.exe"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_LOCALMACHINE_LOCKDOWN\Settings]
+;Разрешить запуск активного содержимого компакт-дисков на моем компьютере
+"LOCALMACHINE_CD_UNLOCK"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\MINIE]
+;Показывать вкладки в отдельной строке
+"ShowTabsBelowAddressBar"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\PhishingFilter]
+;Выключить фильтр SmartScreen для Internet Explorer
+"EnabledV9"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\PrefetchPrerender]
+;Не загружать сайты и содержимое в фоновом режиме
+"Enabled"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\SearchScopes]
+;Назначить Bing поисковой системой по умолчанию
+"DefaultScope"="{0633EE93-D776-472f-A0FF-E1416B8B2E3A}"
+
+[-HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\SearchScopes\{8C3078A0-9AAB-4371-85D1-656CA8E46EE8}]
+;Удалить Яндекс из списка поисковых систем
+
+[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\TabbedBrowsing]
+;При открытии новой вкладки открывать домашнюю страницу
+"NewTabPageShow"=dword:00000001
+
+;Настройка Windows Media Player 12
+[HKEY_CURRENT_USER\Software\Microsoft\MediaPlayer\Preferences]
+;Принять лицензионное соглашение
+"AcceptedPrivacyStatement"=dword:00000001
+;Не добавлять файлы видео, найденные в библиотеке изображений
+"AddVideosFromPicturesLibrary"=dword:00000000
+;Отключить автоматическое добавление музыки в библиотеку
+"AutoAddMusicToLibrary"=dword:00000000
+;Не удалять файлы с компьютера при удалении из библиотеки
+"DeleteRemovesFromComputer"=dword:00000000
+;Запретить автоматическую проверку лицензий защищённых файлов
+"DisableLicenseRefresh"=dword:00000001
+;Отметить, что проигрыватель уже запускался
+"FirstRun"=dword:00000000
+;Не сохранять оценки в файлах мультимедиа
+"FlushRatingsToFiles"=dword:00000000
+;Не спрашивать о воспроизведении с веб-страницы
+"HTMLViewAsk"=dword:00000000
+;Не показывать сведения о мультимедиа из Интернета и не обновлять файлы
+"MetadataRetrieval"=dword:00000000
+;Отключить загрузку лицензий на использование файлов мультимедиа
+"SilentAcquisition"=dword:00000000
+;Не устанавливать автоматически часы на устройсвтах
+"SilentDRMConfiguration"=dword:00000000
+;Увеличить время запроса автоматического обновления проигрывателя
+"UpgradeCheckFrequency"=dword:00000002
+;Не отправлять данные об использовании проигрывателя
+"UsageTracking"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\General]
+;Отметить показанным начальный диалог Office 2016
+"ShownFirstRunOptin"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Microsoft\Siuf\Rules]
+;Никогда не запрашивать мои отзывы
+"NumberOfSIUFInPeriod"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\DeviceAccess\Global\LooselyCoupled]
+;Запретить приложениям автоматически синхронизироваться с беспроводными устройствами
+"Value"="Deny"
+
+;Настройка Проводника
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer]
+;Отображать все значки в области уведомлений
+"EnableAutoTray"=dword:00000000
+;He дoбaвлять "- Яpлык" для coздaвaeмыx яpлыкoв
+"link"=hex:00,00,00,00
+
+;Расширенная настройка Проводника
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+;Показывать скрытые файлы, папки и диски
+"Hidden"=dword:00000001
+;Показывать пустые диски в папке "Компьютер"
+"HideDrivesWithNoMedia"=dword:00000000
+;Показывать расширения для зарегистрированных типов файлов
+"HideFileExt"=dword:00000000
+;Показывать конфликты слияния папок
+"HideMergeConflicts"=dword:00000000
+;При запуске Проводника открывать Этот компьютер
+"LaunchTo"=dword:00000001
+;Не использовать мастер общего доступа
+"SharingWizardOn"=dword:00000000
+;Отображать сжатые или зашифрованные файлы NTFS другим цветом
+"ShowEncryptCompressedColor"=dword:00000001
+;Скрыть кнопку Представление задач
+"ShowTaskViewButton"=dword:00000000
+;Не показывать приложения Магазина Windows на панели задач
+"StoreAppsOnTaskbar"=dword:00000000
+;Отключить скольжение кнопок Панели задач
+"TaskbarAnimations"=dword:00000000
+;Не группировать кнопки на Панели задач
+"TaskbarGlomLevel"=dword:00000002
+;Использовать маленькие значки на Панели задач
+"TaskbarSmallIcons"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\AutoComplete]
+;Использовать встроенное автозаполнение
+"Append Completion"="yes"
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers]
+;Запретить автозапуск для всех носителей и устройств
+"DisableAutoplay"=dword:00000001
+
+[-HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\EventHandlersDefaultSelection]
+[-HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\UserChosenExecuteHandlers]
+;Сбросить настройки автозапуска для всех носителей и устройств
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\CIDOpen\Modules\GlobalSettings\Sizer]
+;Скрыть область навигации в диалоге "Открыть..."
+"PageSpaceControlSizer"=hex:a0,00,00,00,00,00,00,00,00,00,00,00,9b,02,00,00
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\CIDSave\Modules\GlobalSettings\Sizer]
+;Скрыть область навигации в диалоге "Сохранить как..."
+"PageSpaceControlSizer"=hex:a0,00,00,00,00,00,00,00,00,00,00,00,9b,02,00,00
+
+;Настройка Панели управления
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel]
+;Показывать крупные значки
+"AllItemsIconView"=dword:00000000
+;Показывать все элементы
+"StartupPage"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\DontShowMeThisDialogAgain]
+;Не показывать запрос перед удалением программ
+"{948e51fb-0a48-44f0-86ac-33c36def540c}"="NO"
+
+;Добавление значков на Рабочий стол
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel]
+;Отображать Компьютер на Рабочем столе
+"{20D04FE0-3AEA-1069-A2D8-08002B30309D}"=dword:00000000
+;Отображать %UserName% на Рабочем столе
+"{59031a47-3f72-44a7-89c5-5595fe6b30ee}"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Modules\GlobalSettings\Sizer]
+;Скрыть область навигации в папках
+"PageSpaceControlSizer"=hex:a0,00,00,00,00,00,00,00,00,00,00,00,45,03,00,00
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Taskband]
+;Изъять все программы из Панели задач
+"Favorites"=hex:ff
+"FavoritesResolve"=-
+
+;Настройка параметров безопасности браузера
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings]
+;Запретить встроенную проверку подлинности Windows
+"EnableNegotiate"=dword:00000000
+;Отключить предупреждение о несоответствии адреса сертификата
+"WarnonBadCertRecving"=dword:00000000
+;Отключить предупреждение о переходе в локальную зону
+"WarnOnIntranet"=dword:00000000
+;Отключить предупреждение о перенаправления публикаций
+"WarnOnPostRedirect"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Notifications\Settings\Windows.SystemToast.SecurityAndMaintenance]
+;Не получать уведомления от Центра безопасности и обслуживания
+"Enabled"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Attachments]
+;Отключить предупреждение при открытии файлов, загруженных из Интернета
+"SaveZoneInformation"=dword:00000001
+
+;Дополнительная настройка Проводника
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer]
+;Отключить встроенные средства записи компакт-дисков
+"NoCDBurning"=dword:00000001
+;Отключить автозапуск всех устройств, кроме CD-привода
+"NoDriveTypeAutoRun"=dword:000000dd
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Search]
+;Отключить журнал этого и других устройств, где выполнен вход
+"DeviceHistoryEnabled"=dword:00000000
+;Скрыть значок поиска на Панели задач
+"SearchboxTaskbarMode"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\DWM]
+;Показать цвет в заголовке окна
+"ColorPrevalence"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\MSDT]
+;Запретить начинать устранение неполадок сразу после запуска
+"AllowSkipFirstPage"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Windows]
+;Запретить Windows управлять принтером по умолчанию
+"LegacyDefaultPrinterMode"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQMClient\Windows]
+;Не принимать участие в Программе улучшения качества ПО
+"CEIPEnable"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WcmSvc\Tethering]
+;Запретить удалённо включать мобильный хот-спот
+"RemoteStartupDisabled"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\DeliveryOptimization\Config]
+;Отключить обновление из нескольких мест
+"DODownloadMode"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\DeviceSetup]
+;Скачивать драйверы для новых устройств даже через лимитные подключения
+"CostedNetworkPolicy"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer]
+;Отключить отображения вкладки "Предыдущие версии" в свойствах файлов
+"NoPreviousVersionsPage"=dword:00000001
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\RemoteComputer\NameSpace\{863aa9fd-42df-457b-8e4d-0de1b8015c60}]
+;Не сканировать сеть на наличие сетевых принтеров
+
+;Настройка выдачи уведомлений о вносимых изменениях
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+;Запускать программы от имени Администратора
+"ConsentPromptBehaviorAdmin"=dword:00000000
+;Отключить Контроль учётных записей (UAC)
+"EnableLUA"=dword:00000000
+;Не использовать защищённый Рабочий стол
+"PromptOnSecureDesktop"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\SmartGlass]
+;Запретить приложениям на других устройствах открывать приложения
+"UserAuthPolicy"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\ScheduledDiagnostics]
+;Отключить автоматический поиск распространённых неполадок 
+"EnabledExecution"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Windows Error Reporting]
+;Не проверять наличие новых решений для отчётов о проблемах
+"Disabled"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SPP\Clients]
+;Не восстанавливать параметры системы
+"{09F7EDC5-294E-4180-AF6A-FB0E6A0E9513}"=-
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SystemRestore]
+;Отключить восстановление системы на всех дисках
+"RPSessionInterval"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsSelfHost\UI\Visibility]
+;Убрать пункт "Программа предварительно оценки Windows"
+"HideInsiderPage"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\MRT]
+;Не предлагать обновления для Средства удаления вредоносных программ
+"DontOfferThroughWUAU"=dword:00000001
+
+;Поведение в случае отказа сисемы (BSOD)
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\CrashControl]
+;Не выполнять автоматическую перезагрузку
+"AutoReboot"=dword:00000000
+;Не записывать отладочную информацию
+"CrashDumpEnabled"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power]
+;Отключить режим Гибернации
+"HibernateEnabled"=dword:00000000
+
+;Установка параметров удалённого доступа
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Remote Assistance]
+;Запретить удалённое управление этим компьютером
+"fAllowFullControl"=dword:00000000
+;Запретить подключения удалённого помощника к этому компьютеру
+"fAllowToGetHelp"=dword:00000000
+;Запретить удалённое управление через чат
+"fEnableChatControl"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\CSC]
+;Отключить драйвер автономных файлов
+"Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\CscService]
+;Отключить службу автономных файлов
+"Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DiagTrack]
+;Отключить службу диагностического отслеживания
+"Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\lanmanserver\Parameters]
+;Отключить стандартные административные общие ресурсы (C$ и т.д.)
+"AutoShareWks"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MpsSvc]
+;Отключить службу Брандмауэр Windows
+"Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\DomainProfile]
+;Отключить доменный профиль Брандмауэра Windows
+"EnableFirewall"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\PublicProfile]
+;Отключить общий профиль Брандмауэра Windows
+"EnableFirewall"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\StandardProfile]
+;Отключить частный профиль Брандмауэра Windows
+"EnableFirewall"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time]
+;Отключить службу времени Windows
+"Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters]
+;Не выполнять синхронизацию с сервером времени в Интернете
+"Type"="NoSync"
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wscsvc]
+;Отключить службу Центр обеспечения безопасности
+"Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SYSTEM\Maps]
+;Отключить автоматическое обновление карт
+"AutoUpdateEnabled"=dword:00000000
