@@ -119,7 +119,7 @@
                 <NetworkLocation>Other</NetworkLocation>
                 <ProtectYourPC>3</ProtectYourPC>
             </OOBE>
-            <TimeZone>FLE Standard Time</TimeZone>
+            <TimeZone>Russian Standard Time</TimeZone>
             <UserAccounts>
                 <AdministratorPassword>
                     <PlainText>true</PlainText>
