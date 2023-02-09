@@ -36,14 +36,9 @@ Windows Registry Editor Version 5.00
 "TMP"=-
 
 [HKEY_CURRENT_USER\Keyboard Layout\Preload]
-;Установить английский язык по умолчанию, добавить русский и украинский
+;Установить английский язык по умолчанию, добавить русский язык
 "1"="00000409"
 "2"="00000419"
-"3"="00000422"
-
-[HKEY_CURRENT_USER\Keyboard Layout\Preload\Substitutes]
-;Подставить украинскую (расширенную) раскладку клавиатуры
-"00000422"="00020422"
 
 [HKEY_CURRENT_USER\Keyboard Layout\Toggle]
 ;Установить Ctrl+Shift для переключение между языками ввода

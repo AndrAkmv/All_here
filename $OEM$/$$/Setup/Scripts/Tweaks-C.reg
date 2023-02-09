@@ -27,8 +27,8 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Control Panel\International\User Profile]
 ;Не предоставлять веб-сайтам доступ к моему списку языков
 "HttpAcceptLanguageOptOut"=dword:00000001
-;Сортировать языки ввода в порядке: английский, русский, украинский
-"Languages"=hex(7):65,00,6e,00,2d,00,55,00,53,00,00,00,72,00,75,00,00,00,75,00,6b,00
+;Сортировать языки ввода в порядке: английский, русский
+"Languages"=hex(7):65,00,6e,00,2d,00,55,00,53,00,00,00,72,00,75,00,00,00,00,00
 
 [HKEY_CURRENT_USER\Control Panel\Keyboard]
 ;Убрать задержку повтора при зажатии клавиши
@@ -69,14 +69,9 @@ Windows Registry Editor Version 5.00
 "TMP"=-
 
 [HKEY_CURRENT_USER\Keyboard Layout\Preload]
-;Установить английский язык по умолчанию, добавить русский и украинский
+;Установить английский язык по умолчанию, добавить русский язык
 "1"="00000409"
 "2"="00000419"
-"3"="00000422"
-
-[HKEY_CURRENT_USER\Keyboard Layout\Preload\Substitutes]
-;Подставить украинскую (расширенную) раскладку клавиатуры
-"00000422"="00020422"
 
 [HKEY_CURRENT_USER\Keyboard Layout\Toggle]
 ;Установить Ctrl+Shift для переключение между языками ввода
@@ -85,10 +80,9 @@ Windows Registry Editor Version 5.00
 "Layout Hotkey"="3"
 
 [HKEY_CURRENT_USER\Software\Microsoft\CTF\SortOrder\Language]
-;Сортировать языки ввода в порядке: английский, русский, украинский
+;Сортировать языки ввода в порядке: английский, русский
 "00000000"="00000409"
 "00000001"="00000419"
-"00000002"="00000422"
 
 [HKEY_CURRENT_USER\Software\Microsoft\FTP]
 ;Запретить просмотр FTP-папок (за пределами Internet Explorer)
