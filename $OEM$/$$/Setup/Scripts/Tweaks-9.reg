@@ -108,13 +108,6 @@ Windows Registry Editor Version 5.00
 ;Ќе загружать сайты и содержимое в фоновом режиме
 "Enabled"=dword:00000000
 
-[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\SearchScopes]
-;Ќазначить Bing поисковой системой по умолчанию
-"DefaultScope"="{0633EE93-D776-472f-A0FF-E1416B8B2E3A}"
-
-[-HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\SearchScopes\{8C3078A0-9AAB-4371-85D1-656CA8E46EE8}]
-;”далить яндекс из списка поисковых систем
-
 [HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\TabbedBrowsing]
 ;ѕри открытии новой вкладки открывать домашнюю страницу
 "NewTabPageShow"=dword:00000001
