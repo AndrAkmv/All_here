@@ -125,7 +125,7 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer]
 ;Отображать все значки в области уведомлений
 "EnableAutoTray"=dword:00000000
-;He дoбaвлять "- Яpлык" для coздaвaeмыx яpлыкoв
+;He дoбaвлять "- Ярлык" для coздaвaeмыx яpлыкoв
 "link"=hex:00,00,00,00
 
 ;Расширенная настройка Проводника
@@ -232,14 +232,36 @@ Windows Registry Editor Version 5.00
 "HideSCAHealth"=dword:00000001
 ;Отключить встроенные средства записи компакт-дисков
 "NoCDBurning"=dword:00000001
-;Отключить автозапуск всех устройств, кроме CD-привода
-"NoDriveTypeAutoRun"=dword:000000dd
+;Отключить проверку свободного места на диске
+"NoLowDiskSpaceChecks"=dword:00000001
 ;Убрать ярлык "Программы по умолчанию" из меню Пуск
 "NoSMConfigurePrograms"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\DWM]
+;Включить тему оформления "Windows 7 - упрощённый стиль"
+"Composition"=dword:00000000
 
 [HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\MSDT]
 ;Запретить начинать устранение неполадок сразу после запуска
 "AllowSkipFirstPage"=dword:00000000
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.bmp\ShellNew]
+;Удалить из контекстного меню Создать - Точечный рисунок
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.contact\ShellNew]
+;Удалить из контекстного меню Создать - Контакт
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.rtf\ShellNew]
+;Удалить из контекстного меню Создать - Документ RTF
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.zip\CompressedFolder\ShellNew]
+;Удалить из контекстного меню Создать - Сжатая ZIP-папка
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Briefcase\ShellNew]
+;Удалить из контекстного меню Создать - Портфель
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\SystemFileAssociations\Directory.Audio\shellex\ContextMenuHandlers\WMPShopMusic]
+;Удалить из контекстного меню Библиотеки (Аудио) - Поиск музыки в Интернете
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQMClient\Windows]
 ;Не принимать участие в Программе улучшения качества ПО
@@ -362,6 +384,22 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\StandardProfile]
 ;Отключить частный профиль Брандмауэра Windows
 "EnableFirewall"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ShellHWDetection]
+;Отключить службу определения оборудования оболочки (Автозапуск)
+"Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SysMain]
+;Отключить службу Superfetch
+"Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\TabletInputService]
+;Отключить службу ввода планшетного ПК
+"Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\UxSMS]
+;Отключить службу диспетчера окон Рабочего стола (Aero)
+"Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time]
 ;Отключить службу времени Windows
