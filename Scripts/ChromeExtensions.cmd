@@ -25,8 +25,8 @@ reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\gipnlpdeieaidmmeaichnddnmj
 :: reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\aagminaekdpcfimcbhknlgjmpnnnmooo /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
 
 rem Dislike
-:: echo Return YouTube Dislike
-:: reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\gebbhagfogifgggkldgodflihgfeippi /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
+echo Return YouTube Dislike
+reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\gebbhagfogifgggkldgodflihgfeippi /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
 
 rem Eyes
 echo Dark Reader
@@ -35,8 +35,8 @@ reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\eimadpbcbfnmbkopoojfekhnkh
 :: reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\hmafjphdklmdjfcnljjeonfpgafanjjc /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
 
 rem Lang
-:: echo Google Translate
-:: reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\aapbdbdomjkkjkaonfhkkikfgjllcleb /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
+echo Google Translate
+reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\aapbdbdomjkkjkaonfhkkikfgjllcleb /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
 
 rem Mouse
 echo CrxMouse Chrome Gestures
@@ -47,8 +47,8 @@ reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\jlgkpaicikihijadgifklkbpda
 rem Similar
 echo SimilarSites
 reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\necpbmbhhdiplmfhmjicabdeighkndkn /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
-echo SimilarWeb
-reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\hoklmmgfnpapgjgcpechhaamimifchmp /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
+:: echo SimilarWeb
+:: reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\hoklmmgfnpapgjgcpechhaamimifchmp /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
 
 rem Tabs
 echo Prevent Duplicate Tabs
@@ -57,10 +57,10 @@ echo Tab Activate
 reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\jlmadbnpnnolpaljadgakjilggigioaj /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
 
 rem VPN
+echo Brisk VPN
+reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\ciifcakemmcbbdpmljdohdmbodagmela /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
 :: echo Browsec VPN
 :: reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\omghfjlpggmjjaagoclmmobgdodcjboh /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
-echo Delta Free VPN
-reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\lpejglcfpkpbjhmnnmpmmlpblkcmdgmi /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
 
 rem Window
 echo Material Dark
