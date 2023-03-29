@@ -311,6 +311,10 @@ Windows Registry Editor Version 5.00
 ;Никогда не устанавливать драйверы из Центра обновления Windows
 "SearchOrderConfig"=dword:00000000
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\DeviceSetup]
+;Скачивать драйверы для новых устройств даже через лимитные подключения
+"CostedNetworkPolicy"=dword:00000001
+
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\EOSNotify]
 ;Больше не напоминать об окончании срока поддержки
 "DiscontinueEOS"=dword:00000001
@@ -397,12 +401,32 @@ Windows Registry Editor Version 5.00
 ;Отключить службу диагностического отслеживания
 "Start"=dword:00000004
 
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HomeGroupProvider]
+;Отключить службу Поставщик домашней группы
+"Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\IKEEXT]
+;Отключить службу модулей ключей IPsec
+"Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\iphlpsvc]
+;Отключить вспомогательную службу IP
+"Start"=dword:00000004
+
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\lanmanserver\Parameters]
 ;Отключить стандартные административные общие ресурсы (C$ и т.д.)
 "AutoShareWks"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MpsSvc]
 ;Отключить службу Брандмауэр Windows
+"Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NcbService]
+;Отключить службу Посредник подключений к сети (Магазин)
+"Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PolicyAgent]
+;Отключить службу Агент политики IPsec
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\DomainProfile]
