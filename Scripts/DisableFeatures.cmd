@@ -43,6 +43,7 @@ exit /b
 
 :exclude
 if %1==NetFx3 exit /b
+if %1==SMB1Protocol exit /b
 if %1==MediaPlayback exit /b
 if %1==WindowsMediaPlayer exit /b
 if %1==Internet-Explorer-Optional-x86 exit /b
