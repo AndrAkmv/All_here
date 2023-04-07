@@ -24,6 +24,7 @@ Windows Registry Editor Version 5.00
 ;Отключить анимацию окон при свертывании и развертывании
 "MinAnimate"="0"
 
+;Установка списка языков и параметров конфиденциальности
 [HKEY_CURRENT_USER\Control Panel\International\User Profile]
 ;Не предоставлять веб-сайтам доступ к моему списку языков
 "HttpAcceptLanguageOptOut"=dword:00000001
@@ -438,6 +439,10 @@ Windows Registry Editor Version 5.00
 "fAllowToGetHelp"=dword:00000000
 ;Запретить удалённое управление через чат
 "fEnableChatControl"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management]
+;Отключить файл подкачки приложений Магазина Windows
+"SwapfileControl"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\CDPSvc]
 ;Отключить службу платформы подключенных устройств
