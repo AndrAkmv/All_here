@@ -423,6 +423,7 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management]
 ;Отключить файл подкачки приложений Магазина Windows
 "SwapfileControl"=dword:00000000
+
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\CSC]
 ;Отключить драйвер автономных файлов
 "Start"=dword:00000004
@@ -439,9 +440,21 @@ Windows Registry Editor Version 5.00
 ;Отключить службу оптимизации доставки
 "Start"=dword:00000004
 
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\IKEEXT]
+;Отключить службу модулей ключей IPsec
+"Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\iphlpsvc]
+;Отключить вспомогательную службу IP
+"Start"=dword:00000004
+
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\lanmanserver\Parameters]
 ;Отключить стандартные административные общие ресурсы (C$ и т.д.)
 "AutoShareWks"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\lfsvc]
+;Отключить службу географического положения
+"Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MapsBroker]
 ;Отключить службу Диспетчер скачанных карт
@@ -449,6 +462,14 @@ Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MpsSvc]
 ;Отключить службу Брандмауэр Windows
+"Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NcbService]
+;Отключить службу Посредник подключений к сети (Магазин)
+"Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PolicyAgent]
+;Отключить службу Агент политики IPsec
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\DomainProfile]
