@@ -280,8 +280,8 @@ Windows Registry Editor Version 5.00
 "PreventDeviceMetadataFromNetwork"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\DriverSearching]
-;Никогда не устанавливать драйверы из Центра обновления Windows
-"SearchOrderConfig"=dword:00000000
+;Всегда устанавливать драйверы из Центра обновления Windows
+"SearchOrderConfig"=dword:00000001
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\EOSNotify]
 ;Больше не напоминать об окончании срока поддержки
@@ -443,8 +443,4 @@ Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wscsvc]
 ;Отключить службу Центр обеспечения безопасности
-"Start"=dword:00000004
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wuauserv]
-;Отключить службу Центр обновления Windows
 "Start"=dword:00000004
