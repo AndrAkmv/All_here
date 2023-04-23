@@ -422,6 +422,10 @@ Windows Registry Editor Version 5.00
 ;Отключить стандартные административные общие ресурсы (C$ и т.д.)
 "AutoShareWks"=dword:00000000
 
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\luafv]
+;Отключить драйвер виртуализации Контроля учетных записей
+"Start"=dword:00000004
+
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MpsSvc]
 ;Отключить службу Брандмауэр Windows
 "Start"=dword:00000004
