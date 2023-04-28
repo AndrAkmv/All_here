@@ -60,7 +60,6 @@ Windows Registry Editor Version 5.00
 "14"=-
 "15"=-
 "16"=-
-"17"=-
 
 [HKEY_CURRENT_USER\Environment]
 ;Использовать %SYSTEMROOT%\System32 как папку для приложений WindowsApps
@@ -375,6 +374,8 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
 ;Запускать программы от имени Администратора
 "ConsentPromptBehaviorAdmin"=dword:00000000
+;Запретить автоматический вход после перезагрузки
+"DisableAutomaticRestartSignOn"=dword:00000001
 ;Отключить Контроль учётных записей (UAC)
 "EnableLUA"=dword:00000000
 ;Не использовать защищённый Рабочий стол
@@ -479,6 +480,10 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\lanmanserver\Parameters]
 ;Отключить стандартные административные общие ресурсы (C$ и т.д.)
 "AutoShareWks"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\lfsvc]
+;Отключить службу географического положения
+"Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\luafv]
 ;Отключить драйвер виртуализации Контроля учетных записей
