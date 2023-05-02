@@ -367,8 +367,6 @@ Windows Registry Editor Version 5.00
 "DontOfferThroughWUAU"=dword:00000001
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Explorer]
-;Не предлагать ассоциировать новые приложения
-"NoNewAppAlert"=dword:00000001
 ;Не предлагать найти приложение в Магазине
 "NoUseStoreOpenWith"=dword:00000001
 
