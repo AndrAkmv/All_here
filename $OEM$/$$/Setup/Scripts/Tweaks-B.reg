@@ -432,10 +432,6 @@ Windows Registry Editor Version 5.00
 ;Отключить службу диагностического отслеживания
 "Start"=dword:00000004
 
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DoSvc]
-;Отключить службу оптимизации доставки
-"Start"=dword:00000004
-
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HomeGroupProvider]
 ;Отключить службу Поставщик домашней группы
 "Start"=dword:00000004
