@@ -439,10 +439,6 @@ Windows Registry Editor Version 5.00
 ;Отключить службу Защитник Windows
 "Start"=dword:00000004
 
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WMPNetworkSvc]
-;Отключить службу общих сетевых ресурсов проигрывателя
-"Start"=dword:00000004
-
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wscsvc]
 ;Отключить службу Центр обеспечения безопасности
 "Start"=dword:00000004
