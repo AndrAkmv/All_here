@@ -1,7 +1,6 @@
 @echo off
+title Installing updates for Microsoft Office
 
-echo Installing updates for Microsoft Office
-echo -------------------------------------------------------------------------------
 for /f "tokens=*" %%i in ('dir x86 /b') do call :install %%i
 timeout 3 > nul
 exit
