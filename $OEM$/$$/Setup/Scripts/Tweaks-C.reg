@@ -417,6 +417,10 @@ Windows Registry Editor Version 5.00
 ;Не предлагать обновления для Средства удаления вредоносных программ
 "DontOfferThroughWUAU"=dword:00000001
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU]
+;Отключить автоматическое обновление Windows
+"NoAutoUpdate"=dword:00000001
+
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender]
 ;Отключить Защитник Windows
 "DisableAntiSpyware"=dword:00000001
