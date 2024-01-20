@@ -428,6 +428,10 @@ Windows Registry Editor Version 5.00
 ;Отключить службу Брандмауэр Windows
 "Start"=dword:00000004
 
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NcaSvc]
+;Отключить службу Помощник по подключению к сети
+"Start"=dword:00000004
+
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NcbService]
 ;Отключить службу Посредник подключений к сети (Магазин)
 "Start"=dword:00000004
