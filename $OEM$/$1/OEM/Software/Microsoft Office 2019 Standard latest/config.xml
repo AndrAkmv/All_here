@@ -19,7 +19,7 @@
   <Property Name="AUTOACTIVATE" Value="0" />
   <Property Name="FORCEAPPSHUTDOWN" Value="FALSE" />
   <Property Name="DeviceBasedLicensing" Value="0" />
-  <Updates Enabled="TRUE" />
+  <Updates Enabled="FALSE" />
   <RemoveMSI />
   <Display Level="None" AcceptEULA="TRUE" />
   <Logging Level="Off" />

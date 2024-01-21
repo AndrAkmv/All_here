@@ -66,4 +66,3 @@ reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Folder /d "cmd
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Remove /d "cmd /c rd /s /q %SYSTEMROOT%\Setup\Scripts"
 powercfg -h off
 powercfg -s 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c
-powershell -ExecutionPolicy ByPass -Command "$ms = New-Object -ComObject Microsoft.Update.ServiceManager; $ms.AddService2('7971f918-a847-4430-9279-4a52d1efe18d',7,'')"
