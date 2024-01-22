@@ -170,9 +170,9 @@ Windows Registry Editor Version 5.00
 ;Не отправлять данные об использовании проигрывателя
 "UsageTracking"=dword:00000000
 
-[HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\General]
-;Отметить показанным начальный диалог Office 2016
-"ShownFirstRunOptin"=dword:00000001
+[HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common]
+;Отметить показанным начальный диалог Office 2019
+"PrivacyNoticeShown"=dword:00000002
 
 [HKEY_CURRENT_USER\Software\Microsoft\Personalization\Settings]
 ;Отменить принятие соглашения о конфиденциальности
