@@ -425,6 +425,10 @@ Windows Registry Editor Version 5.00
 ;Отключить Защитник Windows
 "DisableAntiSpyware"=dword:00000001
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender Security Center\Virus and threat protection]
+;Скрыть область защиты от вирусов и угроз в Безопасности Windows
+"UILockdown"=dword:00000001
+
 ;Поведение в случае отказа сисемы (BSOD)
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\CrashControl]
 ;Не выполнять автоматическую перезагрузку
