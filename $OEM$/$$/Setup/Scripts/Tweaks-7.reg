@@ -255,6 +255,10 @@ Windows Registry Editor Version 5.00
 ;Запретить начинать устранение неполадок сразу после запуска
 "AllowSkipFirstPage"=dword:00000000
 
+[HKEY_CURRENT_USER\Software\Policies\Google\Chrome]
+;Подавить предупреждение об использовании неподдерживаемой ОС
+"SuppressUnsupportedOSWarning"=dword:00000001
+
 [-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.bmp\ShellNew]
 ;Удалить из контекстного меню Создать - Точечный рисунок
 
