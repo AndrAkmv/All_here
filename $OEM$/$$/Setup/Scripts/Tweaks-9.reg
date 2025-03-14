@@ -276,6 +276,8 @@ Windows Registry Editor Version 5.00
 "HideSCAHealth"=dword:00000001
 ;Отключить встроенные средства записи компакт-дисков
 "NoCDBurning"=dword:00000001
+;Отключить автозапуск всех устройств, кроме CD-привода
+"NoDriveTypeAutoRun"=dword:000000dd
 ;Отключить проверку свободного места на диске
 "NoLowDiskSpaceChecks"=dword:00000001
 
