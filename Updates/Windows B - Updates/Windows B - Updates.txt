@@ -1,0 +1,16 @@
+[Netfx]  
+WindowsB-SXS-x64.exe
+WindowsB-SXS-x86.exe
+ 
+[Rollup\x64]  
+Windows10.0-KB4486129-x64.cab
+Windows10.0-KB5023788-x64.cab
+Windows10.0-KB5028623-x64.cab
+Windows10.0-KB5033910-x64.cab
+ 
+[Rollup\x86]  
+Windows10.0-KB4132216-x86.cab
+Windows10.0-KB4346877-x86.cab
+Windows10.0-KB4486129-x86.cab
+Windows10.0-KB5033910-x86.cab
+ 
