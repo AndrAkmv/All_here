@@ -1,1 +1,1 @@
-Windows 10 RS+ Enterprise LTSB x86 (Jul 2018)
+Windows 10 1607 Enterprise LTSB x86 (Jul 2018)
