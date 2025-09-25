@@ -23,21 +23,21 @@ dism /Online /English /LogLevel:1 /Add-Package /PackagePath:"%SYSTEMDRIVE%\OEM\U
 start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft .NET Framework 4.8\ndp48-x86-x64-allos-enu.exe" /q
 start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft .NET Framework 4.8\ndp48-x86-x64-allos-rus.exe" /q
 start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft .NET Framework 4.8\ndp48-kb4532941-%_arch%.exe" /q
-start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2010 Standard SP2+\setup.exe" ^
-/config "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2010 Standard SP2+\Unattend\config.xml"
+start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2010 Standard x32\setup.exe" ^
+/config "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2010 Standard x32\Unattend\config.xml"
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Tweaks /d "cmd /c reg import %SYSTEMROOT%\Setup\Scripts\Tweaks-7.reg"
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v HotFix /d "cscript //b %SYSTEMROOT%\Setup\Scripts\W7-Fix-Event-ID-10.vbs"
 goto :cleanup
 
 :windows-9
-start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2013 Standard SP1+\setup.exe" ^
-/config "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2013 Standard SP1+\unattend\config.xml"
+start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2013 Standard x32\setup.exe" ^
+/config "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2013 Standard x32\unattend\config.xml"
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Tweaks /d "cmd /c reg import %SYSTEMROOT%\Setup\Scripts\Tweaks-9.reg"
 goto :cleanup
 
 :windows-B
-start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2016 Standard SP0+\setup.exe" ^
-/config "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2016 Standard SP0+\unattend\config.xml"
+start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2016 Standard x32\setup.exe" ^
+/config "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2016 Standard x32\unattend\config.xml"
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Tweaks /d "cmd /c reg import %SYSTEMROOT%\Setup\Scripts\Tweaks-B.reg"
 goto :cleanup
 
