@@ -1,16 +1,9 @@
 [Netfx]  
 WindowsC-SXS-x64.exe
-WindowsC-SXS-x86.exe
  
 [Rollup\x64]  
 Windows10.0-KB4486153-x64.cab
 Windows10.0-KB5023789-x64.cab
 Windows10.0-KB5027222-x64.cab
 Windows10.0-KB5033911-x64.cab
- 
-[Rollup\x86]  
-Windows10.0-KB4486153-x86.cab
-Windows10.0-KB5023789-x86.cab
-Windows10.0-KB5027222-x86.cab
-Windows10.0-KB5033911-x86.cab
  
