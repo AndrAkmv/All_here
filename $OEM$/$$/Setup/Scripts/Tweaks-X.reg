@@ -478,22 +478,6 @@ Windows Registry Editor Version 5.00
 ;Отключить драйвер виртуализации Контроля учетных записей
 "Start"=dword:00000004
 
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MpsSvc]
-;Отключить службу Брандмауэр Windows
-"Start"=dword:00000004
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\DomainProfile]
-;Отключить доменный профиль Брандмауэра Windows
-"EnableFirewall"=dword:00000000
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\PublicProfile]
-;Отключить общий профиль Брандмауэра Windows
-"EnableFirewall"=dword:00000000
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\StandardProfile]
-;Отключить частный профиль Брандмауэра Windows
-"EnableFirewall"=dword:00000000
-
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time]
 ;Отключить службу времени Windows
 "Start"=dword:00000004
