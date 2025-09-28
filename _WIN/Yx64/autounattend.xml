@@ -71,7 +71,6 @@
                 <HideWirelessSetupInOOBE>true</HideWirelessSetupInOOBE>
                 <ProtectYourPC>3</ProtectYourPC>
             </OOBE>
-            <TimeZone>Russian Standard Time</TimeZone>
             <UserAccounts>
                 <AdministratorPassword>
                     <PlainText>true</PlainText>
