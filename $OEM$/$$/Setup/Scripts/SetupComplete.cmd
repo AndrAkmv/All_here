@@ -39,17 +39,21 @@ goto :cleanup
 start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2016 Standard x32\setup.exe" ^
 /config "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2016 Standard x32\unattend\config.xml"
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Tweaks /d "cmd /c reg import %SYSTEMROOT%\Setup\Scripts\Tweaks-B.reg"
-goto :cleanup
+goto :defend
 
 :windows-C
 start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2019 Standard x64\setup.exe" ^
 /configure "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2019 Standard x64\config.xml"
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Tweaks /d "cmd /c reg import %SYSTEMROOT%\Setup\Scripts\Tweaks-C.reg"
-goto :cleanup
+goto :defend
 
 :windows-X
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Tweaks /d "cmd /c reg import %SYSTEMROOT%\Setup\Scripts\Tweaks-X.reg"
 goto :cleanup
+
+:defend
+sc stop WinDefend > nul
+sc config WinDefend start= disabled > nul
 
 :cleanup
 start "" /w "%SYSTEMDRIVE%\OEM\Activator\AAct_%_arch%.exe" /win=act /ofs=act /taskwin /taskofs
