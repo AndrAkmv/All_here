@@ -99,12 +99,6 @@
                 </Password>
                 <Username>Administrator</Username>
             </AutoLogon>
-            <FirstLogonCommands>
-                <SynchronousCommand wcm:action="add">
-                    <CommandLine>net user Временный /delete</CommandLine>
-                    <Order>1</Order>
-                </SynchronousCommand>
-            </FirstLogonCommands>
             <OOBE>
                 <HideOEMRegistrationScreen>true</HideOEMRegistrationScreen>
                 <HideOnlineAccountScreens>true</HideOnlineAccountScreens>
@@ -116,16 +110,6 @@
                     <PlainText>true</PlainText>
                     <Value></Value>
                 </AdministratorPassword>
-                <LocalAccounts>
-                    <LocalAccount wcm:action="add">
-                        <Group>Users</Group>
-                        <Name>Временный</Name>
-                        <Password>
-                            <PlainText>true</PlainText>
-                            <Value></Value>
-                        </Password>
-                    </LocalAccount>
-                </LocalAccounts>
             </UserAccounts>
         </component>
         <component name="Microsoft-Windows-WinRE-RecoveryAgent" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
