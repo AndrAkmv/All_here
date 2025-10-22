@@ -1,15 +1,12 @@
 @echo off
 
-set _arch=x64
-if %PROCESSOR_ARCHITECTURE%==x86 if not defined PROCESSOR_ARCHITEW6432 set _arch=x86
-
 start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Visual C++ Pack\vstor_redist.exe" /q
 start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Visual C++ Pack\vcredist_x86_2012.exe" /q
-if %_arch%==x64 start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Visual C++ Pack\vcredist_x64_2012.exe" /q
+start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Visual C++ Pack\vcredist_x64_2012.exe" /q
 start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Visual C++ Pack\vcredist_x86_2013.exe" /q
-if %_arch%==x64 start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Visual C++ Pack\vcredist_x64_2013.exe" /q
+start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Visual C++ Pack\vcredist_x64_2013.exe" /q
 start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Visual C++ Pack\vcredist_x86_2015-2022.exe" /q
-if %_arch%==x64 start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Visual C++ Pack\vcredist_x64_2015-2022.exe" /q
+start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Visual C++ Pack\vcredist_x64_2015-2022.exe" /q
 
 ver | find "6.1" > nul && goto :windows-7
 ver | find "6.3" > nul && goto :windows-9
@@ -19,10 +16,10 @@ ver | find "10.0.19044" > nul && goto :Windows-X
 goto :cleanup
 
 :windows-7
-dism /Online /English /LogLevel:1 /Add-Package /PackagePath:"%SYSTEMDRIVE%\OEM\Updates\Windows 7 - Online\%_arch%"
+dism /Online /English /LogLevel:1 /Add-Package /PackagePath:"%SYSTEMDRIVE%\OEM\Updates\Windows 7 - Online\x64"
 start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft .NET Framework 4.8\ndp48-x86-x64-allos-enu.exe" /q
 start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft .NET Framework 4.8\ndp48-x86-x64-allos-rus.exe" /q
-start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft .NET Framework 4.8\ndp48-kb4532941-%_arch%.exe" /q
+start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft .NET Framework 4.8\ndp48-kb4532941-x64.exe" /q
 start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2010 Standard x32\setup.exe" ^
 /config "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2010 Standard x32\Unattend\config.xml"
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Tweaks /d "cmd /c reg import %SYSTEMROOT%\Setup\Scripts\Tweaks-7.reg"
@@ -58,7 +55,7 @@ sc stop WinDefend > nul
 sc config WinDefend start= disabled > nul
 
 :cleanup
-start "" /w "%SYSTEMDRIVE%\OEM\Activator\AAct_%_arch%.exe" /win=act /ofs=act /taskwin /taskofs
+start "" /w "%SYSTEMDRIVE%\OEM\Activator\AAct_x64.exe" /win=act /ofs=act /taskwin /taskofs
 rd /s /q %SYSTEMDRIVE%\OEM
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v AntSpy /d "cmd /c %SYSTEMROOT%\Setup\Scripts\AntiSpyware.cmd"
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v DTasks /d "cmd /c %SYSTEMROOT%\Setup\Scripts\DeleteTasks.cmd"
