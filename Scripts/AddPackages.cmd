@@ -47,7 +47,7 @@ set /a _num+=1
 echo %_num% Add: %1
 dism /English /LogLevel:1 /%_img% /Add-Package /PackagePath:x64\%1 /NoRestart
 echo -------------------------------------------------------------------------------
-if %ERRORLEVEL% NEQ 0 set _make=Discard & pause
+if %ERRORLEVEL% NEQ 0 if %ERRORLEVEL% NEQ 3010 set _make=Discard & pause
 exit /b
 
 :unmount

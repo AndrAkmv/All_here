@@ -57,7 +57,7 @@ set /a _num+=1
 echo %_num% Disable: %1
 dism /English /LogLevel:1 /%_img% /Disable-Feature /FeatureName:%1 /NoRestart
 echo -------------------------------------------------------------------------------
-if %ERRORLEVEL% NEQ 0 set _make=Discard & pause
+if %ERRORLEVEL% NEQ 0 if %ERRORLEVEL% NEQ 3010 set _make=Discard & pause
 exit /b
 
 :unmount

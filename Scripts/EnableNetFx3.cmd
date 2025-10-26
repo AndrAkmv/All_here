@@ -49,7 +49,7 @@ echo Enable: .NET Framework 3.5 (includes .NET 2.0 and 3.0)
 call :state NetFx3 ||^
 dism /English /LogLevel:1 /%_img% /Enable-Feature /FeatureName:NetFx3 /Source:%TEMP%\Windows%_ver%-SXS-x64 /LimitAccess /NoRestart
 echo -------------------------------------------------------------------------------
-if %ERRORLEVEL% NEQ 0 set _make=Discard & pause
+if %ERRORLEVEL% NEQ 0 if %ERRORLEVEL% NEQ 3010 set _make=Discard & pause
 del %TEMP%\features.txt
 rd /s /q %TEMP%\Windows%_ver%-SXS-x64
 if %_ver%==8.1 goto :add
@@ -78,7 +78,7 @@ set /a _num+=1
 echo %_num% Add: %1
 dism /English /LogLevel:1 /%_img% /Add-Package /PackagePath:x64\%1 /NoRestart
 echo -------------------------------------------------------------------------------
-if %ERRORLEVEL% NEQ 0 set _make=Discard & pause
+if %ERRORLEVEL% NEQ 0 if %ERRORLEVEL% NEQ 3010 set _make=Discard & pause
 exit /b
 
 :unmount
