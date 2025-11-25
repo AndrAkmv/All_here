@@ -47,6 +47,8 @@ goto :defend
 
 :windows-D
 dism /Online /English /LogLevel:1 /Cleanup-Image /StartComponentCleanup /NoRestart
+start "" /w "%PROGRAMFILES(X86)%\Microsoft\Edge\Application\92.0.902.67\Installer\setup.exe" ^
+/uninstall /msedge /system-level /force-uninstall & tasklist > nul & wevtutil cl Application
 start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2021 Standard x64\setup.exe" ^
 /configure "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2021 Standard x64\config.xml"
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Tweaks /d "cmd /c reg import %SYSTEMROOT%\Setup\Scripts\Tweaks-D.reg"
