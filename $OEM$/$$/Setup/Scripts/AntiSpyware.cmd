@@ -7,8 +7,6 @@ reg add %%i /v Start /t REG_DWORD /d 4 /f)                                      
 for /f %%i in ('reg query HKLM\SYSTEM\CurrentControlSet\Services /k /f BluetoothUserService ^| find "BluetoothUserService"') do (
 reg add %%i /v Start /t REG_DWORD /d 4 /f)                                                                                                  &rem - C
 
-for /f %%i in ('reg query HKLM\SYSTEM\CurrentControlSet\Services /k /f CDPUserSvc ^| find "CDPUserSvc"') do (
-reg add %%i /v Start /t REG_DWORD /d 4 /f)                                                                                                  &rem B C
 for /f %%i in ('reg query HKLM\SYSTEM\CurrentControlSet\Services /k /f ConsentUxUserSvc ^| find "ConsentUxUserSvc"') do (
 reg add %%i /v Start /t REG_DWORD /d 4 /f)                                                                                                  &rem - C
 
