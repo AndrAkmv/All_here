@@ -60,6 +60,8 @@ reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v ClrLog /d "cmd
 wevtutil cl Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider/Admin
 wevtutil cl Microsoft-Windows-AppModel-Runtime/Admin
 wevtutil cl Application
+rd /q %SYSTEMDRIVE%\PerfLogs
+rd /q %SYSTEMDRIVE%\inetpub
 goto :defend
 
 :windows-X
