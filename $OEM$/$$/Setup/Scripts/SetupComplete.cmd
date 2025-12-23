@@ -4,7 +4,6 @@ powercfg /h off
 powercfg /a | find "S0" > nul
 if %ERRORLEVEL% NEQ 0 powercfg /s 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c
 
-start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Visual C++ Pack\vstor_redist.exe" /q
 start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Visual C++ Pack\vcredist_x86_2012.exe" /q
 start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Visual C++ Pack\vcredist_x64_2012.exe" /q
 start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Visual C++ Pack\vcredist_x86_2013.exe" /q
