@@ -1,5 +1,11 @@
 Windows Registry Editor Version 5.00
 
+[-HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers\EPP]
+;Удалить "Проверка с использованием Windows Defender"
+
+[-HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers\ModernSharing]
+;Удалить пункт "Отправить" из контекстного меню всех объектов
+
 [HKEY_CLASSES_ROOT\AllFilesystemObjects\shellex\ContextMenuHandlers\CopyTo]
 ;Добавить пункт "Копировать в папку..." в контекстное меню файлов
 @="{C2FBB630-2971-11d1-A18C-00C04FD75D13}"
@@ -8,9 +14,14 @@ Windows Registry Editor Version 5.00
 ;Добавить пункт "Переместить в папку..." в контекстное меню файлов
 @="{C2FBB631-2971-11d1-A18C-00C04FD75D13}"
 
+;Настройка визуальных эффектов Рабочего стола
 [HKEY_CURRENT_USER\Control Panel\Desktop]
 ;Увеличить частоту мерцания курсора
 "CursorBlinkRate"="200"
+;Отключить сглаживание неровностей экранных шрифтов
+"FontSmoothing"="0"
+;Выключить сглаживание ClearType
+"FontSmoothingType"=dword:00000000
 
 ;Дополнительная настройка внешнего вида
 [HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics]
@@ -255,26 +266,27 @@ Windows Registry Editor Version 5.00
 "Favorites"=hex:ff
 "FavoritesResolve"=-
 
-;Отключение расширений браузера
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Ext\Settings\{2670000A-7350-4F3C-8081-5663EE0C6C49}]
-;Отправить в OneNote
-"Flags"=dword:00000001
-"Version"="*"
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Ext\Settings\{31D09BA0-12F5-4CCE-BE8A-2923E76605DA}]
-;Нажать для вызова Lync
-"Flags"=dword:00000001
-"Version"="*"
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Ext\Settings\{789FE86F-6FC4-46A1-9849-EDE0DB0C95CA}]
-;Связанные заметки в OneNote
+;Отключение расширения браузера - Отправить в OneNote
 "Flags"=dword:00000001
 "Version"="*"
 
-;Удаление надстроек браузера
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Ext\Settings\{31D09BA0-12F5-4CCE-BE8A-2923E76605DA}]
+;Отключение расширения браузера - Нажать для вызова Lync
+"Flags"=dword:00000001
+"Version"="*"
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Ext\Settings\{789FE86F-6FC4-46A1-9849-EDE0DB0C95CA}]
+;Отключение расширения браузера - Связанные заметки в OneNote
+"Flags"=dword:00000001
+"Version"="*"
+
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Activities\Перевести\microsofttranslator.com]
-;Перевод с помощью Bing
+;Удаление надстройки браузера - Перевод с помощью Bing
 "Deleted"=dword:00000001
+
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Activities\Электронная почта\live.com]
-;Электронная почта Live
+;Удаление надстройки браузера - Электронная почта Live
 "Deleted"=dword:00000001
 
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Notifications\Settings\Windows.SystemToast.SecurityAndMaintenance]
@@ -309,9 +321,6 @@ Windows Registry Editor Version 5.00
 
 [-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.rtf\ShellNew]
 ;Удалить из контекстного меню Создать - Документ RTF
-
-[-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{09A47860-11B0-4DA5-AFA5-26D86198A780}]
-;Удалить из контекстного меню - Проверка с использованием Windows Defender...
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\pintohome]
 ;Удалить из контекстного меню папок - Закрепить на панели быстрого доступа
@@ -387,10 +396,6 @@ Windows Registry Editor Version 5.00
 ;Не обновлять Средство удаления вредоносных программ
 "DontOfferThroughWUAU"=dword:00000001
 
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Personalization]
-;Запретить отображение экрана блокировки
-"NoLockScreen"=dword:00000001
-
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU]
 ;Отключить автоматическое обновление Windows
 "NoAutoUpdate"=dword:00000001
@@ -427,9 +432,21 @@ Windows Registry Editor Version 5.00
 ;Запретить удалённое управление через чат
 "fEnableChatControl"=dword:00000000
 
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecureBoot]
+;Не выполнять обновление сертификатов безопасной загрузки
+"AvailableUpdates"=dword:00000000
+
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management]
 ;Отключить файл подкачки приложений Магазина Windows
 "SwapfileControl"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\WMI\Autologger\Diagtrack-Listener]
+;Отключить создание логов службой функциональных возможностей и телеметрии
+"Start"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\WMI\Autologger\WiFiDriverIHVSession]
+;Отключить создание логов драйвером Wi-Fi для диагностической трассировки
+"Start"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\CSC]
 ;Отключить драйвер автономных файлов
@@ -483,13 +500,13 @@ Windows Registry Editor Version 5.00
 ;Отключить службу сенсорной клавиатуры и панели рукописного ввода
 "Start"=dword:00000004
 
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters]
-;Отключить Протокол Интернета версии 6 (TCP/IPv6)
-"DisabledComponents"=dword:000000ff
-
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters]
 ;Не выполнять синхронизацию с сервером времени в Интернете
 "Type"="NoSync"
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wlpasvc]
+;Отключить службу помощника по локальному профилю
+"Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wscsvc]
 ;Отключить Центр обеспечения безопасности
