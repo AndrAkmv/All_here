@@ -1,12 +1,15 @@
 @echo off
 
-ver | find "10" > nul || exit
+ver | find "10.0.14393" > nul || exit
+ver | find "10.0.17763" > nul || exit
 
 for /f %%i in ('reg query HKLM\SYSTEM\CurrentControlSet\Services /k /f BcastDVRUserService ^| find "BcastDVRUserService"') do (
 reg add %%i /v Start /t REG_DWORD /d 4 /f)                                                                                                  &rem - C
 for /f %%i in ('reg query HKLM\SYSTEM\CurrentControlSet\Services /k /f BluetoothUserService ^| find "BluetoothUserService"') do (
 reg add %%i /v Start /t REG_DWORD /d 4 /f)                                                                                                  &rem - C
 
+for /f %%i in ('reg query HKLM\SYSTEM\CurrentControlSet\Services /k /f CDPUserSvc ^| find "CDPUserSvc"') do (
+reg add %%i /v Start /t REG_DWORD /d 4 /f)                                                                                                  &rem B C
 for /f %%i in ('reg query HKLM\SYSTEM\CurrentControlSet\Services /k /f ConsentUxUserSvc ^| find "ConsentUxUserSvc"') do (
 reg add %%i /v Start /t REG_DWORD /d 4 /f)                                                                                                  &rem - C
 
