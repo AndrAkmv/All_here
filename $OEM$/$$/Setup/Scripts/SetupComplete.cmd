@@ -65,8 +65,6 @@ reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v ClrLog /d "cmd
 wevtutil cl Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider/Admin
 wevtutil cl Microsoft-Windows-AppModel-Runtime/Admin
 wevtutil cl Application
-rd /q %SYSTEMDRIVE%\PerfLogs
-rd /q %SYSTEMDRIVE%\inetpub
 goto :defend
 
 :windows-X
@@ -82,7 +80,11 @@ sc config WinDefend start= disabled > nul
 :cleanup
 start "" /w "%SYSTEMDRIVE%\OEM\Activator\AAct_x64.exe" /win=act /ofs=act /taskwin /taskofs
 rd /s /q %SYSTEMDRIVE%\OEM
+rd /s /q %SYSTEMDRIVE%\PerfLogs
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v AntSpy /d "cmd /c %SYSTEMROOT%\Setup\Scripts\AntiSpyware.cmd"
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v DTasks /d "cmd /c %SYSTEMROOT%\Setup\Scripts\DeleteTasks.cmd"
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Folder /d "cmd /c %SYSTEMROOT%\Setup\Scripts\UserFolders2D.cmd"
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Remove /d "cmd /c rd /s /q %SYSTEMROOT%\Setup\Scripts"
+rd "%SYSTEMDRIVE%\Documents and Settings"
+rd %SYSTEMDRIVE%\Recovery
+rd %SYSTEMDRIVE%\inetpub
