@@ -27,7 +27,7 @@ if %ERRORLEVEL% NEQ 0 rd %_mnt% & pause & exit
 
 :delete
 if not exist %_file% set _mnt=%SYSTEMDRIVE%
-del %_mnt%\Windows\System32\Recovery\WinRE.wim
+del %_mnt%\Windows\System32\Recovery\Winre.wim
 timeout 3 > nul
 
 cls

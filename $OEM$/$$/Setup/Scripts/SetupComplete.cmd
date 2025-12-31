@@ -81,6 +81,7 @@ sc config WinDefend start= disabled > nul
 start "" /w "%SYSTEMDRIVE%\OEM\Activator\AAct_x64.exe" /win=act /ofs=act /taskwin /taskofs
 rd /s /q %SYSTEMDRIVE%\OEM
 rd /s /q %SYSTEMDRIVE%\PerfLogs
+if exist %SYSTEMDRIVE%\Recovery\WindowsRE\Winre.wim reagentc /disable && del /a %SYSTEMROOT%\System32\Recovery\Winre.wim
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v AntSpy /d "cmd /c %SYSTEMROOT%\Setup\Scripts\AntiSpyware.cmd"
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v DTasks /d "cmd /c %SYSTEMROOT%\Setup\Scripts\DeleteTasks.cmd"
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Folder /d "cmd /c %SYSTEMROOT%\Setup\Scripts\UserFolders2D.cmd"
