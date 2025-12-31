@@ -1,14 +1,14 @@
 @echo off
 
 powercfg /h off
-powercfg /a | find "S0" > nul
+powercfg /a | find "S0"
 if %ERRORLEVEL% NEQ 0 powercfg /s 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c
 
 start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Visual C++ Pack\vcredist_x86_2012.exe" /q
 start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Visual C++ Pack\vcredist_x64_2012.exe" /q
 start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Visual C++ Pack\vcredist_x86_2013.exe" /q
 start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Visual C++ Pack\vcredist_x64_2013.exe" /q
-ver | find "10" > nul
+ver | find "10"
 if %ERRORLEVEL% EQU 0 (
 start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Visual C++ Pack\vcredist_x86_2017-2026.exe" /q
 start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Visual C++ Pack\vcredist_x64_2017-2026.exe" /q
@@ -17,12 +17,12 @@ start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Visual C++ Pack\vcredist_x86_2
 start "" /w "%SYSTEMDRIVE%\OEM\Software\Microsoft Visual C++ Pack\vcredist_x64_2015-2022.exe" /q
 )
 
-ver | find "6.1" > nul && goto :windows-7
-ver | find "6.3" > nul && goto :windows-9
-ver | find "10.0.14393" > nul && goto :Windows-B
-ver | find "10.0.17763" > nul && goto :Windows-C
-ver | find "10.0.19044" > nul && goto :Windows-D
-ver | find "10.0.19045" > nul && goto :Windows-X
+ver | find "6.1" && goto :windows-7
+ver | find "6.3" && goto :windows-9
+ver | find "10.0.14393" && goto :Windows-B
+ver | find "10.0.17763" && goto :Windows-C
+ver | find "10.0.19044" && goto :Windows-D
+ver | find "10.0.19045" && goto :Windows-X
 goto :cleanup
 
 :windows-7
@@ -74,8 +74,8 @@ reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Tweaks /d "cmd
 goto :cleanup
 
 :defend
-sc stop WinDefend > nul
-sc config WinDefend start= disabled > nul
+sc stop WinDefend
+sc config WinDefend start= disabled
 
 :cleanup
 start "" /w "%SYSTEMDRIVE%\OEM\Activator\AAct_x64.exe" /win=act /ofs=act /taskwin /taskofs
