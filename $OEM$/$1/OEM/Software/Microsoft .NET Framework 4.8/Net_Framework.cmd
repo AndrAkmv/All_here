@@ -5,8 +5,8 @@ ver | find "6.1" > nul || goto exit
 echo Microsoft .NET Framework Russian
 echo -------------------------------------------------------------------------------
 echo .NET Framework 4.8
-start /w ndp48-x86-x64-allos-enu.exe /passive /norestart
+ndp48-x86-x64-allos-enu.exe /passive /norestart
 echo Russian Language Pack
-start /w ndp48-x86-x64-allos-rus.exe /passive /norestart
+ndp48-x86-x64-allos-rus.exe /passive /norestart
 echo Rollup updates (Dec 2019)
-start /w ndp48-kb4532941-x64.exe /passive /norestart
+ndp48-kb4532941-x64.exe /passive /norestart
