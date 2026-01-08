@@ -273,14 +273,6 @@ Windows Registry Editor Version 5.00
 ;Не принимать участие в Программе улучшения качества ПО
 "CEIPEnable"=dword:00000000
 
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Device Metadata]
-;Заменять стандартные значки устройств улучшенными
-"PreventDeviceMetadataFromNetwork"=dword:00000000
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\DriverSearching]
-;Всегда устанавливать драйверы из Центра обновления Windows
-"SearchOrderConfig"=dword:00000001
-
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\EOSNotify]
 ;Больше не напоминать об окончании срока поддержки
 "DiscontinueEOS"=dword:00000001

@@ -300,17 +300,9 @@ Windows Registry Editor Version 5.00
 ;Не принимать участие в Программе улучшения качества ПО
 "CEIPEnable"=dword:00000000
 
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Device Metadata]
-;Автоматически получать приложения и информацию для устройств
-"PreventDeviceMetadataFromNetwork"=dword:00000000
-
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\DeviceSetup]
 ;Скачивать драйверы для новых устройств даже через лимитные подключения
 "CostedNetworkPolicy"=dword:00000001
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\DriverSearching]
-;Всегда устанавливать драйверы из Центра обновления Windows
-"SearchOrderConfig"=dword:00000001
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\EOSNotify]
 ;Больше не напоминать об окончании срока поддержки
