@@ -35,11 +35,6 @@ Windows Registry Editor Version 5.00
 ;Убрать задержку повтора при зажатии клавиши
 "KeyboardDelay"="0"
 
-[HKEY_CURRENT_USER\Environment]
-;Использовать %SYSTEMROOT%\Temp как временную папку для всех пользователей
-"TEMP"=-
-"TMP"=-
-
 [HKEY_CURRENT_USER\Keyboard Layout\Preload]
 ;Установить английский язык по умолчанию, добавить русский язык
 "1"="00000409"
