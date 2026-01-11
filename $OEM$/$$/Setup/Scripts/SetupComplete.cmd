@@ -22,7 +22,6 @@ ver | find "6.3" && goto :windows-9
 ver | find "10.0.14393" && goto :Windows-B
 ver | find "10.0.17763" && goto :Windows-C
 ver | find "10.0.19044" && goto :Windows-D
-ver | find "10.0.19045" && goto :Windows-X
 goto :cleanup
 
 :windows-7
@@ -65,13 +64,6 @@ reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v ClrLog /d "cmd
 wevtutil cl Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider/Admin
 wevtutil cl Microsoft-Windows-AppModel-Runtime/Admin
 wevtutil cl Application
-goto :defend
-
-:windows-X
-"%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2021 Standard x64\setup.exe" ^
-/configure "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2021 Standard x64\config.xml"
-reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Tweaks /d "cmd /c reg import %SYSTEMROOT%\Setup\Scripts\Tweaks-X.reg"
-goto :cleanup
 
 :defend
 sc stop WinDefend
