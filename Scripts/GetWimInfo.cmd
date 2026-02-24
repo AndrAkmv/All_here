@@ -120,16 +120,16 @@ goto :adv_menu
 
 :capabils
 cls
-dism /%_img% /English /LogLevel:1 /Get-Capabilities | more
+dism /%_img% /English /LogLevel:1 /Get-Capabilities /LimitAccess | more
 echo -------------------------------------------------------------------------------
 choice /c b /n /m "Back [b] "
 goto :adv_menu
 
 :capabils-export
 cls
-if exist capabils%_numf%.txt set /a _numf+=1 & goto :capabils-export
+if exist capabils%_numc%.txt set /a _numc+=1 & goto :capabils-export
 echo Getting list of capabils. Please wait...
-dism /%_img% /English /LogLevel:1 /Get-Capabilities /Format:Table > capabils%_numf%.txt
+dism /%_img% /English /LogLevel:1 /Get-Capabilities /LimitAccess /Format:Table > capabils%_numc%.txt
 goto :adv_menu
 
 :associat
