@@ -1,8 +1,8 @@
 @echo off
 
 powercfg /h off
-powercfg /a | find "S0"
-if %ERRORLEVEL% NEQ 0 powercfg /s 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c
+powercfg /l | find "8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c"
+if %ERRORLEVEL% EQU 0 powercfg /s 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c
 
 "%SYSTEMDRIVE%\OEM\Software\Microsoft Visual C++ Pack\vcredist_x86_2012.exe" /q
 "%SYSTEMDRIVE%\OEM\Software\Microsoft Visual C++ Pack\vcredist_x64_2012.exe" /q
