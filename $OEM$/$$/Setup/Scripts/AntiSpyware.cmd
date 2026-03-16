@@ -1,8 +1,10 @@
 @echo off
 
-ver | find "10.0.14393" > nul || exit
-ver | find "10.0.17763" > nul || exit
+ver | find "10.0.14393" > nul && goto :services
+ver | find "10.0.17763" > nul && goto :services
+exit
 
+:services
 for /f %%i in ('reg query HKLM\SYSTEM\CurrentControlSet\Services /k /f BcastDVRUserService ^| find "BcastDVRUserService"') do (
 reg add %%i /v Start /t REG_DWORD /d 4 /f)                                                                                                  &rem - C
 for /f %%i in ('reg query HKLM\SYSTEM\CurrentControlSet\Services /k /f BluetoothUserService ^| find "BluetoothUserService"') do (
