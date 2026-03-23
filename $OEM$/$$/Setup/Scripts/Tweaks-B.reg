@@ -57,6 +57,11 @@ Windows Registry Editor Version 5.00
 "11"=-
 "12"=-
 "13"=-
+"14"=-
+"15"=-
+"16"=-
+"17"=-
+"18"=-
 
 [HKEY_CURRENT_USER\Keyboard Layout\Preload]
 ;Установить английский язык по умолчанию, добавить русский язык
@@ -73,10 +78,6 @@ Windows Registry Editor Version 5.00
 ;Сортировать языки ввода в порядке: английский, русский
 "00000000"="00000409"
 "00000001"="00000419"
-
-[HKEY_CURRENT_USER\Software\Microsoft\FTP]
-;Запретить просмотр FTP-папок (за пределами Internet Explorer)
-"Use Web Based FTP"="yes"
 
 ;Настройка персонализации ввода
 [HKEY_CURRENT_USER\Software\Microsoft\InputPersonalization]
@@ -117,10 +118,6 @@ Windows Registry Editor Version 5.00
 ;Показывать вкладки в отдельной строке
 "ShowTabsBelowAddressBar"=dword:00000001
 
-[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\PhishingFilter]
-;Выключить фильтр SmartScreen для Internet Explorer
-"EnabledV9"=dword:00000000
-
 [HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\PrefetchPrerender]
 ;Не загружать сайты и содержимое в фоновом режиме
 "Enabled"=dword:00000000
@@ -151,7 +148,7 @@ Windows Registry Editor Version 5.00
 "MetadataRetrieval"=dword:00000000
 ;Отключить загрузку лицензий на использование файлов мультимедиа
 "SilentAcquisition"=dword:00000000
-;Не устанавливать автоматически часы на устройсвтах
+;Не устанавливать автоматически часы на устройствах
 "SilentDRMConfiguration"=dword:00000000
 ;Увеличить время запроса автоматического обновления проигрывателя
 "UpgradeCheckFrequency"=dword:00000002
@@ -165,10 +162,6 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\Microsoft\Siuf\Rules]
 ;Никогда не запрашивать мои отзывы
 "NumberOfSIUFInPeriod"=dword:00000000
-
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\DeviceAccess\Global\LooselyCoupled]
-;Запретить приложениям автоматически синхронизироваться с беспроводными устройствами
-"Value"="Deny"
 
 ;Настройка Проводника
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer]
@@ -185,8 +178,6 @@ Windows Registry Editor Version 5.00
 "HideDrivesWithNoMedia"=dword:00000000
 ;Показывать расширения для зарегистрированных типов файлов
 "HideFileExt"=dword:00000000
-;Показывать конфликты слияния папок
-"HideMergeConflicts"=dword:00000000
 ;При запуске Проводника открывать Этот компьютер
 "LaunchTo"=dword:00000001
 ;Не использовать мастер общего доступа
@@ -195,8 +186,6 @@ Windows Registry Editor Version 5.00
 "ShowEncryptCompressedColor"=dword:00000001
 ;Скрыть кнопку Представление задач
 "ShowTaskViewButton"=dword:00000000
-;Не показывать приложения Магазина Windows на панели задач
-"StoreAppsOnTaskbar"=dword:00000000
 ;Отключить скольжение кнопок Панели задач
 "TaskbarAnimations"=dword:00000000
 ;Не группировать кнопки на Панели задач
@@ -253,14 +242,20 @@ Windows Registry Editor Version 5.00
 
 ;Настройка параметров безопасности браузера
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings]
-;Запретить встроенную проверку подлинности Windows
-"EnableNegotiate"=dword:00000000
 ;Отключить предупреждение о несоответствии адреса сертификата
 "WarnonBadCertRecving"=dword:00000000
 ;Отключить предупреждение о переходе в локальную зону
 "WarnOnIntranet"=dword:00000000
 ;Отключить предупреждение о перенаправления публикаций
 "WarnOnPostRedirect"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Activities\Перевести\microsofttranslator.com]
+;Удаление надстройки браузера - Перевод с помощью Bing
+"Deleted"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Activities\Электронная почта\live.com]
+;Удаление надстройки браузера - Электронная почта Live
+"Deleted"=dword:00000001
 
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Notifications\Settings\Windows.SystemToast.SecurityAndMaintenance]
 ;Не получать уведомления от Центра безопасности и обслуживания
@@ -287,10 +282,6 @@ Windows Registry Editor Version 5.00
 ;Показать цвет в заголовке окна
 "ColorPrevalence"=dword:00000001
 
-[HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\MSDT]
-;Запретить начинать устранение неполадок сразу после запуска
-"AllowSkipFirstPage"=dword:00000000
-
 [HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Windows]
 ;Запретить Windows управлять принтером по умолчанию
 "LegacyDefaultPrinterMode"=dword:00000001
@@ -310,12 +301,12 @@ Windows Registry Editor Version 5.00
 [-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{09A47860-11B0-4DA5-AFA5-26D86198A780}]
 ;Удалить из контекстного меню - Проверка с использованием Windows Defender...
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\pintohome]
+;Удалить из контекстного меню папок - Закрепить на панели быстрого доступа
+"ProgrammaticAccessOnly"="1"
+
 [-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\SystemFileAssociations\Directory.Audio\shellex\ContextMenuHandlers\WMPShopMusic]
 ;Удалить из контекстного меню Библиотеки (Аудио) - Поиск музыки в Интернете
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQMClient\Windows]
-;Не принимать участие в Программе улучшения качества ПО
-"CEIPEnable"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WcmSvc\Tethering]
 ;Запретить удалённо включать мобильный хот-спот
@@ -325,10 +316,6 @@ Windows Registry Editor Version 5.00
 ;Отключить обновление из нескольких мест
 "DODownloadMode"=dword:00000000
 
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\DeviceSetup]
-;Скачивать драйверы для новых устройств даже через лимитные подключения
-"CostedNetworkPolicy"=dword:00000001
-
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer]
 ;Отключить отображения вкладки "Предыдущие версии" в свойствах файлов
 "NoPreviousVersionsPage"=dword:00000001
@@ -337,7 +324,7 @@ Windows Registry Editor Version 5.00
 ;Не сканировать сеть на наличие сетевых принтеров
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Attachments]
-;Отключить предупреждение при открытии файлов, загруженных из Интернета
+;Не помечать файлы сведениями о зоне происхождения
 "SaveZoneInformation"=dword:00000001
 
 ;Настройка выдачи уведомлений о вносимых изменениях
@@ -365,20 +352,12 @@ Windows Registry Editor Version 5.00
 ;Не проверять наличие новых решений для отчётов о проблемах
 "Disabled"=dword:00000001
 
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SPP\Clients]
-;Не восстанавливать параметры системы
-"{09F7EDC5-294E-4180-AF6A-FB0E6A0E9513}"=-
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SystemRestore]
-;Отключить восстановление системы на всех дисках
-"RPSessionInterval"=dword:00000000
-
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsSelfHost\UI\Visibility]
 ;Убрать пункт "Программа предварительно оценки Windows"
 "HideInsiderPage"=dword:00000001
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\MRT]
-;Не предлагать обновления для Средства удаления вредоносных программ
+;Не обновлять Средство удаления вредоносных программ
 "DontOfferThroughWUAU"=dword:00000001
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU]
@@ -395,10 +374,6 @@ Windows Registry Editor Version 5.00
 "AutoReboot"=dword:00000000
 ;Не записывать отладочную информацию
 "CrashDumpEnabled"=dword:00000000
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power]
-;Отключить режим Гибернации
-"HibernateEnabled"=dword:00000000
 
 ;Установка параметров удалённого доступа
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Remote Assistance]
@@ -422,19 +397,19 @@ Windows Registry Editor Version 5.00
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\CscService]
-;Отключить службу автономных файлов
+;Отключить автономные файлы
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DiagTrack]
-;Отключить службу диагностического отслеживания
+;Отключить функциональные возможности и телеметрию
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HomeGroupProvider]
-;Отключить службу Поставщик домашней группы
+;Отключить Поставщик домашней группы
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\IKEEXT]
-;Отключить службу модулей ключей IPsec
+;Отключить модули ключей IPsec для обмена ключами в Интернете
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\iphlpsvc]
@@ -454,23 +429,27 @@ Windows Registry Editor Version 5.00
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MapsBroker]
-;Отключить службу Диспетчер скачанных карт
+;Отключить Диспетчер скачанных карт
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MpsSvc]
-;Отключить службу Брандмауэр Windows
+;Отключить Брандмауэр Windows
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NcaSvc]
-;Отключить службу Помощник по подключению к сети
+;Отключить Помощник по подключению к сети
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NcbService]
-;Отключить службу Посредник подключений к сети (Магазин)
+;Отключить Посредник подключений к сети
+"Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PcaSvc]
+;Отключить службу помощника по совместимости программ
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PolicyAgent]
-;Отключить службу Агент политики IPsec
+;Отключить Агент политики IPsec
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\DomainProfile]
@@ -486,15 +465,15 @@ Windows Registry Editor Version 5.00
 "EnableFirewall"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ShellHWDetection]
-;Отключить службу определения оборудования оболочки (Автозапуск)
+;Отключить Определение оборудования оболочки (Автозапуск)
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SysMain]
-;Отключить службу Superfetch
+;Отключить Superfetch
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\TabletInputService]
-;Отключить службу ввода планшетного ПК
+;Отключить службу сенсорной клавиатуры и панели рукописного ввода
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time]
@@ -505,14 +484,14 @@ Windows Registry Editor Version 5.00
 ;Не выполнять синхронизацию с сервером времени в Интернете
 "Type"="NoSync"
 
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WbioSrvc]
+;Отключить биометрическую службу Windows
+"Start"=dword:00000004
+
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WpnService]
 ;Отключить службу системы push-уведомлений Windows
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wscsvc]
-;Отключить службу Центр обеспечения безопасности
+;Отключить Центр обеспечения безопасности
 "Start"=dword:00000004
-
-[HKEY_LOCAL_MACHINE\SYSTEM\Maps]
-;Отключить автоматическое обновление карт
-"AutoUpdateEnabled"=dword:00000000
