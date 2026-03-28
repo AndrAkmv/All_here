@@ -60,10 +60,6 @@ dism /Online /English /LogLevel:1 /Cleanup-Image /StartComponentCleanup /NoResta
 "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2021 Standard x64\setup.exe" ^
 /configure "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2021 Standard x64\config.xml"
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Tweaks /d "cmd /c reg import %SYSTEMROOT%\Setup\Scripts\Tweaks-D.reg"
-reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v ClrLog /d "cmd /c wevtutil cl Microsoft-Windows-AppReadiness/Admin"
-wevtutil cl Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider/Admin
-wevtutil cl Microsoft-Windows-AppModel-Runtime/Admin
-wevtutil cl Application
 
 :defend
 sc stop WinDefend
@@ -75,6 +71,7 @@ rd /s /q %SYSTEMDRIVE%\OEM
 rd /s /q %SYSTEMDRIVE%\PerfLogs
 if exist %SYSTEMDRIVE%\Recovery\WindowsRE\Winre.wim reagentc /disable && del /a %SYSTEMROOT%\System32\Recovery\Winre.wim
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v AntSpy /d "cmd /c %SYSTEMROOT%\Setup\Scripts\AntiSpyware.cmd"
+reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v ClrEvt /d "cmd /c %SYSTEMROOT%\Setup\Scripts\ClearEvents.cmd"
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v DTasks /d "cmd /c %SYSTEMROOT%\Setup\Scripts\DeleteTasks.cmd"
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Folder /d "cmd /c %SYSTEMROOT%\Setup\Scripts\UserFolders2D.cmd"
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Remove /d "cmd /c rd /s /q %SYSTEMROOT%\Setup\Scripts"
