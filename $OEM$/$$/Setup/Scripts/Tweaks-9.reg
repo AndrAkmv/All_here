@@ -383,6 +383,25 @@ Windows Registry Editor Version 5.00
 ;Отключить файл подкачки приложений Магазина Windows
 "SwapfileControl"=dword:00000000
 
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\WMI\Autologger\AITEventLog]
+;Отключить создание логов службой помощника по совместимости программ
+"Start"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\WMI\Autologger\AutoLogger-Diagtrack-Listener]
+;Отключить создание логов службой функциональных возможностей и телеметрии
+"Start"=dword:00000000
+
+[-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\WMI\Autologger\EventLog-Microsoft-RMS-MSIPC-Debug]
+;Удалить логгер клиента защиты информации от несанкционированного доступа
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\WMI\Autologger\ReadyBoot]
+;Отключить создание логов службой ускорения загрузки системы
+"Start"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\WMI\Autologger\SQMLogger]
+;Отключить создание логов службой отзывов для оценки качества
+"Start"=dword:00000000
+
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\CSC]
 ;Отключить драйвер автономных файлов
 "Start"=dword:00000004

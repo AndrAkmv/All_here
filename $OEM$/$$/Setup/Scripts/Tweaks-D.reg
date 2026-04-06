@@ -437,6 +437,13 @@ Windows Registry Editor Version 5.00
 ;Отключить создание логов службой функциональных возможностей и телеметрии
 "Start"=dword:00000000
 
+[-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\WMI\Autologger\Microsoft-Windows-Rdp-Graphics-RdpIdd-Trace]
+;Удалить логгер трассировки графической системы удалённого рабочего стола
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\WMI\Autologger\ReadyBoot]
+;Отключить создание логов службой ускорения загрузки системы
+"Start"=dword:00000000
+
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\WMI\Autologger\WiFiDriverIHVSession]
 ;Отключить создание логов драйвером Wi-Fi для диагностической трассировки
 "Start"=dword:00000000
