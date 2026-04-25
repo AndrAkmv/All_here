@@ -229,12 +229,8 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer]
 ;Убрать значок "Центр поддержки" из области уведомлений
 "HideSCAHealth"=dword:00000001
-;Отключить встроенные средства записи компакт-дисков
-"NoCDBurning"=dword:00000001
 ;Отключить автозапуск всех устройств, кроме CD-привода
 "NoDriveTypeAutoRun"=dword:000000dd
-;Отключить проверку свободного места на диске
-"NoLowDiskSpaceChecks"=dword:00000001
 ;Убрать ярлык "Программы по умолчанию" из меню Пуск
 "NoSMConfigurePrograms"=dword:00000001
 
