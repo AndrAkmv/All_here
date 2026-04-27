@@ -102,6 +102,7 @@
                 <ProtectYourPC>3</ProtectYourPC>
             </OOBE>
             <ShowWindowsLive>false</ShowWindowsLive>
+            <TimeZone>Russian Standard Time</TimeZone>
             <UserAccounts>
                 <AdministratorPassword>
                     <PlainText>true</PlainText>
