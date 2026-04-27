@@ -412,10 +412,6 @@ Windows Registry Editor Version 5.00
 ;Отключить функциональные возможности и телеметрию
 "Start"=dword:00000004
 
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HomeGroupProvider]
-;Отключить Поставщик домашней группы
-"Start"=dword:00000004
-
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\IKEEXT]
 ;Отключить модули ключей IPsec для обмена ключами в Интернете
 "Start"=dword:00000004
