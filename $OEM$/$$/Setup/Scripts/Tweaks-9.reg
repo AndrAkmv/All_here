@@ -466,10 +466,6 @@ Windows Registry Editor Version 5.00
 ;Отключить службу Superfetch
 "Start"=dword:00000004
 
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\TabletInputService]
-;Отключить службу ввода планшетного ПК
-"Start"=dword:00000004
-
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time]
 ;Отключить службу времени Windows
 "Start"=dword:00000004

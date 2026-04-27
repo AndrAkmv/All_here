@@ -480,10 +480,6 @@ Windows Registry Editor Version 5.00
 ;Отключить Superfetch
 "Start"=dword:00000004
 
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\TabletInputService]
-;Отключить службу сенсорной клавиатуры и панели рукописного ввода
-"Start"=dword:00000004
-
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time]
 ;Отключить службу времени Windows
 "Start"=dword:00000004

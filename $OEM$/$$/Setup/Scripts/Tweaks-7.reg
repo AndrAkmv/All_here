@@ -422,10 +422,6 @@ Windows Registry Editor Version 5.00
 ;Отключить службу Superfetch
 "Start"=dword:00000004
 
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\TabletInputService]
-;Отключить службу ввода планшетного ПК
-"Start"=dword:00000004
-
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\UxSMS]
 ;Отключить службу диспетчера окон Рабочего стола (Aero)
 "Start"=dword:00000004
