@@ -468,6 +468,10 @@ Windows Registry Editor Version 5.00
 ;Отключить использование данных
 "Start"=dword:00000004
 
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\IKEEXT]
+;Отключить модули ключей IPsec для обмена ключами в Интернете
+"Start"=dword:00000004
+
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\iphlpsvc]
 ;Отключить вспомогательную службу IP
 "Start"=dword:00000004
@@ -478,6 +482,10 @@ Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\luafv]
 ;Отключить драйвер виртуализации Контроля учетных записей
+"Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MapsBroker]
+;Отключить Диспетчер скачанных карт
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NcaSvc]
@@ -519,10 +527,6 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WwanSvc]
 ;Отключить Автонастройка WWAN
 "Start"=dword:00000004
-
-[HKEY_LOCAL_MACHINE\SYSTEM\Maps]
-;Отключить автоматическое обновление карт
-"AutoUpdateEnabled"=dword:00000000
 
 [HKEY_USERS\S-1-5-20\Software\Microsoft\Windows\CurrentVersion\DeliveryOptimization\Settings]
 ;Запретить загрузки с других компьютеров

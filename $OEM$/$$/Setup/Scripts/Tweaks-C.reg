@@ -543,10 +543,6 @@ Windows Registry Editor Version 5.00
 ;Отключить службу Центр обеспечения безопасности
 "Start"=dword:00000004
 
-[HKEY_LOCAL_MACHINE\SYSTEM\Maps]
-;Отключить автоматическое обновление карт
-"AutoUpdateEnabled"=dword:00000000
-
 [HKEY_USERS\S-1-5-20\Software\Microsoft\Windows\CurrentVersion\DeliveryOptimization\Settings]
 ;Отключить обновление из нескольких мест
 "DownloadMode"=dword:00000000
