@@ -342,7 +342,7 @@ Windows Registry Editor Version 5.00
 "UserAuthPolicy"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\ScheduledDiagnostics]
-;Отключить автоматический поиск распространённых неполадок 
+;Отключить автоматический поиск распространённых неполадок
 "EnabledExecution"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Windows Error Reporting]
@@ -421,7 +421,7 @@ Windows Registry Editor Version 5.00
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\lanmanserver\Parameters]
-;Отключить стандартные административные общие ресурсы (C$ и т.д.)
+;Отключить стандартные административные общие ресурсы
 "AutoShareWks"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\lfsvc]
@@ -469,7 +469,7 @@ Windows Registry Editor Version 5.00
 "EnableFirewall"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ShellHWDetection]
-;Отключить Определение оборудования оболочки (Автозапуск)
+;Отключить Определение оборудования оболочки
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SysMain]

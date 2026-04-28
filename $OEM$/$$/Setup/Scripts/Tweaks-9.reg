@@ -128,7 +128,7 @@ Windows Registry Editor Version 5.00
 "MetadataRetrieval"=dword:00000000
 ;Отключить загрузку лицензий на использование файлов мультимедиа
 "SilentAcquisition"=dword:00000000
-;Не устанавливать автоматически часы на устройсвтах
+;Не устанавливать автоматически часы на устройствах
 "SilentDRMConfiguration"=dword:00000000
 ;Увеличить время запроса автоматического обновления проигрывателя
 "UpgradeCheckFrequency"=dword:00000002
@@ -326,7 +326,7 @@ Windows Registry Editor Version 5.00
 "CachedAUOptions"=dword:00000001
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\ScheduledDiagnostics]
-;Отключить автоматический поиск распространённых неполадок 
+;Отключить автоматический поиск распространённых неполадок
 "EnabledExecution"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Windows Error Reporting]
@@ -403,7 +403,7 @@ Windows Registry Editor Version 5.00
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\CscService]
-;Отключить службу автономных файлов
+;Отключить автономные файлы
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DiagTrack]
@@ -411,7 +411,7 @@ Windows Registry Editor Version 5.00
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\IKEEXT]
-;Отключить службу модулей ключей IPsec
+;Отключить модули ключей IPsec для обмена ключами в Интернете
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\iphlpsvc]
@@ -419,7 +419,7 @@ Windows Registry Editor Version 5.00
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\lanmanserver\Parameters]
-;Отключить стандартные административные общие ресурсы (C$ и т.д.)
+;Отключить стандартные административные общие ресурсы
 "AutoShareWks"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\luafv]
@@ -427,15 +427,15 @@ Windows Registry Editor Version 5.00
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MpsSvc]
-;Отключить службу Брандмауэр Windows
+;Отключить Брандмауэр Windows
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NcaSvc]
-;Отключить службу Помощник по подключению к сети
+;Отключить Помощник по подключению к сети
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NcbService]
-;Отключить службу Посредник подключений к сети (Магазин)
+;Отключить Посредник подключений к сети
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PcaSvc]
@@ -443,7 +443,7 @@ Windows Registry Editor Version 5.00
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PolicyAgent]
-;Отключить службу Агент политики IPsec
+;Отключить Агент политики IPsec
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\DomainProfile]
@@ -459,11 +459,11 @@ Windows Registry Editor Version 5.00
 "EnableFirewall"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ShellHWDetection]
-;Отключить службу определения оборудования оболочки (Автозапуск)
+;Отключить Определение оборудования оболочки
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SysMain]
-;Отключить службу Superfetch
+;Отключить Superfetch
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time]
@@ -475,9 +475,9 @@ Windows Registry Editor Version 5.00
 "Type"="NoSync"
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WinDefend]
-;Отключить службу Защитник Windows
+;Отключить службу Защитника Windows
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wscsvc]
-;Отключить службу Центр обеспечения безопасности
+;Отключить Центр обеспечения безопасности
 "Start"=dword:00000004

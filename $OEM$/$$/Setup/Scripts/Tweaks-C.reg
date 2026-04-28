@@ -158,7 +158,7 @@ Windows Registry Editor Version 5.00
 "MetadataRetrieval"=dword:00000000
 ;Отключить загрузку лицензий на использование файлов мультимедиа
 "SilentAcquisition"=dword:00000000
-;Не устанавливать автоматически часы на устройсвтах
+;Не устанавливать автоматически часы на устройствах
 "SilentDRMConfiguration"=dword:00000000
 ;Не отправлять данные об использовании проигрывателя
 "UsageTracking"=dword:00000000
@@ -380,7 +380,7 @@ Windows Registry Editor Version 5.00
 "UserAuthPolicy"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\ScheduledDiagnostics]
-;Отключить автоматический поиск распространённых неполадок 
+;Отключить автоматический поиск распространённых неполадок
 "EnabledExecution"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Windows Error Reporting]
@@ -464,11 +464,11 @@ Windows Registry Editor Version 5.00
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\CscService]
-;Отключить службу автономных файлов
+;Отключить автономные файлы
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DiagTrack]
-;Отключить службу диагностического отслеживания
+;Отключить функциональные возможности и телеметрию
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DusmSvc]
@@ -476,7 +476,7 @@ Windows Registry Editor Version 5.00
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\IKEEXT]
-;Отключить службу модулей ключей IPsec
+;Отключить модули ключей IPsec для обмена ключами в Интернете
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\iphlpsvc]
@@ -484,7 +484,7 @@ Windows Registry Editor Version 5.00
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\lanmanserver\Parameters]
-;Отключить стандартные административные общие ресурсы (C$ и т.д.)
+;Отключить стандартные административные общие ресурсы
 "AutoShareWks"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\lfsvc]
@@ -496,15 +496,15 @@ Windows Registry Editor Version 5.00
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MapsBroker]
-;Отключить службу Диспетчер скачанных карт
+;Отключить Диспетчер скачанных карт
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NcaSvc]
-;Отключить службу Помощник по подключению к сети
+;Отключить Помощник по подключению к сети
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NcbService]
-;Отключить службу Посредник подключений к сети (Магазин)
+;Отключить Посредник подключений к сети
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PcaSvc]
@@ -512,19 +512,19 @@ Windows Registry Editor Version 5.00
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PolicyAgent]
-;Отключить службу Агент политики IPsec
+;Отключить Агент политики IPsec
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ShellHWDetection]
-;Отключить службу определения оборудования оболочки (Автозапуск)
+;Отключить Определение оборудования оболочки
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SysMain]
-;Отключить службу Superfetch
+;Отключить Superfetch
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\TabletInputService]
-;Отключить службу ввода планшетного ПК
+;Отключить службу сенсорной клавиатуры и панели рукописного ввода
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time]
@@ -540,7 +540,7 @@ Windows Registry Editor Version 5.00
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wscsvc]
-;Отключить службу Центр обеспечения безопасности
+;Отключить Центр обеспечения безопасности
 "Start"=dword:00000004
 
 [HKEY_USERS\S-1-5-20\Software\Microsoft\Windows\CurrentVersion\DeliveryOptimization\Settings]
