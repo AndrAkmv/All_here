@@ -400,8 +400,8 @@ Windows Registry Editor Version 5.00
 "Start"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\CDPSvc]
-;Отключить службу платформы подключенных устройств
-"Start"=dword:00000004
+;Остановить службу платформы подключенных устройств
+"Start"=dword:00000003
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\CSC]
 ;Отключить драйвер автономных файлов
@@ -492,8 +492,8 @@ Windows Registry Editor Version 5.00
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WpnService]
-;Отключить службу системы push-уведомлений Windows
-"Start"=dword:00000004
+;Остановить службу системы push-уведомлений Windows
+"Start"=dword:00000003
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wscsvc]
 ;Отключить Центр обеспечения безопасности

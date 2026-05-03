@@ -458,6 +458,10 @@ Windows Registry Editor Version 5.00
 ;Отключить создание логов драйвером Wi-Fi для диагностической трассировки
 "Start"=dword:00000000
 
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\CDPSvc]
+;Остановить службу платформы подключенных устройств
+"Start"=dword:00000003
+
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\CSC]
 ;Отключить драйвер автономных файлов
 "Start"=dword:00000004
@@ -525,6 +529,10 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wlpasvc]
 ;Отключить службу помощника по локальному профилю
 "Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WpnService]
+;Остановить службу системы push-уведомлений Windows
+"Start"=dword:00000003
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wscsvc]
 ;Отключить Центр обеспечения безопасности
