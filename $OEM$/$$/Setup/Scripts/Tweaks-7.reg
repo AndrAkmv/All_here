@@ -1,5 +1,14 @@
 Windows Registry Editor Version 5.00
 
+[-HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers\{90AA3A4E-1CBA-4233-B8BB-535773D48449}]
+;Удалить "Закрепить на панели задач" из контекстного меню некоторых объектов
+
+[-HKEY_CLASSES_ROOT\.bmp\ShellNew]
+[-HKEY_CLASSES_ROOT\.contact\ShellNew]
+[-HKEY_CLASSES_ROOT\.rtf\ShellNew]
+[-HKEY_CLASSES_ROOT\Briefcase\ShellNew]
+;Сократить список контекстного меню "Создать"
+
 [HKEY_CLASSES_ROOT\AllFilesystemObjects\shellex\ContextMenuHandlers\CopyTo]
 ;Добавить пункт "Копировать в папку..." в контекстное меню файлов
 @="{C2FBB630-2971-11d1-A18C-00C04FD75D13}"
@@ -7,6 +16,16 @@ Windows Registry Editor Version 5.00
 [HKEY_CLASSES_ROOT\AllFilesystemObjects\shellex\ContextMenuHandlers\MoveTo]
 ;Добавить пункт "Переместить в папку..." в контекстное меню файлов
 @="{C2FBB631-2971-11d1-A18C-00C04FD75D13}"
+
+[-HKEY_CLASSES_ROOT\batfile\shellex\ContextMenuHandlers\Compatibility]
+[-HKEY_CLASSES_ROOT\cmdfile\shellex\ContextMenuHandlers\Compatibility]
+[-HKEY_CLASSES_ROOT\exefile\shellex\ContextMenuHandlers\Compatibility]
+[-HKEY_CLASSES_ROOT\lnkfile\shellex\ContextMenuHandlers\Compatibility]
+[-HKEY_CLASSES_ROOT\Msi.Package\shellex\ContextMenuHandlers\Compatibility]
+;Удалить "Исправление неполадок совместимости" из контекстного меню файлов
+
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\Directory.Audio\shellex\ContextMenuHandlers\WMPShopMusic]
+;Удалить "Поиск музыки в Интернете" из контекстного меню библиотеки "Аудио"
 
 ;Настройка визуальных эффектов Рабочего стола
 [HKEY_CURRENT_USER\Control Panel\Desktop]
@@ -245,24 +264,6 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\MSDT]
 ;Запретить начинать устранение неполадок сразу после запуска
 "AllowSkipFirstPage"=dword:00000000
-
-[-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.bmp\ShellNew]
-;Удалить из контекстного меню Создать - Точечный рисунок
-
-[-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.contact\ShellNew]
-;Удалить из контекстного меню Создать - Контакт
-
-[-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.rtf\ShellNew]
-;Удалить из контекстного меню Создать - Документ RTF
-
-[-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.zip\CompressedFolder\ShellNew]
-;Удалить из контекстного меню Создать - Сжатая ZIP-папка
-
-[-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Briefcase\ShellNew]
-;Удалить из контекстного меню Создать - Портфель
-
-[-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\SystemFileAssociations\Directory.Audio\shellex\ContextMenuHandlers\WMPShopMusic]
-;Удалить из контекстного меню Библиотеки (Аудио) - Поиск музыки в Интернете
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQMClient\Windows]
 ;Не принимать участие в Программе улучшения качества ПО
