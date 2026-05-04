@@ -399,6 +399,10 @@ Windows Registry Editor Version 5.00
 ;Не обновлять Средство удаления вредоносных программ
 "DontOfferThroughWUAU"=dword:00000001
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\AppCompat]
+;Отключить дистанционное отслеживание приложений
+"AITEnable"=dword:00000000
+
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU]
 ;Отключить автоматическое обновление Windows
 "NoAutoUpdate"=dword:00000001
