@@ -63,14 +63,21 @@ Windows Registry Editor Version 5.00
 "Language Hotkey"="2"
 "Layout Hotkey"="3"
 
+;Предварительная настройка Обозревателя игр
+[HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\Windows\GameUX]
+;Не загружать сведения и картинки для установленных игр
+"DownLoadGameInfo"=dword:00000000
+;Начальный запрос первого запуска был показан
+"FirstRunDialogLaunched"=dword:00000001
+;Не выполнять автоматическую проверку обновлений
+"GameUpdateOptions"=dword:00000002
+;Не собирать сведения о последних запускавшихся играх
+"ListRecentlyPlayed"=dword:00000000
+
 [HKEY_CURRENT_USER\Software\Microsoft\CTF\SortOrder\Language]
 ;Сортировать языки ввода в порядке: английский, русский
 "00000000"="00000409"
 "00000001"="00000419"
-
-[HKEY_CURRENT_USER\Software\Microsoft\FTP]
-;Запретить просмотр FTP-папок (за пределами Internet Explorer)
-"Use Web Based FTP"="yes"
 
 ;Настройка персонализации ввода
 [HKEY_CURRENT_USER\Software\Microsoft\InputPersonalization]
@@ -110,10 +117,6 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\MINIE]
 ;Показывать вкладки в отдельной строке
 "ShowTabsBelowAddressBar"=dword:00000001
-
-[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\PhishingFilter]
-;Выключить фильтр SmartScreen для Internet Explorer
-"EnabledV9"=dword:00000000
 
 [HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\PrefetchPrerender]
 ;Не загружать сайты и содержимое в фоновом режиме
@@ -175,25 +178,21 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
 ;Показывать скрытые файлы, папки и диски
 "Hidden"=dword:00000001
-;Показывать пустые диски в папке "Компьютер"
+;Показывать пустые диски
 "HideDrivesWithNoMedia"=dword:00000000
 ;Показывать расширения для зарегистрированных типов файлов
 "HideFileExt"=dword:00000000
-;Показывать конфликты слияния папок
-"HideMergeConflicts"=dword:00000000
 ;Не отображать папку "Избранное"
 "NavPaneShowFavorites"=dword:00000000
 ;Не использовать мастер общего доступа
 "SharingWizardOn"=dword:00000000
 ;Не выделять недавно установленные программы
 "Start_NotifyNewApps"=dword:00000000
-;Не показывать приложения Магазина Windows на панели задач
-"StoreAppsOnTaskbar"=dword:00000000
 ;Отключить скольжение кнопок Панели задач
 "TaskbarAnimations"=dword:00000000
-;Не группировать кнопки на Панели задач
+;Не группировать кнопки Панели задач
 "TaskbarGlomLevel"=dword:00000002
-;Использовать маленькие значки на Панели задач
+;Использовать маленькие кнопки Панели задач
 "TaskbarSmallIcons"=dword:00000001
 
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\AutoComplete]
@@ -240,6 +239,8 @@ Windows Registry Editor Version 5.00
 
 ;Настройка Начального экрана
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\StartPage]
+;При поиске в представлении "Приложения" выполнять поиск везде
+"GlobalSearchInApps"=dword:00000001
 ;Открывать представление "Приложения" на Начальном экране
 "MakeAllAppsDefault"=dword:00000001
 ;Показывать Начальный экран при нажатии клавиши Windows
@@ -269,14 +270,20 @@ Windows Registry Editor Version 5.00
 
 ;Настройка параметров безопасности браузера
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings]
-;Запретить встроенную проверку подлинности Windows
-"EnableNegotiate"=dword:00000000
 ;Отключить предупреждение о несоответствии адреса сертификата
 "WarnonBadCertRecving"=dword:00000000
 ;Отключить предупреждение о переходе в локальную зону
 "WarnOnIntranet"=dword:00000000
 ;Отключить предупреждение о перенаправления публикаций
 "WarnOnPostRedirect"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Activities\Перевести\microsofttranslator.com]
+;Удаление надстройки браузера - Перевод с помощью Bing
+"Deleted"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Activities\Электронная почта\live.com]
+;Удаление надстройки браузера - Электронная почта Live
+"Deleted"=dword:00000001
 
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Attachments]
 ;Не хранить сведения о зоне происхождения вложенных файлов
@@ -286,28 +293,18 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer]
 ;Убрать значок "Центр поддержки" из области уведомлений
 "HideSCAHealth"=dword:00000001
-;Отключить автозапуск всех устройств, кроме CD-привода
-"NoDriveTypeAutoRun"=dword:000000dd
-
-[HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\MSDT]
-;Запретить начинать устранение неполадок сразу после запуска
-"AllowSkipFirstPage"=dword:00000000
+;Удалить ссылку "Программы по умолчанию" из меню "Пуск"
+"NoSMConfigurePrograms"=dword:00000001
+;Удалить ссылку на Центр обновления Windows из меню "Пуск"
+"NoWindowsUpdate"=dword:00000001
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQMClient\Windows]
 ;Не принимать участие в Программе улучшения качества ПО
 "CEIPEnable"=dword:00000000
 
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\DeviceSetup]
-;Скачивать драйверы для новых устройств даже через лимитные подключения
-"CostedNetworkPolicy"=dword:00000001
-
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\EOSNotify]
 ;Больше не напоминать об окончании срока поддержки
 "DiscontinueEOS"=dword:00000001
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer]
-;Выключить фильтр SmartScreen для приложений и файлов
-"SmartScreenEnabled"="Off"
 
 [-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\RemoteComputer\NameSpace\{863aa9fd-42df-457b-8e4d-0de1b8015c60}]
 ;Не сканировать сеть на наличие сетевых принтеров
@@ -320,6 +317,10 @@ Windows Registry Editor Version 5.00
 "EnableLUA"=dword:00000000
 ;Не использовать защищённый Рабочий стол
 "PromptOnSecureDesktop"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run]
+;Удалить из автозагрузки иконку Защитника Windows в системном трее
+"WindowsDefender"=-
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update]
 ;Не проверять наличие обновлений (не рекомендуется)
@@ -366,9 +367,8 @@ Windows Registry Editor Version 5.00
 ;Не записывать отладочную информацию
 "CrashDumpEnabled"=dword:00000000
 
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power]
-;Отключить режим Гибернации
-"HibernateEnabled"=dword:00000000
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Network\NewNetworkWindowOff]
+;Скрыть мастер выбора типа сети и считать все сети общественными
 
 ;Установка параметров удалённого доступа
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Remote Assistance]
@@ -409,7 +409,7 @@ Windows Registry Editor Version 5.00
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DiagTrack]
-;Отключить службу диагностического отслеживания
+;Отключить Diagnostics Tracking Service
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\IKEEXT]
@@ -476,10 +476,10 @@ Windows Registry Editor Version 5.00
 ;Не выполнять синхронизацию с сервером времени в Интернете
 "Type"="NoSync"
 
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WinDefend]
-;Отключить службу Защитника Windows
-"Start"=dword:00000004
-
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wscsvc]
 ;Отключить Центр обеспечения безопасности
+"Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wuauserv]
+;Отключить Центр обновления Windows
 "Start"=dword:00000004
