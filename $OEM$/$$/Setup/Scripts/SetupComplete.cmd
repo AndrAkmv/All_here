@@ -45,13 +45,13 @@ goto :cleanup
 "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2016 Standard x32\setup.exe" ^
 /config "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2016 Standard x32\unattend\config.xml"
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Tweaks /d "cmd /c reg import %SYSTEMROOT%\Setup\Scripts\Tweaks-B.reg"
-goto :numeric
+goto :cdpuser
 
 :windows-C
 "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2019 Standard x64\setup.exe" ^
 /configure "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2019 Standard x64\config.xml"
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Tweaks /d "cmd /c reg import %SYSTEMROOT%\Setup\Scripts\Tweaks-C.reg"
-goto :numeric
+goto :cdpuser
 
 :windows-D
 dism /Online /English /LogLevel:1 /Cleanup-Image /StartComponentCleanup /NoRestart
@@ -60,20 +60,18 @@ dism /Online /English /LogLevel:1 /Cleanup-Image /StartComponentCleanup /NoResta
 "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2021 Standard x64\setup.exe" ^
 /configure "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2021 Standard x64\config.xml"
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Tweaks /d "cmd /c reg import %SYSTEMROOT%\Setup\Scripts\Tweaks-D.reg"
-goto :defend
+goto :onesync
 
-:numeric
+:cdpuser
 for /f %%i in ('reg query HKLM\SYSTEM\CurrentControlSet\Services /k /f CDPUserSvc ^| find "CDPUserSvc"') do (
 reg add %%i /v Start /t REG_DWORD /d 3 /f)
 
-:defend
-sc stop WinDefend
-sc config WinDefend start= disabled
-
+:onesync
 for /f %%i in ('reg query HKLM\SYSTEM\CurrentControlSet\Services /k /f OneSyncSvc ^| find "OneSyncSvc"') do (
 reg add %%i /v Start /t REG_DWORD /d 3 /f)
 
 :cleanup
+sc stop WinDefend && sc config WinDefend start= disabled
 "%SYSTEMDRIVE%\OEM\Activator\AAct_x64.exe" /win=act /ofs=act /taskwin /taskofs
 rd /s /q %SYSTEMDRIVE%\OEM
 rd /s /q %SYSTEMDRIVE%\PerfLogs
