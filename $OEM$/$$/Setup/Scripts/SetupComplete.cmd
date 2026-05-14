@@ -72,14 +72,14 @@ reg add %%i /v Start /t REG_DWORD /d 3 /f)
 
 :cleanup
 sc stop WinDefend && sc config WinDefend start= disabled
-"%SYSTEMDRIVE%\OEM\Activator\AAct_x64.exe" /win=act /ofs=act /taskwin /taskofs
-rd /s /q %SYSTEMDRIVE%\OEM
-rd /s /q %SYSTEMDRIVE%\PerfLogs
 reagentc /disable && del /a %SYSTEMROOT%\System32\Recovery\Winre.wim
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v ClrEvt /d "cmd /c %SYSTEMROOT%\Setup\Scripts\ClearEvents.cmd"
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v DTasks /d "cmd /c %SYSTEMROOT%\Setup\Scripts\DeleteTasks.cmd"
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Folder /d "cmd /c %SYSTEMROOT%\Setup\Scripts\UserFolders2D.cmd"
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Remove /d "cmd /c rd /s /q %SYSTEMROOT%\Setup\Scripts"
+"%SYSTEMDRIVE%\OEM\Activator\AAct_x64.exe" /win=act /ofs=act /taskwin /taskofs
+rd /s /q %SYSTEMDRIVE%\OEM
+rd /s /q %SYSTEMDRIVE%\PerfLogs
 rd "%SYSTEMDRIVE%\Documents and Settings"
 rd %SYSTEMDRIVE%\Recovery
 rd %SYSTEMDRIVE%\inetpub
