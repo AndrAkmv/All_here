@@ -33,6 +33,7 @@ dism /Online /English /LogLevel:1 /Add-Package /PackagePath:"%SYSTEMDRIVE%\OEM\U
 /config "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2010 Standard x32\Unattend\config.xml"
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Tweaks /d "cmd /c reg import %SYSTEMROOT%\Setup\Scripts\Tweaks-7.reg"
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v HotFix /d "cscript //b %SYSTEMROOT%\Setup\Scripts\W7-Fix-Event-ID-10.vbs"
+sc stop CscService && sc config CscService start= disabled
 goto :cleanup
 
 :windows-9
