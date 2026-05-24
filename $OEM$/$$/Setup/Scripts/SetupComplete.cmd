@@ -34,12 +34,14 @@ dism /Online /English /LogLevel:1 /Add-Package /PackagePath:"%SYSTEMDRIVE%\OEM\U
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Tweaks /d "cmd /c reg import %SYSTEMROOT%\Setup\Scripts\Tweaks-7.reg"
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v HotFix /d "cscript //b %SYSTEMROOT%\Setup\Scripts\W7-Fix-Event-ID-10.vbs"
 sc stop CscService && sc config CscService start= disabled
+printui /dd /m "Microsoft Shared Fax Driver"
 goto :cleanup
 
 :windows-9
 "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2013 Standard x32\setup.exe" ^
 /config "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2013 Standard x32\unattend\config.xml"
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Tweaks /d "cmd /c reg import %SYSTEMROOT%\Setup\Scripts\Tweaks-9.reg"
+printui /dl /n "Fax" && printui /dd /m "Microsoft Shared Fax Driver"
 goto :cleanup
 
 :windows-B
