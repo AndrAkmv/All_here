@@ -18,6 +18,15 @@ if %ERRORLEVEL% EQU 0 (
 )
 
 ver | find "6.1" && goto :windows-7
+
+powershell -NoProfile -ExecutionPolicy Bypass -Command ^
+"$flash = (Get-Volume ^| Where-Object DriveType -eq 'Removable' ^| Select-Object -First 1).DriveLetter; ^
+$lhard = (Get-Volume ^| Where-Object DriveType -eq 'Fixed' ^| Select-Object -Last 1).DriveLetter; ^
+if ($flash -and $lhard -and ($flash -lt $lhard)) { ^
+Set-Partition -DriveLetter $flash -NewDriveLetter T; ^
+Set-Partition -DriveLetter $lhard -NewDriveLetter $flash; ^
+Set-Partition -DriveLetter T -NewDriveLetter $lhard }"
+
 ver | find "6.3" && goto :windows-9
 ver | find "10.0.14393" && goto :Windows-B
 ver | find "10.0.17763" && goto :Windows-C
