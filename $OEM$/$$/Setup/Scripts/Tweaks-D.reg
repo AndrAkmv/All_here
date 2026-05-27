@@ -147,6 +147,10 @@ Windows Registry Editor Version 5.00
 ;Выключить фильтр SmartScreen для Internet Explorer
 "EnabledV9"=dword:00000000
 
+[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main\WindowsSearch]
+;Отключить передачу истории посещённых страниц в Поиск
+"EnabledScopes"=dword:00000000
+
 [HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\PrefetchPrerender]
 ;Не загружать сайты и содержимое в фоновом режиме
 "Enabled"=dword:00000000

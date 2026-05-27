@@ -139,6 +139,10 @@ Windows Registry Editor Version 5.00
 ;Разрешить запуск активного содержимого компакт-дисков на моем компьютере
 "LOCALMACHINE_CD_UNLOCK"=dword:00000001
 
+[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main\WindowsSearch]
+;Отключить передачу истории посещённых страниц в Поиск
+"EnabledScopes"=dword:00000000
+
 [HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\MINIE]
 ;Показывать вкладки в отдельной строке
 "ShowTabsBelowAddressBar"=dword:00000001
