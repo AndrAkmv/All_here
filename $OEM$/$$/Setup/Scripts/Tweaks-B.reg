@@ -497,6 +497,10 @@ Windows Registry Editor Version 5.00
 ;Отключить биометрическую службу Windows
 "Start"=dword:00000004
 
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wlidsvc]
+;Отключить Помощник по входу в учётную запись Майкрософт
+"Start"=dword:00000004
+
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WpnService]
 ;Остановить службу системы push-уведомлений Windows
 "Start"=dword:00000003
