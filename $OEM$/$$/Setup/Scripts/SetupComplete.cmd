@@ -57,12 +57,14 @@ goto :cleanup
 "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2016 Standard x32\setup.exe" ^
 /config "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2016 Standard x32\unattend\config.xml"
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Tweaks /d "cmd /c reg import %SYSTEMROOT%\Setup\Scripts\Tweaks-B.reg"
+reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v UsoCli /d "cmd /c usoclient startscan"
 goto :cdpuser
 
 :windows-C
 "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2019 Standard x64\setup.exe" ^
 /configure "%SYSTEMDRIVE%\OEM\Software\Microsoft Office 2019 Standard x64\config.xml"
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Tweaks /d "cmd /c reg import %SYSTEMROOT%\Setup\Scripts\Tweaks-C.reg"
+reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v UsoCli /d "cmd /c usoclient refreshsettings"
 goto :cdpuser
 
 :windows-D
