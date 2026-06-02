@@ -407,6 +407,10 @@ Windows Registry Editor Version 5.00
 ;Отключить дистанционное отслеживание приложений
 "AITEnable"=dword:00000000
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DeliveryOptimization]
+;Оптимизация доставки в режиме скачивания только HTTP, без пиринга
+"DODownloadMode"=dword:00000000
+
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate]
 ;Запретить доступ для использования Центра обновления Windows
 "SetDisableUXWUAccess"=dword:00000001
@@ -555,7 +559,3 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WwanSvc]
 ;Отключить Автонастройка WWAN
 "Start"=dword:00000004
-
-[HKEY_USERS\S-1-5-20\Software\Microsoft\Windows\CurrentVersion\DeliveryOptimization\Settings]
-;Запретить загрузки с других компьютеров
-"DownloadMode"=dword:00000000
