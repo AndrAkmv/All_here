@@ -368,6 +368,10 @@ Windows Registry Editor Version 5.00
 ;Оптимизация доставки в режиме скачивания только HTTP, без пиринга
 "DODownloadMode"=dword:00000000
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Device Metadata]
+;Запретить получение метаданных устройств из Интернета
+"PreventDeviceMetadataFromNetwork"=dword:00000001
+
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate]
 ;Запретить доступ для использования Центра обновления Windows
 "SetDisableUXWUAccess"=dword:00000001
