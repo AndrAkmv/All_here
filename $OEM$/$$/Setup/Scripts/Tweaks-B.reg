@@ -457,10 +457,6 @@ Windows Registry Editor Version 5.00
 ;Отключить Диспетчер скачанных карт
 "Start"=dword:00000004
 
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MpsSvc]
-;Отключить Брандмауэр Windows
-"Start"=dword:00000004
-
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NcaSvc]
 ;Отключить Помощник по подключению к сети
 "Start"=dword:00000004
@@ -476,18 +472,6 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PolicyAgent]
 ;Отключить Агент политики IPsec
 "Start"=dword:00000004
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\DomainProfile]
-;Отключить доменный профиль Брандмауэра Windows
-"EnableFirewall"=dword:00000000
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\PublicProfile]
-;Отключить общий профиль Брандмауэра Windows
-"EnableFirewall"=dword:00000000
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\StandardProfile]
-;Отключить частный профиль Брандмауэра Windows
-"EnableFirewall"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ShellHWDetection]
 ;Отключить Определение оборудования оболочки
