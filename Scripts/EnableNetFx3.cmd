@@ -34,8 +34,6 @@ dism /English /LogLevel:1 /%_img% /Get-Help | find "Image Version: 10.0.17763" >
 if defined _ver goto :enable
 dism /English /LogLevel:1 /%_img% /Get-Help | find "Image Version: 10.0.19044" > nul && set _ver=D
 if defined _ver goto :enable
-dism /English /LogLevel:1 /%_img% /Get-Help | find "Image Version: 10.0.19045" > nul && set _ver=X
-if defined _ver goto :enable
 goto :unmount
 
 :enable
