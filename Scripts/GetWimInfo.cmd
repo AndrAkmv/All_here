@@ -23,7 +23,7 @@ if %ERRORLEVEL% NEQ 13 exit
 
 cls
 md %_mnt%
-dism /English /LogLevel:1 /Mount-%_word% /%_word%File:%_file% /Index:%_ind% /MountDir:%_mnt%
+dism /English /LogLevel:1 /Mount-%_word% /%_word%File:%_file% /Index:%_ind% /MountDir:%_mnt% /ReadOnly
 if %ERRORLEVEL% NEQ 0 rd %_mnt% & pause & exit
 set _img=Image:%_mnt%
 
