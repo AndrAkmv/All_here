@@ -34,6 +34,10 @@ ver | find "10.0.19044" && goto :Windows-D
 goto :cleanup
 
 :windows-7
+dism /Online /English /LogLevel:1 /Remove-Package /PackageName:Microsoft-Windows-IE-Troubleshooters-Package~31bf3856ad364e35~amd64~en-US~6.1.7601.17514
+dism /Online /English /LogLevel:1 /Remove-Package /PackageName:Microsoft-Windows-IE-Troubleshooters-Package~31bf3856ad364e35~amd64~~6.1.7601.17514
+dism /Online /English /LogLevel:1 /Remove-Package /PackageName:Microsoft-Windows-InternetExplorer-Optional-Package~31bf3856ad364e35~amd64~en-US~8.0.7601.17514
+dism /Online /English /LogLevel:1 /Remove-Package /PackageName:Microsoft-Windows-InternetExplorer-Optional-Package~31bf3856ad364e35~amd64~~8.0.7601.17514
 dism /Online /English /LogLevel:1 /Add-Package /PackagePath:"%SYSTEMDRIVE%\OEM\Updates\Windows 7 - Online\x64"
 "%SYSTEMDRIVE%\OEM\Software\Microsoft .NET Framework 4.8\ndp48-x86-x64-allos-enu.exe" /q
 "%SYSTEMDRIVE%\OEM\Software\Microsoft .NET Framework 4.8\ndp48-x86-x64-allos-rus.exe" /q
