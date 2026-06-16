@@ -93,6 +93,7 @@ sc stop WinDefend && sc config WinDefend start= disabled
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v ClrEvt /d "cmd /c %SYSTEMROOT%\Setup\Scripts\ClearEvents.cmd"
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v DTasks /d "cmd /c %SYSTEMROOT%\Setup\Scripts\DeleteTasks.cmd"
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Folder /d "cmd /c %SYSTEMROOT%\Setup\Scripts\UserFolders2D.cmd"
+reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v NoAnim /d "cmd /c %SYSTEMROOT%\Setup\Scripts\NoAnimations.cmd"
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Remove /d "cmd /c rd /s /q %SYSTEMROOT%\Setup\Scripts"
 "%SYSTEMDRIVE%\OEM\Activator\AAct_x64.exe" /win=act /ofs=act /taskwin /taskofs
 rd /s /q %SYSTEMDRIVE%\OEM

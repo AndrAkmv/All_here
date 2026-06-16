@@ -35,15 +35,6 @@ Windows Registry Editor Version 5.00
 "FontSmoothing"="0"
 ;Выключить сглаживание ClearType
 "FontSmoothingType"=dword:00000000
-;Убрать тень указателя мыши
-"UserPreferencesMask"=hex:9e,1e,07,80,12,00,00,00
-
-;Дополнительная настройка внешнего вида
-[HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics]
-;Показывать полностью имена длинных файлов в Проводнике
-"IconTitleWrap"="0"
-;Отключить анимацию окон при свертывании и развертывании
-"MinAnimate"="0"
 
 [HKEY_CURRENT_USER\Control Panel\Keyboard]
 ;Убрать задержку повтора при зажатии клавиши
@@ -185,8 +176,6 @@ Windows Registry Editor Version 5.00
 "Start_ShowRun"=dword:00000001
 ;Не отображать "Программы по умолчанию"
 "Start_ShowSetProgramAccessAndDefaults"=dword:00000000
-;Отключить скольжение кнопок Панели задач
-"TaskbarAnimations"=dword:00000000
 ;Не группировать кнопки на Панели задач
 "TaskbarGlomLevel"=dword:00000002
 ;Использовать маленькие значки на Панели задач
@@ -239,10 +228,9 @@ Windows Registry Editor Version 5.00
 ;Скрыть область сведений в папках
 "PreviewPaneSizer"=hex:35,00,00,00,00,00,00,00,00,00,00,00,0f,02,00,00
 
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Taskband]
-;Изъять все программы из Панели задач
-"Favorites"=hex:ff
-"FavoritesResolve"=-
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects]
+;Выбрать особые параметры визуальных эффектов
+"VisualFXSetting"=dword:00000003
 
 ;Настройка параметров безопасности браузера
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings]

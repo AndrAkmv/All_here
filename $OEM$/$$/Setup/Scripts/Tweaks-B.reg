@@ -42,13 +42,6 @@ Windows Registry Editor Version 5.00
 ;Выключить сглаживание ClearType
 "FontSmoothingType"=dword:00000000
 
-;Дополнительная настройка внешнего вида
-[HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics]
-;Показывать полностью имена длинных файлов в Проводнике
-"IconTitleWrap"="0"
-;Отключить анимацию окон при свертывании и развертывании
-"MinAnimate"="0"
-
 ;Установка списка языков и параметров конфиденциальности
 [HKEY_CURRENT_USER\Control Panel\International\User Profile]
 ;Не предоставлять веб-сайтам доступ к моему списку языков
@@ -219,8 +212,6 @@ Windows Registry Editor Version 5.00
 "ShowEncryptCompressedColor"=dword:00000001
 ;Скрыть кнопку Представление задач
 "ShowTaskViewButton"=dword:00000000
-;Отключить скольжение кнопок Панели задач
-"TaskbarAnimations"=dword:00000000
 ;Не группировать кнопки на Панели задач
 "TaskbarGlomLevel"=dword:00000002
 ;Использовать маленькие значки на Панели задач
@@ -268,10 +259,9 @@ Windows Registry Editor Version 5.00
 ;Скрыть область навигации в папках
 "PageSpaceControlSizer"=hex:a0,00,00,00,00,00,00,00,00,00,00,00,45,03,00,00
 
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Taskband]
-;Изъять все программы из Панели задач
-"Favorites"=hex:ff
-"FavoritesResolve"=-
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects]
+;Выбрать особые параметры визуальных эффектов
+"VisualFXSetting"=dword:00000003
 
 ;Настройка параметров безопасности браузера
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings]
