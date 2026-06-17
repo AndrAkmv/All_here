@@ -123,9 +123,12 @@ Windows Registry Editor Version 5.00
 ;Не загружать сайты и содержимое в фоновом режиме
 "Enabled"=dword:00000000
 
+;Настройка обзора с вкладками
 [HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\TabbedBrowsing]
 ;При открытии новой вкладки открывать домашнюю страницу
 "NewTabPageShow"=dword:00000001
+;Не предупреждать об одновременном закрытии вкладок
+"WarnOnClose"=dword:00000000
 
 ;Настройка Windows Media Player 12
 [HKEY_CURRENT_USER\Software\Microsoft\MediaPlayer\Preferences]
