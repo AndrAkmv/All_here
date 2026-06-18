@@ -399,10 +399,6 @@ Windows Registry Editor Version 5.00
 ;Отключить файл подкачки приложений Магазина Windows
 "SwapfileControl"=dword:00000000
 
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\WMI\Autologger\AutoLogger-Diagtrack-Listener]
-;Отключить создание логов службой функциональных возможностей и телеметрии
-"Start"=dword:00000000
-
 [-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\WMI\Autologger\EventLog-Microsoft-RMS-MSIPC-Debug]
 ;Удалить логгер клиента защиты информации от несанкционированного доступа
 
