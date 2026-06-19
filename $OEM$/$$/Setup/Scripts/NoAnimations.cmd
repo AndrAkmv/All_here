@@ -1,8 +1,13 @@
 @echo off
 
+ver | find "10" > nul
+if %ERRORLEVEL% EQU 0 (
+reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Histor /d ^
+"cmd /c reg add \"HKCU\Software\Microsoft\Windows\CurrentVersion\Search\" /v DeviceHistoryEnabled /t REG_DWORD /d 0 /f"
+) else (
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Favori /d ^
 "cmd /c reg delete \"HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Taskband\" /f"
-
+)
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v MinAni /d ^
 "cmd /c reg add \"HKCU\Control Panel\Desktop\WindowMetrics\" /v MinAnimate /d 0 /f"
 
@@ -20,6 +25,9 @@ if %ERRORLEVEL% NEQ 0 (
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v WMILog /d ^
 "cmd /c reg add \"HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\AutoLogger-Diagtrack-Listener\" /v Start /t REG_DWORD /d 0 /f"
 ) else (
+reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Histor /d ^
+"cmd /c reg add \"HKCU\Software\Microsoft\Windows\CurrentVersion\SearchSettings\" /v IsDeviceSearchHistoryEnabled /t REG_DWORD /d 0 /f" /f
+
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v WMILog /d ^
 "cmd /c reg add \"HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\Diagtrack-Listener\" /v Start /t REG_DWORD /d 0 /f"
 )

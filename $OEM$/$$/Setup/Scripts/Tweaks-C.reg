@@ -330,8 +330,6 @@ Windows Registry Editor Version 5.00
 "SaveZoneInformation"=dword:00000001
 
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Search]
-;Отключить журнал этого и других устройств, где выполнен вход
-"DeviceHistoryEnabled"=dword:00000000
 ;Скрыть значок поиска на Панели задач
 "SearchboxTaskbarMode"=dword:00000000
 
