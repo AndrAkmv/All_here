@@ -53,10 +53,15 @@ Windows Registry Editor Version 5.00
 ;Убрать задержку повтора при зажатии клавиши
 "KeyboardDelay"="0"
 
+[HKEY_CURRENT_USER\Control Panel\Quick Actions\Control Center]
+;Применение параметров быстрых действий было выполнено
+"AppliedDefaultPins"=dword:00000001
 [HKEY_CURRENT_USER\Control Panel\Quick Actions\Control Center\QuickActionsStateCapture]
 ;Установка нужных плиток на панели Центра уведомлений
+"Flows"="Flows"
+"GroupCount"=dword:00000003
 "Sliders"="Sliders"
-"Toggles"="Toggles,Microsoft.QuickAction.BlueLightReduction:false,Microsoft.QuickAction.QuietHours:false,Microsoft.QuickAction.Bluetooth:false,Microsoft.QuickAction.WiFi:false"
+"Toggles"="Toggles,Microsoft.QuickAction.Location:true,Microsoft.QuickAction.BlueLightReduction:false,Microsoft.QuickAction.Bluetooth:false,Microsoft.QuickAction.WiFi:true"
 
 [HKEY_CURRENT_USER\Control Panel\Quick Actions\Control Center\Unpinned]
 ;Выбор используемых плиток из списка незакреплённых
@@ -68,11 +73,11 @@ Windows Registry Editor Version 5.00
 "Microsoft.QuickAction.Bluetooth"=-
 "Microsoft.QuickAction.Brightness"=hex(0):
 "Microsoft.QuickAction.Connect"=hex(0):
-"Microsoft.QuickAction.Location"=hex(0):
+"Microsoft.QuickAction.Location"=-
 "Microsoft.QuickAction.MobileHotspot"=hex(0):
 "Microsoft.QuickAction.NearShare"=hex(0):
 "Microsoft.QuickAction.Project"=hex(0):
-"Microsoft.QuickAction.QuietHours"=-
+"Microsoft.QuickAction.QuietHours"=hex(0):
 "Microsoft.QuickAction.ScreenClipping"=hex(0):
 "Microsoft.QuickAction.Vpn"=hex(0):
 "Microsoft.QuickAction.WiFi"=-
@@ -140,9 +145,13 @@ Windows Registry Editor Version 5.00
 ;Использовать новую вкладку при запуске
 "Start Page"="about:Tabs"
 
-[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\PhishingFilter]
-;Выключить фильтр SmartScreen для Internet Explorer
-"EnabledV9"=dword:00000000
+[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_LOCALMACHINE_LOCKDOWN]
+;Разрешить запуск активного содержимого файлов на моем компьютере
+"iexplore.exe"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_LOCALMACHINE_LOCKDOWN\Settings]
+;Разрешить запуск активного содержимого компакт-дисков на моем компьютере
+"LOCALMACHINE_CD_UNLOCK"=dword:00000001
 
 [HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main\WindowsSearch]
 ;Отключить передачу истории посещённых страниц в Поиск
@@ -197,6 +206,10 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\Microsoft\Siuf\Rules]
 ;Никогда не запрашивать мои отзывы
 "NumberOfSIUFInPeriod"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\location]
+;Разрешить приложениям доступ к местоположению
+"Value"="Allow"
 
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\CDP]
 ;Запретить приложениям на других устройствах открывать приложения
@@ -294,6 +307,15 @@ Windows Registry Editor Version 5.00
 "Flags"=dword:00000001
 "Version"="*"
 
+;Настройка параметров безопасности браузера
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings]
+;Отключить предупреждение о несоответствии адреса сертификата
+"WarnonBadCertRecving"=dword:00000000
+;Отключить предупреждение о переходе в локальную зону
+"WarnOnIntranet"=dword:00000000
+;Отключить предупреждение о перенаправления публикаций
+"WarnOnPostRedirect"=dword:00000000
+
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Activities\Перевести\microsofttranslator.com]
 ;Удаление надстройки браузера - Перевод с помощью Bing
 "Deleted"=dword:00000001
@@ -326,9 +348,9 @@ Windows Registry Editor Version 5.00
 ;Запретить Windows управлять принтером по умолчанию
 "LegacyDefaultPrinterMode"=dword:00000001
 
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\AppHost]
-;Отключить облачную оценку контерента с помощью SmartScreen
-"EnableWebContentEvaluation"=dword:00000000
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\location]
+;Разрешить доступ к местоположению на этом устройстве
+"Value"="Allow"
 
 ;Системная настройка Проводника
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer]
@@ -375,6 +397,10 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Windows Error Reporting]
 ;Не проверять наличие новых решений для отчётов о проблемах
 "Disabled"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Sensor\Overrides\{BFA794E4-F964-4FDB-90F6-51056BFE4B44}]
+;Предоставить разрешение датчику расположения
+"SensorPermissionState"=dword:00000001
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Security Health\State]
 ;Скрыть предупреждение об отключенном SmartScreen
@@ -445,10 +471,6 @@ Windows Registry Editor Version 5.00
 "fAllowFullControl"=dword:00000000
 ;Запретить подключения удалённого помощника к этому компьютеру
 "fAllowToGetHelp"=dword:00000000
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecureBoot]
-;Не выполнять обновление сертификатов безопасной загрузки
-"AvailableUpdates"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management]
 ;Отключить файл подкачки приложений Магазина Windows
@@ -533,12 +555,12 @@ Windows Registry Editor Version 5.00
 ;Не выполнять синхронизацию с сервером времени в Интернете
 "Type"="NoSync"
 
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wlidsvc]
-;Отключить Помощник по входу в учётную запись Майкрософт
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WbioSrvc]
+;Отключить биометрическую службу Windows
 "Start"=dword:00000004
 
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wlpasvc]
-;Отключить службу помощника по локальному профилю
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wlidsvc]
+;Отключить Помощник по входу в учётную запись Майкрософт
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WpnService]
@@ -547,8 +569,4 @@ Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wscsvc]
 ;Отключить Центр обеспечения безопасности
-"Start"=dword:00000004
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WwanSvc]
-;Отключить Автонастройка WWAN
 "Start"=dword:00000004
