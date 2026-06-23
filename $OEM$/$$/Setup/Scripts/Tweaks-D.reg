@@ -56,6 +56,7 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Control Panel\Quick Actions\Control Center]
 ;Применение параметров быстрых действий было выполнено
 "AppliedDefaultPins"=dword:00000001
+
 [HKEY_CURRENT_USER\Control Panel\Quick Actions\Control Center\QuickActionsStateCapture]
 ;Установка нужных плиток на панели Центра уведомлений
 "Flows"="Flows"
@@ -229,7 +230,7 @@ Windows Registry Editor Version 5.00
 "DontUsePowerShellOnWinX"=dword:00000001
 ;Показывать скрытые файлы, папки и диски
 "Hidden"=dword:00000001
-;Показывать пустые диски в папке "Компьютер"
+;Показывать пустые диски
 "HideDrivesWithNoMedia"=dword:00000000
 ;Показывать расширения для зарегистрированных типов файлов
 "HideFileExt"=dword:00000000
@@ -239,11 +240,11 @@ Windows Registry Editor Version 5.00
 "SharingWizardOn"=dword:00000000
 ;Отображать сжатые или зашифрованные файлы NTFS другим цветом
 "ShowEncryptCompressedColor"=dword:00000001
-;Скрыть кнопку Представление задач
+;Скрыть кнопку Просмотра задач
 "ShowTaskViewButton"=dword:00000000
-;Не группировать кнопки на Панели задач
+;Не группировать кнопки Панели задач
 "TaskbarGlomLevel"=dword:00000002
-;Использовать маленькие значки на Панели задач
+;Использовать маленькие кнопки Панели задач
 "TaskbarSmallIcons"=dword:00000001
 
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\AutoComplete]
@@ -337,15 +338,15 @@ Windows Registry Editor Version 5.00
 "SearchboxTaskbarMode"=dword:00000000
 
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize]
-;Убрать эффект прозрачности
+;Отключить эффекты прозрачности
 "EnableTransparency"=dword:00000000
 
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\DWM]
-;Показать цвет в заголовке окна
+;Отображать цвет на заголовках окон
 "ColorPrevalence"=dword:00000001
 
 [HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Windows]
-;Запретить Windows управлять принтером по умолчанию
+;Запретить Windows управлять принтером, используемым по умолчанию
 "LegacyDefaultPrinterMode"=dword:00000001
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\location]
@@ -407,7 +408,7 @@ Windows Registry Editor Version 5.00
 "AppAndBrowser_AppRepSmartScreenOff"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsSelfHost\UI\Visibility]
-;Убрать пункт "Программа предварительно оценки Windows"
+;Убрать пункт "Программа предварительной оценки Windows"
 "HideInsiderPage"=dword:00000001
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WlanSvc\AnqpCache]
@@ -544,7 +545,7 @@ Windows Registry Editor Version 5.00
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SysMain]
-;Отключить SysMain (Superfetch)
+;Отключить SysMain
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\TabletInputService]

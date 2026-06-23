@@ -53,6 +53,7 @@ Windows Registry Editor Version 5.00
 ;Убрать задержку повтора при зажатии клавиши
 "KeyboardDelay"="0"
 
+;Установка параметров быстрых действий
 [HKEY_CURRENT_USER\Control Panel\Quick Actions]
 ;Установить статус инициализации раскладки
 "LayoutInitializationStatus"=dword:00000003
@@ -197,7 +198,7 @@ Windows Registry Editor Version 5.00
 "PrivacyNoticeShown"=dword:00000002
 
 [HKEY_CURRENT_USER\Software\Microsoft\Personalization\Settings]
-;Отменить принятие соглашения о конфиденциальности
+;Выключить персонализацию рукописного ввода и ввода с клавиатуры
 "AcceptedPrivacyPolicy"=dword:00000000
 
 [HKEY_CURRENT_USER\Software\Microsoft\Siuf\Rules]
@@ -222,7 +223,7 @@ Windows Registry Editor Version 5.00
 "DontUsePowerShellOnWinX"=dword:00000001
 ;Показывать скрытые файлы, папки и диски
 "Hidden"=dword:00000001
-;Показывать пустые диски в папке "Компьютер"
+;Показывать пустые диски
 "HideDrivesWithNoMedia"=dword:00000000
 ;Показывать расширения для зарегистрированных типов файлов
 "HideFileExt"=dword:00000000
@@ -232,15 +233,15 @@ Windows Registry Editor Version 5.00
 "SharingWizardOn"=dword:00000000
 ;Отображать сжатые или зашифрованные файлы NTFS другим цветом
 "ShowEncryptCompressedColor"=dword:00000001
-;Скрыть кнопку Представление задач
+;Скрыть кнопку Просмотра задач
 "ShowTaskViewButton"=dword:00000000
-;Не группировать кнопки на Панели задач
+;Не группировать кнопки Панели задач
 "TaskbarGlomLevel"=dword:00000002
-;Использовать маленькие значки на Панели задач
+;Использовать маленькие кнопки Панели задач
 "TaskbarSmallIcons"=dword:00000001
 
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\People]
-;Не показывать значок "Люди" на Панели задач
+;Скрыть панель "Люди" на Панели задач
 "PeopleBand"=dword:00000000
 
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\AutoComplete]
@@ -334,19 +335,19 @@ Windows Registry Editor Version 5.00
 "SearchboxTaskbarMode"=dword:00000000
 
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize]
-;Убрать эффект прозрачности
+;Отключить эффекты прозрачности
 "EnableTransparency"=dword:00000000
 
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\DWM]
-;Показать цвет в заголовке окна
+;Отображать цвет на заголовках окон
 "ColorPrevalence"=dword:00000001
 
 [HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Windows]
-;Запретить Windows управлять принтером по умолчанию
+;Запретить Windows управлять принтером, используемым по умолчанию
 "LegacyDefaultPrinterMode"=dword:00000001
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WcmSvc\Tethering]
-;Запретить удалённо включать мобильный хот-спот
+;Запретить другому устройству включать мобильный хот-спот
 "RemoteStartupDisabled"=dword:00000001
 
 ;Системная настройка Проводника
@@ -393,7 +394,7 @@ Windows Registry Editor Version 5.00
 "AppAndBrowser_AppRepSmartScreenOff"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsSelfHost\UI\Visibility]
-;Убрать пункт "Программа предварительно оценки Windows"
+;Убрать пункт "Программа предварительной оценки Windows"
 "HideInsiderPage"=dword:00000001
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WlanSvc\AnqpCache]
@@ -401,7 +402,7 @@ Windows Registry Editor Version 5.00
 "OsuRegistrationStatus"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\MRT]
-;Не предлагать обновления для Средства удаления вредоносных программ
+;Не обновлять Средство удаления вредоносных программ
 "DontOfferThroughWUAU"=dword:00000001
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\AppCompat]
@@ -475,7 +476,7 @@ Windows Registry Editor Version 5.00
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DusmSvc]
-;Отключить службу использования данных
+;Отключить использование данных
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\IKEEXT]
@@ -523,7 +524,7 @@ Windows Registry Editor Version 5.00
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SysMain]
-;Отключить Superfetch
+;Отключить SysMain
 "Start"=dword:00000004
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\TabletInputService]
