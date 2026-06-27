@@ -24,9 +24,6 @@ Windows Registry Editor Version 5.00
 [-HKEY_CLASSES_ROOT\Msi.Package\shellex\ContextMenuHandlers\Compatibility]
 ;Удалить "Исправление неполадок совместимости" из контекстного меню файлов
 
-[-HKEY_CLASSES_ROOT\SystemFileAssociations\Directory.Audio\shellex\ContextMenuHandlers\WMPShopMusic]
-;Удалить "Поиск музыки в Интернете" из контекстного меню библиотеки "Аудио"
-
 ;Настройка визуальных эффектов Рабочего стола
 [HKEY_CURRENT_USER\Control Panel\Desktop]
 ;Увеличить частоту мерцания курсора
@@ -113,8 +110,6 @@ Windows Registry Editor Version 5.00
 
 ;Настройка Windows Media Player 12
 [HKEY_CURRENT_USER\Software\Microsoft\MediaPlayer\Preferences]
-;Принять лицензионное соглашение
-"AcceptedPrivacyStatement"=dword:00000001
 ;Не добавлять файлы видео, найденные в библиотеке изображений
 "AddVideosFromPicturesLibrary"=dword:00000000
 ;Отключить автоматическое добавление музыки в библиотеку
@@ -135,8 +130,6 @@ Windows Registry Editor Version 5.00
 "SilentAcquisition"=dword:00000000
 ;Не устанавливать автоматически часы на устройствах
 "SilentDRMConfiguration"=dword:00000000
-;Увеличить время запроса автоматического обновления проигрывателя
-"UpgradeCheckFrequency"=dword:00000002
 ;Не отправлять данные об использовании проигрывателя
 "UsageTracking"=dword:00000000
 

@@ -1,5 +1,16 @@
 @echo off
 
+ver | find "6.1" > nul
+if %ERRORLEVEL% EQU 0 (
+reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v WMPSho /d ^
+"cmd /c reg delete \"HKCR\SystemFileAssociations\Directory.Audio\shellex\ContextMenuHandlers\WMPShopMusic\" /f"
+
+reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Accept /d ^
+"cmd /c reg add \"HKCU\Software\Microsoft\MediaPlayer\Preferences\" /v AcceptedPrivacyStatement /t REG_DWORD /d 1 /f"
+
+reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v ChFreq /d ^
+"cmd /c reg add \"HKCU\Software\Microsoft\MediaPlayer\Preferences\" /v UpgradeCheckFrequency /t REG_DWORD /d 2 /f"
+)
 ver | find "10" > nul
 if %ERRORLEVEL% EQU 0 (
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v Histor /d ^
