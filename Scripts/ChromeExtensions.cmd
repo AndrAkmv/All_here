@@ -13,16 +13,12 @@ exit
 :add
 cls
 rem ADs
-echo uBlock Origin
-reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\cjpalhdlnbpafiamejdnhcphjbkeiagm /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
+echo uBlock Origin Lite
+reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\ddkjiahejlhfcafbddmgiahcphecmpfh /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
 
 rem Context
 echo Selection Search
 reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\gipnlpdeieaidmmeaichnddnmjmcakoe /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
-
-rem Dislike
-echo Return YouTube Dislike
-reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\gebbhagfogifgggkldgodflihgfeippi /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
 
 rem Eyes
 echo Dark Reader
@@ -42,13 +38,13 @@ reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\necpbmbhhdiplmfhmjicabdeig
 
 rem Tabs
 echo Prevent Duplicate Tabs
-reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\eednccpckdkpojaiemedoejdngappaag /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
+reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\jjnoehggdfcblljkkeijmooameiaiani /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
 echo Tab Activate
 reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\jlmadbnpnnolpaljadgakjilggigioaj /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
 
 rem VPN
-echo VPN proxy VeePN
-reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\majdfhpaihoncoakbjgbdhglocklcgno /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
+echo Browsec VPN
+reg add HKLM\SOFTWARE%_arch%\Google\Chrome\Extensions\omghfjlpggmjjaagoclmmobgdodcjboh /v update_url /d https://clients2.google.com/service/update2/crx /f > nul
 
 rem Window
 echo Material Dark
