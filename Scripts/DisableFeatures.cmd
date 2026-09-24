@@ -48,6 +48,8 @@ if %1==MediaPlayback exit /b
 if %1==WindowsMediaPlayer exit /b
 if %1==SearchEngine-Client-Package exit /b
 if %1==Internet-Explorer-Optional-amd64 exit /b
+if %1==Microsoft-Hyper-V-Common-Drivers-Package exit /b
+if %1==Microsoft-Hyper-V-Guest-Integration-Drivers-Package exit /b
 if %1==Microsoft-Windows-NetFx3-OC-Package exit /b
 if %1==Microsoft-Windows-NetFx4-US-OC-Package exit /b
 if %1==Microsoft-Windows-NetFx3-WCF-OC-Package exit /b
