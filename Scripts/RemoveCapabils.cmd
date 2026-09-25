@@ -42,12 +42,14 @@ exit /b
 
 :exclude
 if %1==NetFX3~~~~ exit /b
+if %1==MathRecognizer~~~~0.0.1.0 exit /b
 if %1==OpenSSH.Client~~~~0.0.1.0 exit /b
 if %1==OneCoreUAP.OneSync~~~~0.0.1.0 exit /b
 if %1==Language.Basic~~~en-US~0.0.1.0 exit /b
 if %1==Language.Basic~~~ru-RU~0.0.1.0 exit /b
 if %1==Language.OCR~~~en-US~0.0.1.0 exit /b
 if %1==Language.OCR~~~ru-RU~0.0.1.0 exit /b
+if %1==App.StepsRecorder~~~~0.0.1.0 exit /b
 if %1==Browser.InternetExplorer~~~~0.0.11.0 exit /b
 if %1==Media.WindowsMediaPlayer~~~~0.0.12.0 exit /b
 if %1==Microsoft.Windows.MSPaint~~~~0.0.1.0 exit /b
